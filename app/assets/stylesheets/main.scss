@@ -1,0 +1,100 @@
+/* нахуй этот бутстрап */
+/* @import "bootstrap-sprockets";
+@import "bootstrap"; */
+
+body {
+
+	font-family: "Raleway","Helvetica Neue", "Arial", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: #eee;
+	margin: 0; padding: 0;
+	
+}
+
+table {	background-color: #fff;	border-radius: 3px; }
+
+th,td { padding: 7px; }
+
+a {	text-decoration: none;	font-size: 16px; }
+
+p { color: #fff; }
+
+.wrap {	margin: 0 auto;	width: 1170px; }
+
+ /* header menu */
+
+#menu {
+
+	height: 77px;
+	background-color: #0A0F13;
+
+	#logo {
+		float: left;
+		color: #fff;
+		font-size: 25px;
+		font-weight: 300;
+		margin: 0;
+		padding: 16px; 
+
+	}
+
+	#line {
+	 	width: 1px; height: 20px;
+	 	background-color: #fff;
+	 	float: right;
+	 	margin-top: 23px;
+		margin-right: 20px;
+ }
+
+	#port_size {
+		border-radius: 50px;
+		width: 28px; height: 28px;
+		background-color: #346998;
+		float: right;
+		margin-top: 18px;
+		margin-right: 20px;
+
+		p { text-align: center; margin-top: 3px; font-weight: 400; }
+}
+
+		a {
+	    float: right;
+	    color: #fff;
+	    padding-top: 25px;
+	    padding-right: 20px;
+	    font-weight: 400;
+	    font-size: 15px;
+	    letter-spacing: -0.05em;
+
+	    &:hover { color: #444; transition: 0.9s; }
+	}
+}
+
+#user_pic {
+
+	border-radius: 50px;
+	width: 50px; height: 50px;
+	float: left;
+	margin-top: 10px;
+
+	a { float: left; }
+}
+
+/* footer */
+
+footer {
+
+	width: 100%; height: 60px;
+	background-color: #000;
+	color: #fff;
+	font-size: 14px;
+	clear: both;
+
+	#copyright {
+		float: left;
+		margin-top: 25px;
+		text-align: center;
+		width: 1170px;
+	}
+
+}
