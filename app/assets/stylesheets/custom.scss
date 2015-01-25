@@ -1,0 +1,311 @@
+/* 
+@import "bootstrap-sprockets";
+@import "bootstrap"; */
+
+body {
+
+	font-family: "Raleway","Helvetica Neue", "Arial", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: #eee;
+	margin: 0; padding: 0;
+	scroll-behavior: smooth;
+	
+}
+
+#header_bg {
+	background: url(header_bg.jpg) no-repeat;
+	width: 100%;
+
+	#header_bg_overlay {
+		width: 100%;
+		height: 778px;
+		background: rgba(0,0,0,0.7);
+	}
+}
+a {
+
+	text-decoration: none;
+	font-size: 16px;
+}
+
+p { color: #fff; }
+
+.wrap {
+
+	margin: 0 auto;
+	width: 1170px;
+}
+
+#menu {
+
+	height: 77px;
+	background-color: #0A0F13;
+
+	#logo {
+		float: left;
+		color: #fff;
+		font-size: 25px;
+		font-weight: 300;
+		margin: 0;
+		padding: 16px; 
+
+	}
+
+	#line {
+	 	width: 1px; height: 20px;
+	 	background-color: #fff;
+	 	float: right;
+	 	margin-top: 23px;
+		margin-right: 14px;
+ }
+
+	#port_size {
+		border-radius: 50px;
+		width: 28px; height: 28px;
+		background-color: #346998;
+		float: right;
+		margin-top: 18px;
+		margin-right: 15px;
+
+		 p { text-align: center; margin-top: 3px; font-weight: 400; }
+	}
+
+		 a {
+	    float: right;
+	    color: #fff;
+	    padding-top: 25px;
+	    padding-right: 20px;
+	    font-weight: 400;
+	    font-size: 15px;
+	    letter-spacing: -0.05em;
+
+
+	      &:hover {
+		    color: #444;
+		    transition: 0.7s;
+		}
+	}
+}
+.titl_fade_in, .pic_anim, .iphones_in, .column_in, .ios_apps_in, .web_apps_in { opacity: 1 !important; }
+
+#titl { 
+
+	text-align: center;
+	color: #fff;
+	letter-spacing: -0.05em;
+	position: absolute;
+	width: 1170px;
+	opacity: 0;
+	transition: opacity 2s ease-in-out 0.2s;
+
+	p {
+		font-size: 22px;
+		margin-top: -35px;
+		font-weight: 300;	
+	}
+
+
+	h1 {
+		margin-top: 150px;
+		font-size: 80px;
+		font-weight: 100;
+		letter-spacing: -0.09em;
+		text-align: center;
+	}
+}
+
+table {
+	background-color: #fff;
+	border-radius: 3px;
+}
+th,td { padding: 7px; }
+
+#user_pic {
+
+	border-radius: 50px;
+	width: 50px; height: 50px;
+	float: left;
+	margin-top: 10px;
+
+	a { float: left; }
+}
+
+#pic_a { float: left; }
+
+#window {
+	width: 1000px;
+	margin: 380px 85px;
+	opacity: 0;
+	-webkit-box-shadow: 0px 2px 167px 5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 2px 167px 5px rgba(0,0,0,0.75);
+	box-shadow: 0px 2px 167px 5px rgba(0,0,0,0.75);
+	position: absolute;
+	transition: opacity 2s ease-in-out 0.2s;
+}
+
+
+/* второй экран */
+
+#second_screen {
+	background-color: #1A1B1F;
+	width: 100%; height: 488px;
+}
+
+/* текстовые блоки */
+
+.column:first-child, .column:nth-child(4) { padding-left: 0px; }
+
+#columns {	opacity: 0;	transition: opacity .5s ease-in-out 0.2s; }
+
+.column {
+
+	width: 360px;
+	padding-top: 80px;
+	float: left;
+	position: relative;
+	padding-left: 45px;
+
+	h1 {
+
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 18px;
+		letter-spacing: 0.2em;
+		font-weight: 600;
+		margin: 0px 50px;
+	}
+
+	p {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 1.7;
+		padding-top: 15px;
+		margin-left: 50px;
+	}
+
+
+}
+
+.icon { 
+
+	position: absolute;
+
+}
+
+/* третий экран  */
+
+#third_screen {
+
+	background-color: #141518;
+	width: 100%; height: 854px;
+}
+
+#ios_apps, #web_apps {
+
+	color: #fff;
+    margin: -510px 587px;
+	width: 600px;
+	transition: opacity 1s ease-in-out 0.2s;
+	opacity: 0;
+
+	h1 {
+		padding-left: 150px;
+		letter-spacing: -0.03em;
+		font-weight: 300;
+		font-size: 32px;
+		padding-top: 35px;
+	}
+
+	ul {
+		margin-top: 90px;
+		font-size: 17px;
+
+		li { padding-bottom: 33px; font-weight: 300; }
+	}
+
+	a { color: #fff; }
+
+}
+
+#iphones {
+
+	margin-top: 85px;
+	opacity: 0;
+	transition: opacity .9s ease-in-out 0.2s;
+}
+
+.butn {
+
+	padding: 11px 40px;
+	border: 1px solid #fff;
+	max-width: 170px;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 14px;
+}
+
+/* 4-ый экран */
+
+#fourth_screen {
+
+	background-color: #1A1B1F;
+	width: 100%; height: 854px;
+}
+
+#makets {
+
+	margin-top: 150px;
+
+}
+
+#web_apps {
+
+	color: #fff;
+	margin: 256px 10px;
+	width: 600px;
+	transition: opacity 1s ease-in-out 0.2s;
+	opacity: 0;
+	float: left;
+	height: 342px;
+
+
+	h1 {
+		padding-left: 150px;
+		letter-spacing: -0.03em;
+		font-weight: 300;
+		font-size: 32px;
+		padding-top: 18px;
+	}
+
+	ul {
+		margin-top: 90px;
+		font-size: 17px;
+
+		li { padding-bottom: 33px; font-weight: 300; }
+	}
+
+	a { color: #fff; }
+
+}
+
+/* footer */
+
+footer {
+
+	width: 100%; height: 60px;
+	background-color: #000;
+	color: #fff;
+	font-size: 14px;
+	clear: both;
+
+	#copyright {
+		float: left;
+		margin-top: 25px;
+		text-align: center;
+		width: 1170px;
+
+
+	}
+
+}

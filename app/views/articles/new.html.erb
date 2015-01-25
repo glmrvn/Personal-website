@@ -1,0 +1,20 @@
+<h1>Новое сообщение блога</h1>
+
+<div class="input-group">
+<%= form_for :article, url: articles_path do |f| %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: "form-control" %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text, class: "form-control" %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</div>

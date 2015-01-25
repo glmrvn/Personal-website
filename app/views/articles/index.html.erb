@@ -1,0 +1,26 @@
+<div class="wrap">
+  <h1>Блог</h1>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Загаловок</th>
+      <th>Текст</th>
+      <th>Время создания</th>
+      <th></th>
+    </tr>
+
+    <% @articles.each do |i| %>
+      <tr>
+      	<td><%= i.id %></td>
+      	<td><%= link_to i.title, article_path(i) %></td>
+      	<td><%= i.text %></td>
+        <td><%= i.created_at.strftime("%H:%M %d %b %y") %></td>
+      	<td><%= link_to "Delete", article_path(i), method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+  </br>
+  <%= link_to "New post", new_article_path %>
+</div>
