@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
-
+gem "paperclip", "~> 4.2"
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'rails_12factor'

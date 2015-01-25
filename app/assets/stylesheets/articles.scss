@@ -2,15 +2,22 @@
 
 .article {
 	color: #545454;
+	opacity: 0;
+	top: 100;
+	transition: opacity 0.4s ease-in-out 0.2s;
 
-	h1, p { float: right; width: 640px; }
+	a, p { float: right; width: 640px; }
 
-	h1 {
+	a {
 		margin-top: 150px;
 		font-size: 32px;
 		letter-spacing: -0.03em;
 		font-weight: 300;
 		text-align: left;
+		text-decoration: none;
+		padding-bottom: 30px;
+		color: #999;
+		&:hover { color: #444; transition: 0.9s; }
 	}
 
 	p {
@@ -39,7 +46,7 @@
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 14px;
-	margin: 70px -138px;
+	margin: -120px 0;
 	color: #999;
 }
 

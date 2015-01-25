@@ -2,6 +2,7 @@ $(window).load(function(){
 
     $('#window').addClass('pic_anim');
     $('#titl').addClass('titl_fade_in');
+    $('.article').addClass('article_in');
 
 });
 

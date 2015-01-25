@@ -1,9 +1,11 @@
 <div class="wrap">
 
-  <h1>Новое сообщение блога</h1>
+  <h1>Изменить сообщение</h1>
+
+      <%= image_tag @article.image.url(:medium) %>
 
   <div class="input-group">
-  <%= form_for :article, url: articles_path do |f| %>
+  <%= form_for @article do |f| %>
 
     <p>
       <%= f.label :title %><br>
@@ -17,7 +19,7 @@
    
     <p>
       <%= f.file_field :image %><br><br>
-      <%= f.submit %>
+      <%= f.submit "Сохранить изменения" %>
     </p>
   <% end %>
   </div>

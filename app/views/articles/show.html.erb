@@ -1,6 +1,8 @@
 <div class="wrap">
 	<p>
 	  <strong>Загаловок</strong></br>
+
+	  <%= image_tag @article.image.url(:medium) %>
 	  <%= @article.title %>
 	</p>
 
@@ -9,4 +11,7 @@
 	  <%= @article.text %>
 	</p>
 	</br><%= link_to "Back", articles_path %>
+	</br><%= link_to "Edit", edit_article_path %>
+	</br><%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+
 </div>
