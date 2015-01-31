@@ -2,15 +2,15 @@
 <% if @articles.size ==0 %>
 <%= link_to "New", new_article_path %>
 <% end %>
-<% @articles.all.each do |article| %>
+<% @articles.all.order('created_at DESC').each do |article| %>
 
   <div class="article">
     <%= image_tag article.image.url(:medium), class: "art_img" %>
     <div class="art_cont">
-      <h1><%= link_to article.title, article_path(article) %></h1>
+      <%= link_to article.title, article_path(article), class: "art_title" %>
       <p><%= article.text %></p>
-      <%= image_tag("eye_ico.png", class: "see_ico") %><div class="index">234</div>
-      <a href="#"><div class="butn_port">SEE MAKET</div></a>
+      <%= image_tag("eye_ico.png", class: "see_ico") %><div class="index"><%= article.see_count %></div>
+      <%= link_to "SEE MAKET", see_count_article_path(article), class: "butn_port" %>
     </div>
     <div class="line"></div>
   </div>

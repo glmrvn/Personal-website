@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
-	before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update]
-	before_filter :article_find, only: [:show, :edit, :update]
+	before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update, :see_count]
+	before_filter :article_find, only: [:show, :edit, :update, :see_count]
 #	before_filter :check_admin, only:  [:create, :new, :destroy]
 
 	def index
@@ -30,7 +30,6 @@ class ArticlesController < ApplicationController
 		    redirect_to @article
 		  else
 		    render 'edit'
-		    flash[:succes] = :message
 		  end
 	end
 
@@ -45,6 +44,11 @@ class ArticlesController < ApplicationController
 
 		redirect_to articles_path
 		flash[:succes] = "Article Deleted"
+	end
+
+	def see_count
+		@article.increment!(:see_count)
+		render 'show'		
 	end
 
 

@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  #get 'welcome/index'
-  root 'welcome#index'
-  resources :articles
 
+  root 'welcome#index'
+
+  resources :articles do
+    get :see_count, on: :member
+  end
+  
+  #get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
