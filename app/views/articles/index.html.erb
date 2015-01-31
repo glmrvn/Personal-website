@@ -5,12 +5,13 @@
 <% @articles.all.order('created_at DESC').each do |article| %>
 
   <div class="article">
-    <%= image_tag article.image.url(:medium), class: "art_img" %>
+   <%= image_tag article.image.url(:medium), class: "art_img" %>
     <div class="art_cont">
-      <%= link_to article.title, article_path(article), class: "art_title" %>
+      <%= link_to article.title, see_count_article_path(article), class: "art_title" %>
       <p><%= article.text %></p>
       <%= image_tag("eye_ico.png", class: "see_ico") %><div class="index"><%= article.see_count %></div>
-      <%= link_to "SEE MAKET", see_count_article_path(article), class: "butn_port" %>
+      <%= image_tag("clock_ico.png", class: "date_ico") %><div class="index"><%= article.created_at.strftime("%d %b %y") %></div>
+      <%= link_to "ПРОСМОТРЕТЬ МАКЕТ", see_count_article_path(article), class: "butn_port" %>
     </div>
     <div class="line"></div>
   </div>

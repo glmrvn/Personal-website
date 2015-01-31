@@ -1,12 +1,13 @@
 <div class="wrap">
-	<%= image_tag @article.image.url(:medium) %>
 	<h1><%= @article.title %></h1>
+	<%= link_to "Back", articles_path %>
+	<%= link_to "Edit", edit_article_path %>
+	<%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= image_tag @article.image.url(:original), class: "image_prev" %>
 
 	  <strong>Текст</strong></br>
 	  <%= @article.text %>
 	</p>
-	</br><%= link_to "Back", articles_path %>
-	</br><%= link_to "Edit", edit_article_path %>
-	</br><%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+	
 
 </div>

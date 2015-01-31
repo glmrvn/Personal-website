@@ -10,7 +10,7 @@ a.art_title { font-size: 32px; }
 	.art_cont {
 		width: 640px;
 		float: left;
-		margin: 100px 50px;
+		margin: 70px 50px;
 
 	a {
 		letter-spacing: -0.03em;
@@ -23,19 +23,20 @@ a.art_title { font-size: 32px; }
 	}
 
 	p {
-		font-size: 17px;
+		font-size: 16px;
 		line-height: 1.7;
 		width: 640px;
 		padding-bottom: 10px;
+		font-weight: 300;
 	}
+  }
 }
 
-}
+.art_img_container {width: 300px; height: 400px;}
 
 .art_img {
-	background: url(img1.jpg) no-repeat;
 	float: left;
-	margin: 126px 57px;
+	margin: 75px 57px;
 	overflow: hidden;
 	transition: all 1s ease;
 	&:hover { transform:scale(1.05); }
@@ -43,32 +44,39 @@ a.art_title { font-size: 32px; }
 }
 
 .see_ico { float: left; margin-top: 4px; }
+.date_ico { margin-left: 20px; float: left; }
 
 .index { float: left; margin-left: 14px; font-size: 14px; }
 
 a.butn_port:hover { color: #fff !important; }
 
 a.butn_port {
-	letter-spacing: 0.5em !important;
+	letter-spacing: 0.25em !important;
 	text-transform: uppercase !important;
 	text-align: center !important;
 	font-size: 14px !important;
 	padding-bottom: 10px;
+	font-weight: 400 !important;
 }
 
 .butn_port {
 	float: left;
 	padding: 11px 40px;
 	border: 1px solid #bbb;
-	max-width: 170px;	
-	margin: 52px -55px;
+	margin: 52px -155px;
 	color: #999;
 	transition: 0.4s;
 
 	&:hover {
-		background-color: #333;
-		border-color: #222;
+		background-color: #39444E;
+		border-color: #333;
 	}
 }
 
 .line { width: 1170px; height: 1px; background: #eee; float: left; }
+
+.image_prev {
+	max-width: 960px;
+	margin: 0 auto;
+	display: block;
+}
