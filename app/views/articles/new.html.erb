@@ -4,6 +4,7 @@
 
   <div class="input-group">
   <%= form_for :article, url: articles_path do |f| %>
+  <%= render 'shared/error_messages' %>
 
     <p>
       <%= f.label :title %><br>

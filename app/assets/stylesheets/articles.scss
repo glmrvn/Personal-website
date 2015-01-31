@@ -3,10 +3,12 @@
 .article {
 	color: #545454;
 	opacity: 0;
-	top: 100;
 	transition: opacity 0.4s ease-in-out 0.2s;
 
-	a, p { float: right; width: 640px; }
+.art_cont {
+	width: 640px;
+	float: left;
+	margin: 100px 50px;
 
 	a {
 		margin-top: 150px;
@@ -17,7 +19,8 @@
 		text-decoration: none;
 		padding-bottom: 30px;
 		color: #999;
-		&:hover { color: #444; transition: 0.9s; }
+		transition: 0.9s;
+		&:hover { color: #444; }
 	}
 
 	p {
@@ -27,13 +30,15 @@
 	}
 }
 
+}
+
 .art_img {
 	background: url(img1.jpg) no-repeat;
 	float: left;
-	margin: 57px;
+	margin: 126px 57px;
 }
 
-.see_ico { margin-left: 220px; float: left; }
+.see_ico { float: left; }
 
 .index { float: left; margin-left: 14px; font-size: 14px; }
 
@@ -46,7 +51,7 @@
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 14px;
-	margin: -120px 0;
+	margin: 52px -55px;
 	color: #999;
 }
 

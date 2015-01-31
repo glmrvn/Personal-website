@@ -31,7 +31,7 @@ a {	text-decoration: none;	font-size: 16px; }
 		color: #fff;
 		font-size: 25px;
 		font-weight: 300;
-		margin: 9px;
+		margin: 4px;
 		padding: 16px; 
 
 	}
@@ -64,8 +64,9 @@ a {	text-decoration: none;	font-size: 16px; }
 	    font-size: 15px;
 	    letter-spacing: -0.05em;
 	    text-decoration: none;
+	    transition: 0.9s;
 
-	    &:hover { color: #444; transition: 0.9s; }
+	    &:hover { color: #444; }
 	}
 }
 
@@ -77,6 +78,42 @@ a {	text-decoration: none;	font-size: 16px; }
 	margin-top: 10px;
 
 	a { float: left; }
+}
+/* flash messages styles */
+
+.alert {
+
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	color: #c09853;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	border-radius: 4px;
+}
+
+#error_explanation {
+	ul { 
+		li {
+			list-style-type: none;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+.alert-heading { color: inherit; }
+
+.alert-success {
+
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.alert-error {
+
+	color: #EA4242;
+	background-color: #FFCDD2;
+	border-color: #FFC2C2;
 }
 
 /* footer */

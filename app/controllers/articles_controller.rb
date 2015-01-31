@@ -5,20 +5,20 @@ class ArticlesController < ApplicationController
 #	before_filter :check_admin, only:  [:create, :new, :destroy]
 
 	def index
-
 	end
 
 	def new
 		@article = Article.new
-
 	end
 
 	def create
 		@article = Article.new(article_params)
 
-		@article.save
-		redirect_to @article
-		
+		if @article.save
+		  redirect_to @article
+	    else
+		  render 'new'
+		end		
 	end
 
 	def edit
@@ -26,9 +26,11 @@ class ArticlesController < ApplicationController
 
 	def update
 		  if @article.update(article_params)
+		  	flash[:succes] = "Article updated"
 		    redirect_to @article
 		  else
 		    render 'edit'
+		    flash[:succes] = :message
 		  end
 	end
 
@@ -38,9 +40,11 @@ class ArticlesController < ApplicationController
 
 	def destroy
 		@article = Article.find(params[:id])
+		@article.image = nil
 		@article.destroy
 
 		redirect_to articles_path
+		flash[:succes] = "Article Deleted"
 	end
 
 

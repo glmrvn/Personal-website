@@ -1,12 +1,7 @@
 <div class="wrap">
-	<p>
-	  <strong>Загаловок</strong></br>
+	<%= image_tag @article.image.url(:medium) %>
+	<h1><%= @article.title %></h1>
 
-	  <%= image_tag @article.image.url(:medium) %>
-	  <%= @article.title %>
-	</p>
-
-	<p>
 	  <strong>Текст</strong></br>
 	  <%= @article.text %>
 	</p>

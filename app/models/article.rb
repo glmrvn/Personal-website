@@ -10,4 +10,7 @@ class Article < ActiveRecord::Base
 	validates :text,  presence: true,
 	                  length: { minimum: 5 }
 
+	validates_attachment :image, presence: true,
+	                             size: { in: 0..10.megabytes }
+
 end
