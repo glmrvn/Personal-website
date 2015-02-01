@@ -4,7 +4,7 @@
 
 body {
 
-	font-family: "Raleway","Helvetica Neue", "Arial", sans-serif;
+	font-family: "Museo Sans Cyrl", "Helvetica Neue", "Arial", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background-color: #fff;
 	margin: 0; padding: 0;
@@ -25,17 +25,17 @@ a {	text-decoration: none;	font-size: 16px; }
 
 .menu {
 
-	height: 77px;
+	height: 60px;
 	background-color: #444;
 	transition: 1s;
 
 	#logo {
 		float: left;
 		color: #fff;
-		font-size: 25px;
-		font-weight: 300;
-		margin: 4px;
-		padding: 16px; 
+		font-size: 20px;
+		font-weight: 900;
+		margin: 7px;
+		padding: 9px; 
 
 	}
 
@@ -52,7 +52,7 @@ a {	text-decoration: none;	font-size: 16px; }
 		width: 28px; height: 28px;
 		background-color: #346998;
 		float: right;
-		margin-top: 18px;
+		margin-top: 14px;
 		margin-right: 20px;
 
 		p { text-align: center; margin-top: 4px; font-weight: 400; color: #fff; font-size: 16px; }
@@ -61,10 +61,10 @@ a {	text-decoration: none;	font-size: 16px; }
 		a {
 	    float: right;
 	    color: #fff;
-	    padding-top: 25px;
+	    padding-top: 20px;
 	    padding-right: 20px;
 	    font-weight: 400;
-	    font-size: 16px;
+	    font-size: 14px;
 	    letter-spacing: -0.03em;
 	    text-decoration: none;
 	    transition: 0.9s;
@@ -76,13 +76,15 @@ a {	text-decoration: none;	font-size: 16px; }
 #user_pic {
 
 	border-radius: 50px;
-	width: 50px; height: 50px;
+	width: 40px; height: 40px;
 	float: left;
 	margin-top: 10px;
 
 	a { float: left; }
 }
 /* flash messages styles */
+
+.alert_js { opacity: 0 !important; }
 
 .alert {
 
@@ -93,6 +95,13 @@ a {	text-decoration: none;	font-size: 16px; }
 	background-color: #fcf8e3;
 	border: 1px solid #fbeed5;
 	border-radius: 4px;
+	position: absolute;
+	text-align: center;
+	width: 600px;
+	margin: 0 249px;
+	z-index: 100;
+	opacity: 1;
+	transition: 8s;
 }
 
 #error_explanation {

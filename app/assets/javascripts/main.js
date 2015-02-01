@@ -4,6 +4,7 @@ $(window).load(function(){
     $('#titl').addClass('titl_fade_in');
     $('.article').addClass('article_in');
     $('.menu').addClass('menu_js');
+    $('.alert').addClass('alert_js');
 });
 
 
@@ -62,8 +63,19 @@ $(window).scroll(function() {
     });
 });
 
+$(window).scroll(function() {
+    $('.message').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+700) {
+            $(this).addClass("message_in");
+        }
+    });
+});
+
 $(document).ready(function(){
-    $('a[href^="#"], a[href^="."]').click( function(){ // если в href начинается с # или ., то ловим клик
+    $('a[href^="/#"], a[href^="/."]').click( function(){ // если в href начинается с # или ., то ловим клик
         var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
         $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 900); // анимируем скроолинг к элементу scroll_el

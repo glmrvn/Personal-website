@@ -1,5 +1,5 @@
 /* применение классов для эффектов на главной странице */
-.titl_fade_in, .pic_anim, .iphones_in, .column_in, .ios_apps_in, .web_apps_in, .makets_in, .article_in { opacity: 1 !important; }
+.titl_fade_in, .pic_anim, .iphones_in, .column_in, .ios_apps_in, .web_apps_in, .makets_in, .article_in, .message_in { opacity: 1 !important; }
 
 /* первый экран */
 
@@ -194,6 +194,11 @@
 
 /* 5-ый экран */
 
+.message {
+	opacity: 0;
+	transition: opacity .9s ease-in-out 0.2s ;
+}
+
 #fifth_screen {
 	margin-top: -32px;
 
@@ -204,6 +209,7 @@
 		text-align: center;
 		padding-top: 80px;
 		padding-bottom: 20px;
+		letter-spacing: -0.03em;
 	}
 }
 

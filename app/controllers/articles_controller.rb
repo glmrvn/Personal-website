@@ -1,8 +1,9 @@
 class ArticlesController < ApplicationController
 
+#	http_basic_authenticate_with name: "admin", password: "admin", only: [:edit, :new, :create, :destroy]
+
 	before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update, :see_count]
 	before_filter :article_find, only: [:show, :edit, :update, :see_count]
-#	before_filter :check_admin, only:  [:create, :new, :destroy]
 
 	def index
 	end
@@ -34,7 +35,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
-		#render text: params[:article].inspect
 	end
 
 	def destroy
@@ -43,30 +43,29 @@ class ArticlesController < ApplicationController
 		@article.destroy
 
 		redirect_to articles_path
-		flash[:succes] = "Article Deleted"
+		flash[:error] = "Article Deleted"
 	end
 
 	def see_count
 		@article.increment!(:see_count)
-		render 'show'		
+		render 'show'
 	end
-
 
 
 	private
 
 	def all_articles
-		@articles  = Article.all		
+		@articles  = Article.all
 	end
 
 	def article_find
-		@article = Article.find(params[:id])		
+		@article = Article.find(params[:id])
 	end
 
 	def article_params
 		params.require(:article).permit( :title,
 			                             :text,
-			                             :image )		
+			                             :image )
 	end
 
 end

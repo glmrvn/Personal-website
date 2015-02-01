@@ -7,10 +7,7 @@ class Article < ActiveRecord::Base
     
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
-	validates :title, presence: true,
-	                  length: { minimum: 5 }
-
-	validates :text,  presence: true,
+	validates :title, :text, presence: true,
 	                  length: { minimum: 5 }
 
 	validates_attachment :image, presence: true,
