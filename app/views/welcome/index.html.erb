@@ -3,12 +3,13 @@
 	  <div id="header_bg_overlay">
 	    <div class="wrap">
 		    <div id="titl">
-			    <h1>Вам нужен сайт?</h1>
+
+			    <h1>Web-design</h1>
 			    <p>Разработаю дизайн для вашего проекта в самые короткие сроки. Качественно, не дорого...</p>
 			</div>
+
 		    <%= image_tag("window.png", id: "window") %>
 		</div>
-
 	  </div>
 	</div>
 
@@ -70,7 +71,7 @@
 	    		<li>Minim veniam, quis nostrud exerci tation ullamcorpe</li>
 	    		<li>Ad minim veniam, quis nostrud exerci tation ullamcorpe</li>
 	    	</ul>
-	    	<a href="#second_screen"><div class="butn">SEE MAKET</div></a>
+	    	<a href="/articles"><div class="butn">ПРОСМОТРЕТЬ</div></a>
 	    </div>
 	  </div>
 	</div>
@@ -82,15 +83,39 @@
 	    	<%= image_tag("web_ico.png", class: "icon") %>
 	    	<h1>Web design</h1>
 	    	<ul>
-	    		<li>Enim ad minim veniam, quis nostrud exerci tation ullamcorpe</li>
-	    		<li>Veniam, quis nostrud exerci tation ullamcorpe</li>
-	    		<li>Minim veniam, quis nostrud exerci tation ullamcorpe</li>
-	    		<li>Ad minim veniam, quis nostrud exerci tation ullamcorpe</li>
+	    		<li>Современный дизайн. Простота восприятия информации</li>
+	    		<li>Качественная и читаемая типография</li>
+	    		<li>Адаптивность под retina дисплеи, svg графика</li>
+	    		<li>Мобильные версии для всех устройств</li>
 	    	</ul>
-	    	<a href="#second_screen"><div class="butn">SEE MORE</div></a>
+	    	<a href="/articles"><div class="butn">ПРОСМОТРЕТЬ</div></a>
 	    </div>
 	    <%= image_tag("makets.png", id: "makets") %>
 	  </div>
+	</div>
+
+	<div id="fifth_screen">
+	  <div id="fifth_bg">
+	    <div id="fifth_bg_overlay">
+	      <div class="wrap">
+
+	        <h1>Хотите связаться со мной?</h1>
+
+	        <%= form_for :message, url: messages_path do |f| %>
+
+		    <p><%= f.text_field :name,  :placeholder => 'Введите номер телефона или ваш email...', class: "form" %></p>
+		   
+		    <p><%= f.text_area :text, :placeholder => 'Введите ваш вопрос, сообщение или отзыв :)', class: "form" %></p>
+
+		    <%= f.submit "ОТПРАВИТЬ"%>
+
+	        <% end %>
+
+	      </div>
+
+	    </div>
+	   </div>
+
 	</div>
 
 </content>

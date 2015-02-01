@@ -1,7 +1,8 @@
 class Article < ActiveRecord::Base
 
-	has_attached_file :image, :styles => { :medium => "" },
-	                          :convert_options => { :medium => "-gravity north -thumbnail 300x400^ -extent 300x400"},
+	has_attached_file :image, :styles => { :thumb => [ "", :jpg ],
+		                                   :medium => [ "960x9000", :jpg] },
+	                          :convert_options => { :thumb => "-gravity north -thumbnail 300x400^ -extent 300x400"},
                               :default_url => "/images/:style/missing.png"
     
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/

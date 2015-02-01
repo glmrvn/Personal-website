@@ -4,7 +4,7 @@
 /* первый экран */
 
 #header_bg {
-	background: url(https://dl.dropboxusercontent.com/u/1677902/header_bg.jpg);
+	background: url(header_bg.jpg);
 	width: 100%;
 
 	#header_bg_overlay {
@@ -26,7 +26,8 @@
 
 	p {
 		font-size: 22px;
-		font-weight: 300;	
+		font-weight: 300;
+		margin-top: -30px;
 	}
 
 
@@ -34,7 +35,7 @@
 		margin-top: 150px;
 		font-size: 80px;
 		font-weight: 100;
-		letter-spacing: -0.03em;
+		letter-spacing: -0.08em;
 		text-align: center;
 		color: #fff;
 	}
@@ -188,5 +189,72 @@
 	}
 
 	a { color: #fff; }
+
+}
+
+/* 5-ый экран */
+
+#fifth_screen {
+	margin-top: -32px;
+
+	h1 {
+		color: #fff;
+		font-weight: 100;
+		font-size: 48px;
+		text-align: center;
+		padding-top: 80px;
+		padding-bottom: 20px;
+	}
+}
+
+#fifth_bg {
+
+	background: url(header_bg.jpg);
+}
+#fifth_bg_overlay{
+
+	background-color: #000;
+	opacity: 0.85;
+	height: 634px;
+}
+.form {
+
+	height: 40px;
+	margin: 0 auto;
+	display: block;
+	font-size: 15px;
+	color: #444;
+	border: none;
+}
+
+input#message_name { 
+
+	padding-left: 15px;
+	width: 660px;
+		
+}
+
+textarea#message_text {
+	max-height: 216px;
+	height: 216px;
+	width: 647px;
+	max-width: 647px;
+	padding: 15px;
+	font-family: 'Raleway';
+	font-weight: 500;
+	font-size: 15px;
+}
+
+input[type="submit"] {
+	margin: 50px auto;
+	padding: 11px 40px;
+	border: 1px solid #fff;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 14px;
+	display: block;
+	color: #fff;
+	background-color: #000;
 
 }

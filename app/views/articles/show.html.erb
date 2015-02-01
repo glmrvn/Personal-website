@@ -1,13 +1,23 @@
 <div class="wrap">
+  <div class="art_cont">
 	<h1><%= @article.title %></h1>
+	
+	<div class="art_indx">
+        <%= image_tag("eye_ico.png", class: "see_ico") %><div class="index"><%= @article.see_count %></div>
+        <%= image_tag("clock_ico.png", class: "date_ico") %><div class="index"><%= @article.created_at.strftime("%d %b %y") %></div>
+    </div>
+
+    <div class="admin_btns">
+
 	<%= link_to "Back", articles_path %>
 	<%= link_to "Edit", edit_article_path %>
 	<%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
-	<%= image_tag @article.image.url(:original), class: "image_prev" %>
 
-	  <strong>Текст</strong></br>
-	  <%= @article.text %>
-	</p>
-	
+	</div>
+
+	<%= image_tag @article.image.url(:medium), class: "image_prev" %>
+
+	<p><%= @article.text %></p>
+  </div>
 
 </div>

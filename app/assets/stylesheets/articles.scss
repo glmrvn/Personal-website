@@ -1,21 +1,18 @@
 /* styles for portfolio page */
 
-a.art_title { font-size: 32px; }
+a.art_title { font-size: 15px; }
 
 .article {
 	color: #545454;
 	opacity: 0;
 	transition: opacity 0.4s ease-in-out 0.2s;
-
-	.art_cont {
-		width: 640px;
-		float: left;
-		margin: 70px 50px;
+	width: 290px;
+	float: left;
+	text-align: center;
 
 	a {
-		letter-spacing: -0.03em;
-		font-weight: 300;
-		text-align: left;
+		letter-spacing: -0.02em;
+		font-weight: 600;
 		text-decoration: none;
 		color: #999;
 		transition: 0.9s;
@@ -29,54 +26,43 @@ a.art_title { font-size: 32px; }
 		padding-bottom: 10px;
 		font-weight: 300;
 	}
-  }
 }
-
-.art_img_container {width: 300px; height: 400px;}
 
 .art_img {
-	float: left;
-	margin: 75px 57px;
-	overflow: hidden;
-	transition: all 1s ease;
+	margin-top: 30px;
+	transition: all 0.35s ease;
+	margin-bottom: 30px;
+	max-width: 283px;
 	&:hover { transform:scale(1.05); }
+
 	
 }
+.admin_btns {
+	float: left;
+	padding-right: 10px;
+	margin-left: 281px;
+	margin-bottom: 40px;
+}
 
-.see_ico { float: left; margin-top: 4px; }
+.art_cont {
+	h1 {
+		text-align: center;
+		font-weight: 400;
+		color: #666;
+		letter-spacing: -0.04em;
+	}
+}
+.see_ico { float: left; margin-left: 500px; }
+
 .date_ico { margin-left: 20px; float: left; }
 
 .index { float: left; margin-left: 14px; font-size: 14px; }
 
-a.butn_port:hover { color: #fff !important; }
-
-a.butn_port {
-	letter-spacing: 0.25em !important;
-	text-transform: uppercase !important;
-	text-align: center !important;
-	font-size: 14px !important;
-	padding-bottom: 10px;
-	font-weight: 400 !important;
-}
-
-.butn_port {
-	float: left;
-	padding: 11px 40px;
-	border: 1px solid #bbb;
-	margin: 52px -155px;
-	color: #999;
-	transition: 0.4s;
-
-	&:hover {
-		background-color: #39444E;
-		border-color: #333;
-	}
-}
-
-.line { width: 1170px; height: 1px; background: #eee; float: left; }
+.line { width: 1170px; height: 1px; background: #fff; float: left; margin-top: 30px; margin-bottom: 30px; }
 
 .image_prev {
 	max-width: 960px;
 	margin: 0 auto;
 	display: block;
+	margin-top: 30px;
 }

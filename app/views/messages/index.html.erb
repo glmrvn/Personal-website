@@ -1,0 +1,16 @@
+<div class="wrap">
+  <h1>Сообщения</h1>
+  <table>
+    <tr>
+	  	<th>Имя или телефон</th>
+	  	<th>Сообщение</th>
+	</tr>
+	
+  <% @messages.all.each do |message| %>
+	<tr>
+		<td><%= message.name %></td>
+		<td><%= message.text %></td>
+	</tr>
+	<% end %>
+	</table>
+</div>

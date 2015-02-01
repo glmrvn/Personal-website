@@ -9,17 +9,15 @@
 </head>
 <body>
   <header>
-    <div id="menu">
+    <div class="menu">
     	<div class="wrap">
 	    	<%= image_tag("admin.png", id: "user_pic") %>
-	    	<%= link_to "glmrvn", root_path, id: "logo" %>
+	    	<%= link_to "glmrvn+", root_path, id: "logo" %>
         <nav>
-	        <%= link_to "Войти", "#" %>
-	        <div id="line"></div>
 	        <div id="port_size"><p><%= @articles.size %></p></div>
 	        <%= link_to "Портфолио", articles_path %>     
 	        <%= link_to "Контакты", "#" %>
-	      	<%= link_to "Связаться со мной", "#" %>
+	      	<%= link_to "Связаться со мной", "#fifth_screen" %>
         </nav>
       </div>
     </div>
