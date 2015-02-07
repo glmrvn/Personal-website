@@ -1,7 +1,5 @@
 class MessagesController < ApplicationController
 
-	# http_basic_authenticate_with name: "admin", password: "admin", except: [:new, :create]
-
 	def new
 		@message = Message.new		
 	end
@@ -21,7 +19,6 @@ class MessagesController < ApplicationController
 
 	def index
 		@messages = Message.all
-		@articles  = Article.all
 	end
 
 	def show

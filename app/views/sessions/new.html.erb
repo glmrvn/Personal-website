@@ -2,7 +2,8 @@
 
 <h1>Вход в систему</h1>
 
-  <div class="form_sign_in">
+<div class="row">
+  <div class="span6 offset3">
     <%= form_for(:session, url: sessions_path) do |f| %>
 
       <%= f.label :email %>
@@ -11,8 +12,8 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.submit "Sign in" %>
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     <% end %>
 
-  </div>
+  </div></div>
 </div>

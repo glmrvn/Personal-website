@@ -1,19 +1,29 @@
 <div class="wrap">
-  <% if @articles.size ==0 %>
-    <%= link_to "New", new_article_path %>
+  <% if signed_in? %>
+    <%= link_to "New", new_article_path %><br>
   <% end %>
-
+  <div class="line"></div>
+  
 <% @articles.all.order('created_at DESC').each do |article| %>
 
   <div class="article">
 
-    <%= link_to image_tag(article.image.url(:thumb), class: "art_img"), see_count_article_path(article) %>
+    <div class="art_img_container">
+      <%= link_to image_tag(article.image.url(:thumb), class: "art_img"), see_count_article_path(article) %>
+    </div>
 
-    <%= link_to article.title, see_count_article_path(article), class: "art_title" %>
+    <div class="a_to_article">
+
+      <%= link_to article.title, see_count_article_path(article), class: "art_title" %>
+
+    </div>
 
   </div>
 
 <% end %>
+<div class="pagination1">
+<%= will_paginate %>
+</div>
 
   <div class="line"></div>
 </div>

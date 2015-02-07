@@ -1,14 +1,18 @@
 /* нахуй этот бутстрап */
-/*@import "bootstrap-sprockets";
-@import "bootstrap";*/
+/*@import "bootstrap-sprockets";*/
+@import "bootstrap";
+
+html {
+	position: relative;
+	min-height: 100%;
+}
 
 body {
 
-	font-family: "Helvetica", "Arial", sans-serif;
+	font-family: 'Roboto', "Arial", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background-color: #fff;
 	margin: 0; padding: 0;
-	
 }
 
 table {	background-color: #fff;	border-radius: 3px; }
@@ -136,10 +140,10 @@ footer {
 	background-color: #000;
 	color: #fff;
 	font-size: 14px;
-	clear: both;
+	position: absolute;
+	bottom: 0;
 
 	#copyright {
-		float: left;
 		margin-top: 25px;
 		text-align: center;
 		width: 1170px;

@@ -1,23 +1,29 @@
 /* styles for portfolio page */
 
-a.art_title { font-size: 15px; }
+a.art_title {
+
+	font-size: 15px;
+	letter-spacing: -0.02em;
+	font-weight: 500;
+	text-decoration: none;
+	color: #999;
+	transition: 0.9s;
+	display: block;
+
+	&:hover { color: #444; text-decoration: none; }
+
+}
+
+.a_to_article { margin-top: 20px; margin-bottom: 20px;}
 
 .article {
 	color: #545454;
 	opacity: 0;
 	transition: opacity 0.4s ease-in-out 0.2s;
-	width: 290px;
 	float: left;
 	text-align: center;
-
-	a {
-		letter-spacing: -0.02em;
-		font-weight: 500;
-		text-decoration: none;
-		color: #999;
-		transition: 0.9s;
-		&:hover { color: #444; }
-	}
+	margin: 10px;
+	float: left;
 
 	p {
 		font-size: 16px;
@@ -27,16 +33,19 @@ a.art_title { font-size: 15px; }
 		font-weight: 300;
 	}
 }
+.art_img_container {
+	overflow: hidden;
+}
+
+.art_img_container:hover .art_img { transform: scale(1.15); }
 
 .art_img {
-	margin-top: 30px;
-	transition: all 0.35s ease;
-	margin-bottom: 30px;
 	max-width: 243px;
-	&:hover { transform:scale(1.05); }
-
+	transition: all 1.35s ease;
+	margin: 0 !important;
 	
 }
+
 .admin_btns {
 	float: left;
 	padding-right: 10px;
@@ -47,7 +56,7 @@ a.art_title { font-size: 15px; }
 .art_cont {
 	h1 {
 		text-align: center;
-		font-weight: 400;
+		font-weight: 900;
 		color: #666;
 		letter-spacing: -0.04em;
 		padding-top: 30px;
@@ -66,5 +75,17 @@ a.art_title { font-size: 15px; }
 	margin: 0 auto;
 	display: block;
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 80px;
+}
+
+.pagination1 {
+	display: table;
+	margin: 70px auto;
+	border-radius: 4px;
+	bottom: 100px;
+	clear: both;
+
+	a {
+	}
+
 }

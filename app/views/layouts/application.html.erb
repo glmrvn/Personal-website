@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>Glmrvn</title>
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,100,700' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -14,9 +13,7 @@
 	    	<%= image_tag("admin.png", id: "user_pic") %>
 	    	<%= link_to "glmrvn", root_path, id: "logo" %>
         <nav>
-	        <div id="port_size"><p><%= @articles.size %></p></div>
 	        <%= link_to "Портфолио", articles_path %>     
-	        <%= link_to "Контакты", "#" %>
 	      	<%= link_to "Связаться со мной", root_path( :anchor => 'fifth_screen' ) %>
           <% if signed_in? %>
             <%= link_to "Выйти", signout_path, method: "delete" %>

@@ -1,11 +1,10 @@
 class ArticlesController < ApplicationController
 
-#	http_basic_authenticate_with name: "admin", password: "admin", only: [:edit, :new, :create, :destroy]
-
 	before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update, :see_count]
 	before_filter :article_find, only: [:show, :edit, :update, :see_count]
 
 	def index
+		@articles = Article.paginate(page: params[:page], :per_page => 8)
 	end
 
 	def new
@@ -26,12 +25,12 @@ class ArticlesController < ApplicationController
 	end
 
 	def update
-		  if @article.update(article_params)
-		  	flash[:succes] = "Article updated"
-		    redirect_to @article
-		  else
-		    render 'edit'
-		  end
+		if @article.update(article_params)
+		 flash[:succes] = "Article updated"
+		  redirect_to @article
+		else
+		  render 'edit'
+		end
 	end
 
 	def show
