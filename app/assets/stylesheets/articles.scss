@@ -32,7 +32,7 @@ a.art_title { font-size: 15px; }
 	margin-top: 30px;
 	transition: all 0.35s ease;
 	margin-bottom: 30px;
-	max-width: 283px;
+	max-width: 243px;
 	&:hover { transform:scale(1.05); }
 
 	
@@ -50,6 +50,7 @@ a.art_title { font-size: 15px; }
 		font-weight: 400;
 		color: #666;
 		letter-spacing: -0.04em;
+		padding-top: 30px;
 	}
 }
 .see_ico { float: left; margin-left: 500px; }
@@ -65,4 +66,5 @@ a.art_title { font-size: 15px; }
 	margin: 0 auto;
 	display: block;
 	margin-top: 30px;
+	margin-bottom: 30px;
 }

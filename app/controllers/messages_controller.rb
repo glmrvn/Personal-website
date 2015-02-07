@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 
-	http_basic_authenticate_with name: "admin", password: "admin", except: [:new, :create]
+	# http_basic_authenticate_with name: "admin", password: "admin", except: [:new, :create]
 
 	def new
 		@message = Message.new		

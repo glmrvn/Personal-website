@@ -18,6 +18,10 @@
 	        <%= link_to "Портфолио", articles_path %>     
 	        <%= link_to "Контакты", "#" %>
 	      	<%= link_to "Связаться со мной", root_path( :anchor => 'fifth_screen' ) %>
+          <% if signed_in? %>
+            <%= link_to "Выйти", signout_path, method: "delete" %>
+          <% end %>
+
         </nav>
       </div>
     </div>

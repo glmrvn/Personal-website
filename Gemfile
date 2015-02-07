@@ -6,6 +6,7 @@ gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem "paperclip", "~> 4.2"
+gem 'bcrypt-ruby'
 
 gem 'devise'
 gem 'rails_12factor'

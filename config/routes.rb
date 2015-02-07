@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   resources :articles do
     get :see_count, on: :member
   end
-    resources :messages
+  
+    resources :messages, only: [:new, :create, :destroy]
+    resources :sessions, only: [:new, :create, :destroy]
+
+    match '/signin',  to: 'sessions#new',     via: 'get'
+    match '/signout', to: 'sessions#destroy', via: 'delete'
   
   #get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.
