@@ -8,10 +8,11 @@ Rails.application.routes.draw do
 
     resources :sessions, only: [:new, :create, :destroy]
     resources :messages
+    resources :user
 
     match '/signin',  to: 'sessions#new',     via: 'get'
     match '/signout', to: 'sessions#destroy', via: 'delete'
-    match '/messages', to: 'messages#index', via: 'get'
+    match '/admin', to: 'user#show', via: 'get'
   
   #get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,18 +1,19 @@
-<div class="wrap">
+<div class="wrap_480">
+<div class="line"></div>
 
-<h1>Вход в систему</h1>
+<h2>Вход в систему</h2>
 
-<div class="row">
+<div class="form-group">
   <div class="span6 offset3">
     <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.label "Email:" %>
+      <%= f.text_field :email, class: "form-control" %>
 <br>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.label "Пароль:" %>
+      <%= f.password_field :password, class: "form-control"%>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Войти", class: "btn btn-large btn-primary" %>
     <% end %>
 
   </div></div>

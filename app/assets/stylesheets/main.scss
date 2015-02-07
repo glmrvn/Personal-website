@@ -22,6 +22,7 @@ th,td { padding: 7px; }
 a {	text-decoration: none;	font-size: 16px; }
 
 .wrap {	margin: 0 auto;	width: 1170px; }
+.wrap_480 { margin: 0 auto; width: 480px; }
 
  /* header menu */
 
@@ -105,7 +106,7 @@ a {	text-decoration: none;	font-size: 16px; }
 	margin: 0 249px;
 	z-index: 100;
 	opacity: 1;
-	transition: 8s;
+	transition: 3s;
 }
 
 #error_explanation {

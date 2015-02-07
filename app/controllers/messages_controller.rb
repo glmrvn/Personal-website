@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
 
+	before_filter :signed_user,  only: [:index, :destroy, :show]
+
 	def new
 		@message = Message.new		
 	end
@@ -36,5 +38,9 @@ class MessagesController < ApplicationController
     def message_params
 	  params.require(:message).permit( :name,
 			                           :text)
+	end
+
+	def signed_user
+		redirect_to signin_url, notice: "Пожалуйста пройдите авторизацию" unless signed_in?		
 	end
 end

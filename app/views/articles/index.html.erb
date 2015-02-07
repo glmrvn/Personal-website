@@ -2,8 +2,9 @@
   <% if signed_in? %>
     <%= link_to "New", new_article_path %><br>
   <% end %>
+
   <div class="line"></div>
-  
+
 <% @articles.all.order('created_at DESC').each do |article| %>
 
   <div class="article">
@@ -22,7 +23,7 @@
 
 <% end %>
 <div class="pagination1">
-<%= will_paginate %>
+<%= will_paginate @article%>
 </div>
 
   <div class="line"></div>

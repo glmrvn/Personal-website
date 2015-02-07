@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
 
 	before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update, :see_count]
 	before_filter :article_find, only: [:show, :edit, :update, :see_count]
+	before_filter :signed_user,  only: [:edit, :destroy]
 
 	def index
 		@articles = Article.paginate(page: params[:page], :per_page => 8)
@@ -41,7 +42,7 @@ class ArticlesController < ApplicationController
 		@article.image = nil
 		@article.destroy
 
-		redirect_to articles_path
+		redirect_to user_path
 		flash[:error] = "Article Deleted"
 	end
 
@@ -65,6 +66,10 @@ class ArticlesController < ApplicationController
 		params.require(:article).permit( :title,
 			                             :text,
 			                             :image )
+	end
+
+	def signed_user
+		redirect_to signin_url, notice: "Please sign in." unless signed_in?		
 	end
 
 end

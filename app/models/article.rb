@@ -13,4 +13,12 @@ class Article < ActiveRecord::Base
 	validates_attachment :image, presence: true,
 	                             size: { in: 0..15.megabytes }
 
+	def previous_post
+	  self.class.where("created_at < ?", created_at).order(created_at: :desc).first
+	end
+
+	def next_post
+	  self.class.where("created_at > ?", created_at).order(created_at: :asc).first
+	end
+
 end

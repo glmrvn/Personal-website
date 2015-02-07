@@ -13,12 +13,15 @@
 	    	<%= image_tag("admin.png", id: "user_pic") %>
 	    	<%= link_to "glmrvn", root_path, id: "logo" %>
         <nav>
-	        <%= link_to "Портфолио", articles_path %>     
-	      	<%= link_to "Связаться со мной", root_path( :anchor => 'fifth_screen' ) %>
+
           <% if signed_in? %>
             <%= link_to "Выйти", signout_path, method: "delete" %>
+            <%= link_to "Профиль", '/admin' %>
           <% end %>
 
+	        <%= link_to "Портфолио", articles_path %>     
+          <%= link_to "Связаться со мной", root_path( :anchor => 'fifth_screen' ) %>
+	      	<%= link_to "Главная", root_path %>
         </nav>
       </div>
     </div>
