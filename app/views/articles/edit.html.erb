@@ -1,5 +1,5 @@
 <div class="wrap">
-
+<div class="line"></div><div class="line"></div>
   <h1>Изменить сообщение</h1>
 
       <%= image_tag @article.image.url(:thumb) %>
@@ -21,7 +21,7 @@
    
     <p>
       <%= f.file_field :image %><br><br>
-      <%= f.submit "Сохранить изменения" %>
+      <%= f.submit "Сохранить изменения", class: "btn btn-large btn-primary"%>
     </p>
   <% end %>
   </div>

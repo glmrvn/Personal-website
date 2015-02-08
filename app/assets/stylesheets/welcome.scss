@@ -6,11 +6,14 @@
 #header_bg {
 	background: url(header_bg.jpg);
 	width: 100%;
+	transition: 9.3s;
+
+	&:hover { transform: scale(1.015); }
 
 	#header_bg_overlay {
 		width: 100%;
 		height: 778px;
-		background: rgba(0,0,0,0.7);
+		background: rgba(0,0,0,0.4);
 	}
 }
 
@@ -23,6 +26,7 @@
 	width: 1170px;
 	opacity: 0;
 	transition: opacity 2s ease-in-out 0.2s;
+	margin-top: -750px;
 
 	p {
 		font-size: 22px;
@@ -49,6 +53,8 @@
 	box-shadow: 0px 2px 167px 5px rgba(0,0,0,0.75);
 	transition: opacity 2s ease-in-out 0.2s;
 	opacity: 0;
+	margin-top: -400px;
+	position: relative;
 }
 
 
@@ -57,6 +63,7 @@
 #second_screen {
 	background-color: #1A1B1F;
 	width: 100%; height: 488px;
+	margin-top: -379px;
 }
 
 /* текстовые блоки */
@@ -115,7 +122,7 @@
 	opacity: 0;
 
 	h1 {
-		padding-left: 150px;
+		padding-left: 170px;
 		letter-spacing: -0.03em;
 		font-weight: 300;
 		font-size: 32px;
@@ -140,7 +147,10 @@
 	opacity: 0;
 	transition: opacity .9s ease-in-out 0.2s;
 }
-
+input.button {
+	background: none;
+	border: 1px solid #fff;
+}
 .butn {
 
 	padding: 11px 40px;
@@ -150,6 +160,7 @@
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 14px;
+	margin-left: 23px;
 
 }
 
@@ -174,11 +185,11 @@
 	height: 342px;
 
 	h1 {
-		padding-left: 150px;
+		padding-left: 170px;
 		letter-spacing: -0.03em;
 		font-weight: 300;
 		font-size: 32px;
-		padding-top: 18px;
+		padding-top: 38px;
 	}
 
 	ul {
@@ -219,8 +230,7 @@
 }
 #fifth_bg_overlay{
 
-	background-color: #000;
-	opacity: 0.85;
+	background: rgba(0, 0, 0, 0.6);
 	height: 634px;
 }
 .form {
@@ -246,7 +256,7 @@ textarea#message_text {
 	width: 647px;
 	max-width: 647px;
 	padding: 15px;
-	font-family: 'Raleway';
+	font-family: 'Roboto';
 	font-weight: 500;
 	font-size: 15px;
 }
@@ -254,13 +264,12 @@ textarea#message_text {
 input[type="submit"] {
 	margin: 50px auto;
 	padding: 11px 40px;
-	border: 1px solid #fff;
+
 	letter-spacing: 0.5em;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 14px;
 	display: block;
 	color: #fff;
-	background-color: #000;
 
 }

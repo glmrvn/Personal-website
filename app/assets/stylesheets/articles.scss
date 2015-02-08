@@ -16,14 +16,17 @@ a.art_title {
 
 .a_to_article { margin-top: 20px; margin-bottom: 20px;}
 
+.article_in { -webkit-filter: blur(0px) !important; }
+
 .article {
 	color: #545454;
 	opacity: 0;
-	transition: opacity 0.4s ease-in-out 0.2s;
+	transition: 0.9s;
 	float: left;
 	text-align: center;
 	margin: 24px;
 	float: left;
+	-webkit-filter: blur(7px);
 
 	p {
 		font-size: 16px;
@@ -33,15 +36,13 @@ a.art_title {
 		font-weight: 300;
 	}
 }
-.art_img_container {
-	overflow: hidden;
-}
+.art_img_container { overflow: hidden; }
 
 .art_img_container:hover .art_img { transform: scale(1.15); }
 
 .art_img {
 	max-width: 243px;
-	transition: all 1.35s ease;
+	transition: all 2.35s ease;
 	margin: 0 !important;
 	
 }
@@ -59,7 +60,8 @@ a.art_title {
 		font-weight: 900;
 		color: #666;
 		letter-spacing: -0.04em;
-		padding-top: 30px;
+		margin: 0;
+
 	}
 }
 .see_ico { float: left; margin-left: 500px; }
@@ -80,7 +82,7 @@ a.art_title {
 
 .pagination1 {
 	display: table;
-	margin: 70px auto;
+	margin: -20px auto;
 	border-radius: 4px;
 	bottom: 100px;
 	clear: both;

@@ -10,13 +10,15 @@
   <header>
     <div class="menu">
     	<div class="wrap">
-	    	<%= image_tag("admin.png", id: "user_pic") %>
-	    	<%= link_to "glmrvn", root_path, id: "logo" %>
         <nav>
+	    	<%=link_to (image_tag("glmrvn.png", id: "user_pic")), root_path %>
 
           <% if signed_in? %>
             <%= link_to "Выйти", signout_path, method: "delete" %>
-            <%= link_to "Профиль", '/admin' %>
+            <%= link_to "Админ", '/admin' %>
+            <div id="line"></div>
+          <% else %>
+            <%= link_to "Войти", signin_path %>  
           <% end %>
 
 	        <%= link_to "Портфолио", articles_path %>     

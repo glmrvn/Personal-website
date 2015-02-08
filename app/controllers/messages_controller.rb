@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
 	def destroy
 		@message = Message.find(params[:id])
 		@message.destroy
-		redirect_to messages_path
+		redirect_to user_path
 		flash[:success] = "Сообщение удалено"	
 	end
 

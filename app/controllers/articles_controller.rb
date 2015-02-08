@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
 
 	def update
 		if @article.update(article_params)
-		 flash[:succes] = "Article updated"
+		  flash[:succes] = "Article updated"
 		  redirect_to @article
 		else
 		  render 'edit'
@@ -35,6 +35,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		@article.increment!(:see_count)
 	end
 
 	def destroy
@@ -47,8 +48,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def see_count
-		@article.increment!(:see_count)
-		render 'show'
 	end
 
 

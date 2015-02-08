@@ -1,17 +1,16 @@
 <content>
 	<div id="header_bg" >
-	  <div id="header_bg_overlay">
-	    <div class="wrap">
-		    <div id="titl">
+	  <div id="header_bg_overlay"></div>
 
-			    <h1>Welcome</h1>
+	</div>
+		    <div class="wrap">
+		    <div id="titl">
+			    <h1>Alex Dyakov</h1>
 			    <p>Разработаю дизайн для вашего проекта в самые короткие сроки. Качественно, не дорого...</p>
 			</div>
 
 		    <%= image_tag("window.png", id: "window") %>
 		</div>
-	  </div>
-	</div>
 
 	<div id="second_screen">
 
@@ -66,10 +65,10 @@
 	    	<%= image_tag("ios_ico.png", class: "icon") %>
 	    	<h1>iOS Application design</h1>
 	    	<ul>
-	    		<li>Enim ad minim veniam, quis nostrud exerci tation ullamcorpe</li>
-	    		<li>Veniam, quis nostrud exerci tation ullamcorpe</li>
-	    		<li>Minim veniam, quis nostrud exerci tation ullamcorpe</li>
-	    		<li>Ad minim veniam, quis nostrud exerci tation ullamcorpe</li>
+	    		<li>Без лишних перегружающих и путающих деталей</li>
+	    		<li>Только современные тенденции в дизайне</li>
+	    		<li>Дружелюбным к пользователям интерфейс и функции</li>
+	    		<li>Понятные и гибкие настройки приложения</li>
 	    	</ul>
 	    	<a href="/articles"><div class="butn">ПРОСМОТРЕТЬ</div></a>
 	    </div>
@@ -109,7 +108,7 @@
 		   
 		    <p><%= f.text_area :text, :placeholder => 'Введите ваш вопрос, сообщение или отзыв :)', class: "form" %></p>
 
-		    <%= f.submit "ОТПРАВИТЬ"%>
+		    <%= f.submit "ОТПРАВИТЬ", class: "button" %>
 
 	        <% end %>
 	        
