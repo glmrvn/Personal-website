@@ -17,22 +17,28 @@ a.art_title {
 
 .a_to_article { margin-top: 20px; margin-bottom: 20px;}
 
-.article_in { opacity: 1 !important; }
-
 .article_bg {
 	background: url('art_bg.png') no-repeat;
 	width: 272px;
 	height: 344px;
 }
 
+.article_in {
+	transform: translateY(0px) !important;
+	opacity: 1 !important;
+}
+
 .article {
 	color: #545454;
 	opacity: 0;
-	transition: 0.9s;
 	float: left;
 	text-align: center;
 	margin: 0px 55px -20px 55px;
 	float: left;
+	transform: translateY(15px);
+	transition-property: opacity,transform;
+	transition-duration: .6s;
+	transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
 
 	p {
 		font-size: 16px;

@@ -2,23 +2,30 @@
 
   <div class="wrap">
 
+    <div id="avatar"><%= image_tag("avatar.png") %>
+      <%=link_to (image_tag("github_ico.png", class: "github_ico")), "https://github.com/glmrvn" %>
+      <%=link_to (image_tag("vk_ico.png", class: "vk_ico")), "http://vk.com/id254915817"  %>
+      <%=link_to (image_tag("phone_ico.png", class: "phone_ico")), "tel:+79271701369" %>
+    </div>
+
     <div id="titl">
-      <h1>Сделайте свой сайт продуктивным</h1>
-      <p>Разработаю дизайн для вашего проекта в самые короткие сроки. Качественно, не дорого...</p>
+      <h1>#web_design</h1>
+      <p>Сделайте свой сайт продуктивным. Хватит терять пользователей из-за не уродливого и непонятного интерфейса...</p>
     </div>
 
     <div class="submit">
       <a href="#message_screen">
         <div class="button">
-          <div class="ico_bg"><%= image_tag("ico_letter.png") %></div>ПОЛУЧИТЬ ВЫГОДУ
+          <div class="ico_bg"><%= image_tag("ico_letter.png") %></div>ПОЛУЧАТЬ ПРИБЫЛЬ
         </div>
       </a>
     </div>
 
     <div class="icons">
+      <div class="head_ico"><%= image_tag("ico_anal.png")%><h3>АНАЛИЗ</h3></div>
       <div class="head_ico"><%= image_tag("ico_idea.png")%><h3>ИДЕЯ</h3></div>
-      <div class="head_ico"><%= image_tag("ico_anal.png")%><h3>АНАЛИТИКА</h3></div>
-      <div class="head_ico"><%= image_tag("ico_action.png")%><h3>ДЕЙСТВИЕ</h3></div>
+      <div class="head_ico"><%= image_tag("laptop_nil.png")%><h3>ДЕЙСТВИЕ</h3></div>
+      <%= image_tag("rocket.png", id: "rocket") %>
     </div>
 
   </div>

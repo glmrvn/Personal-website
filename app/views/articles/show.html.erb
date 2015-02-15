@@ -22,8 +22,8 @@
 
 	<nav>
 	  <ul class="pager">
-	    <li class="next"><%= link_to("Next Post", @article.previous_post) if @article.previous_post %></li>
-	    <li class="previous"><%= link_to("Previous Post", @article.next_post) if @article.next_post %></li>
+	    <li class="next"><%= link_to("Следующий", @article.previous_post) if @article.previous_post %></li>
+	    <li class="previous"><%= link_to("Предыдущий", @article.next_post) if @article.next_post %></li>
 	  </ul>
 	</nav>
 

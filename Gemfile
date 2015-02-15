@@ -10,7 +10,6 @@ gem 'bcrypt-ruby'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
-
 gem 'devise'
 gem 'rails_12factor'
 # Use SCSS for stylesheets

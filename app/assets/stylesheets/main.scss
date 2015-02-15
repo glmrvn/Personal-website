@@ -15,6 +15,7 @@ body {
 	height: 100%;
 }
 
+
 h1, h2 { margin: 0; }
 table {	background-color: #fff;	border-radius: 3px; }
 
@@ -85,24 +86,53 @@ a {	text-decoration: none;	font-size: 16px; }
 }
 
 #user_pic {
-	float: left;
-	margin-top: -5px;
-
 	a { float: left; }
 }
 
-/* применение классов для эффектов на главной странице */
-.titl_fade_in, .pic_anim, .iphones_in, .column_in, .ios_apps_in, .web_apps_in, .makets_in, .article_in, .message_in, .icons_in, .submit_in { opacity: 1 !important; }
+/* применение эффектов на главной странице */
+.fade_in { opacity: 1 !important; }
 
 /* первый экран */
 
 #header_bg {
-	background: -webkit-linear-gradient(-38deg,rgb(60,62,150) 0%,rgb(130,90,186) 100%);
-	background: -moz-linear-gradient(-38deg,rgb(60,62,150) 0%,rgb(130,90,186) 100%);
+	background: -webkit-linear-gradient(-38deg, #3c3e96 0%, #BA5AB1 100%);
+	background: -moz-linear-gradient(-38deg, #3c3e96 0%, #BA5AB1 100%);
 	width: 100%;
 	height: 854px;
+	transition:1s;
+
+	&:hover{ filter: hue-rotate(15deg);}
+	&:hover{ -webkit-filter: hue-rotate(15deg);}
 }
 
+#avatar {
+	margin: 100px 488px;
+	display: inline-block;
+	transition: 1.2s;
+
+	&:hover{
+		opacity: .8;
+	}
+}
+
+.github_ico{ position: absolute; margin: -193px 157px; }
+
+.vk_ico{ position: absolute; margin: -144px -10px; }
+
+.phone_ico{ position: absolute; margin: -48px 162px; }
+
+.github_ico, .vk_ico, .phone_ico {
+	transition: 0.7s;
+	display: block;
+	&:hover{
+		opacity: 0.5;
+	};
+}
+
+.titl_in {
+	transform: translateY(0px) !important;
+	opacity: 1 !important;
+}
 #titl { 
 
 	text-align: center;
@@ -111,7 +141,9 @@ a {	text-decoration: none;	font-size: 16px; }
 	display: inline-block;
 	width: 1170px;
 	opacity: 0;
-	transition: opacity 2s ease-in-out 0.2s;
+	transform: translateY(10px);
+	transition-property: opacity,transform;
+	transition: 1s;
 
 	p {
 		font-size: 20px;
@@ -121,7 +153,7 @@ a {	text-decoration: none;	font-size: 16px; }
 
 
 	h1 {
-		margin-top: 180px;
+		margin-top: -80px;
 		font-size: 66px;
 		font-weight: 100;
 		letter-spacing: -0.08em;
@@ -133,7 +165,7 @@ a {	text-decoration: none;	font-size: 16px; }
 /*main button*/
 
 .submit{
-	margin: 60px 480px;
+	margin: 20px 469px;
 	opacity: 0;
 	transition: opacity 2s ease-in-out 0.2s;
 
@@ -145,31 +177,30 @@ a {	text-decoration: none;	font-size: 16px; }
 	width: 22px; height: 22px;
 	border-radius: 10px;
 	display: inline-block;
-	margin-top: 19px;
+	margin-top: 18px;
 	margin-right: 13px;
 }
 
 .button {
-	background-color: rgb(184,214,0) !important;
-	width:223px; height:55px;
-	border-radius: 3px;
+	background-color: rgba(0, 0, 0, 0.22) !important;
+	width:233px; height:55px;
+	border-radius: 55px;
 	transition: 0.4s;
 	color: #fff;
 	text-align: center;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 	border: none !important;
 
 	&:hover {
-		background-color: rgb(214,188,0) !important; 
+		background-color: #4399C5 !important;
 		text-decoration: none;
 	};
 }
-
 /* head icons */
 
 .icons {
-	margin: 60px 95px;
+	margin: 65px 95px;
 	display: inline-block;
 	width: 1170px;
 	opacity: 0;
@@ -187,8 +218,18 @@ a {	text-decoration: none;	font-size: 16px; }
 	  	  	letter-spacing: 0.6em;
 	  	  	text-align: center;
 	  	  	padding-left: 10px;
+	  	  	padding-top: 10px;
 	  	  }
 	  }
+}
+
+#rocket {
+	position: absolute;
+	transition: 2s;
+	top: 656px;
+	margin-left: 866px;
+	display: block;
+	opacity: 1;
 }
 
 /* flash messages styles */
@@ -271,6 +312,10 @@ a {	text-decoration: none;	font-size: 16px; }
 	background: -webkit-linear-gradient(-38deg,rgb(100,69,183) 0%,rgb(169,100,203) 100%);
 	height: 700px;
 	color: #fff;
+	transition:2s;
+
+	&:hover{ -webkit-filter: hue-rotate(15deg);}
+	&:hover{ filter: hue-rotate(15deg);}
 
 	h1 {
 		font-weight: 100;

@@ -1,8 +1,10 @@
 //плавное появление элементов при загрузке страницы
-    $('.menu').addClass('menu_js');
+$(document).ready(function(){
+    $('.menu').addClass('fade_in');
+    $('#titl').addClass('titl_in');
     $('.alert').addClass('alert_js');
-    $('.icons').addClass('icons_in');
-    $('.submit').addClass('submit_in');
+    $('.icons').addClass('fade_in');
+    $('.submit').addClass('fade_in');
 });
 
 //сужение меню при скроле вниз
@@ -29,7 +31,7 @@ $(window).scroll(function() {
 
     var topOfWindow = $(window).scrollTop();
         if (imagePos < topOfWindow+700) {
-            $(this).addClass("message_in");
+            $(this).addClass("fade_in");
         }
     });
 });
@@ -49,9 +51,23 @@ $(document).ready(function(){
 $(function() {
   $(document)  
     .ajaxComplete(function() {
-      $('.article').addClass('article_in');
+      $('.article').addClass('fade_in');
     })
   //   .ajaxStop(function() {
   //     $('.article').addClass('article_in'); // hide it when it is done.
   // });
+});
+
+//паралакс прозрачный взлет ракеты
+$(document).ready(function(){
+    $(window).bind('scroll',function(e){
+        parallaxScroll();
+    });
+ 
+    function parallaxScroll(){
+        var scrolledY = $(window).scrollTop();
+        $('#rocket').css('margin-top','-'+((scrolledY*0.6))+'px');
+        $('#rocket').css('opacity',+(1-(scrolledY*0.003)));
+    }
+ 
 });
