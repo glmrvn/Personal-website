@@ -1,30 +1,56 @@
-  <div class="line"></div>
+<div id="header_bg">
 
-<div class="wrap">
-  <div class="pagination1">
-    <%= will_paginate @article, :previous_label => '&laquo Назад', :next_label => 'Вперед &raquo' %>
-  </div>
+  <div class="wrap">
 
-<% @articles.all.order('created_at DESC').each do |article| %>
-
-  <div class="article">
-
-    <div class="art_img_container">
-      <%= link_to image_tag(article.image.url(:thumb), class: "art_img"), article_path(article) %>
+    <div id="titl">
+      <h1>Сделайте свой сайт продуктивным</h1>
+      <p>Разработаю дизайн для вашего проекта в самые короткие сроки. Качественно, не дорого...</p>
     </div>
 
-    <div class="a_to_article">
+    <div class="submit">
+      <a href="#message_screen">
+        <div class="button">
+          <div class="ico_bg"><%= image_tag("ico_letter.png") %></div>ПОЛУЧИТЬ ВЫГОДУ
+        </div>
+      </a>
+    </div>
 
-      <%= link_to article.title, article_path(article), class: "art_title" %>
-
+    <div class="icons">
+      <div class="head_ico"><%= image_tag("ico_idea.png")%><h3>ИДЕЯ</h3></div>
+      <div class="head_ico"><%= image_tag("ico_anal.png")%><h3>АНАЛИТИКА</h3></div>
+      <div class="head_ico"><%= image_tag("ico_action.png")%><h3>ДЕЙСТВИЕ</h3></div>
     </div>
 
   </div>
+</div> 
 
-<% end %>
+<div id="content">
 
+  <div class="wrap">
+    <div id="art"><%= render :partial => 'articles' %></div>
+  </div>
 
-  <div class="line"></div>
 </div>
 
+<div id="message_screen">
+  <div class="wrap">
+    <div class="message">
+
+    <h1>Вы можете связаться со мной</h1>
+
+    <p>Оставьте сообщение или свяжитесь со мной и мы начнем продуктивно работать</p>
+
+    <%= form_for :message, url: messages_path do |f| %>
+
+    <p><%= f.text_field :name,  :placeholder => 'Введите номер телефона или ваш email...', class: "form" %></p>
+
+    <p><%= f.text_area :text, :placeholder => 'Введите ваш вопрос, сообщение или отзыв :)', class: "form" %></p>
+
+    <%= f.submit "отправить сообщение", class: "button" %>
+
+    <% end %>
+
+    </div>
+  </div>
+</div>
 

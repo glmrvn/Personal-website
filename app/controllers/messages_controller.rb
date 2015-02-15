@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
 		@message.save
 
 	if @message.save
-		flash[:success] = "Ваша сообщение успешно отправлено"
+		flash[:success] = "Ваше сообщение успешно отправлено"
 		redirect_to root_path
 	else flash[:error] = "Сообщение не отправлено"
 		redirect_to root_path

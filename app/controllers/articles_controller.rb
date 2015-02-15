@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 	before_filter :signed_user,  only: [:edit, :destroy]
 
 	def index
-		@articles = Article.paginate(page: params[:page], :per_page => 8)
+		@articles = Article.paginate(page: params[:page], :per_page => 6)
 	end
 
 	def new
@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
 		@article = Article.new(article_params)
 
 		if @article.save
-		  redirect_to @article
+		  redirect_to user_path
 	    else
 		  render 'new'
 		end		
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
 	def update
 		if @article.update(article_params)
 		  flash[:succes] = "Article updated"
-		  redirect_to @article
+		  redirect_to user_path
 		else
 		  render 'edit'
 		end
@@ -63,8 +63,8 @@ class ArticlesController < ApplicationController
 
 	def article_params
 		params.require(:article).permit( :title,
-			                             :text,
-			                             :image )
+                                         :text,
+                                         :image )
 	end
 
 	def signed_user

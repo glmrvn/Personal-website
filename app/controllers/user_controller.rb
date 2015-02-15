@@ -6,7 +6,6 @@ class UserController < ApplicationController
 		@user = User.find(1)
 		@messages = Message.all
 		@articles = Article.all
-		
 	end
 
 	def index
@@ -17,4 +16,5 @@ class UserController < ApplicationController
 	def signed_user
 		redirect_to signin_url, notice: "Пожалуйста пройдите авторизацию" unless signed_in?		
 	end
+	
 end
