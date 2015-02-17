@@ -15,13 +15,13 @@
 
           <% if signed_in? %>
             <%= link_to "Выйти", signout_path, method: "delete" %>
-            <%= link_to "Админ", '/admin' %>
+            <%= link_to "Админ", user_path(current_user) %>
             <div id="line"></div>
           <% else %>
-            <%= link_to "Войти", signin_path %>  
+            <%= link_to "Войти", signin_path %>
           <% end %>
 
-	        <%= link_to "Портфолио", root_path( :anchor => 'art' ) %>     
+	        <%= link_to "Портфолио", root_path( :anchor => 'art' ) %>
           <%= link_to "Связаться со мной", root_path( :anchor => 'message_screen' ) %>
 	      	<%= link_to "Главная", root_path %>
         </nav>
@@ -29,13 +29,13 @@
     </div>
 
   </header>
-  
+
   <div class="wrap">
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
   </div>
-  
+
   <%= yield %>
 
   <footer>

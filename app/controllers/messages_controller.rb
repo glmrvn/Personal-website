@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 	before_filter :signed_user,  only: [:index, :destroy, :show]
 
 	def new
-		@message = Message.new		
+		@message = Message.new
 	end
 
 	def create
@@ -30,17 +30,17 @@ class MessagesController < ApplicationController
 		@message = Message.find(params[:id])
 		@message.destroy
 		redirect_to user_path
-		flash[:success] = "Сообщение удалено"	
+		flash[:success] = "Сообщение удалено"
 	end
 
 	private
 
     def message_params
 	  params.require(:message).permit( :name,
-			                           :text)
+			                               :text )
 	end
 
 	def signed_user
-		redirect_to signin_url, notice: "Пожалуйста пройдите авторизацию" unless signed_in?		
+		redirect_to signin_url, notice: "Пожалуйста пройдите авторизацию" unless signed_in?
 	end
 end

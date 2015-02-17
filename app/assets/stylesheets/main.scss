@@ -15,7 +15,6 @@ body {
 	height: 100%;
 }
 
-
 h1, h2 { margin: 0; }
 table {	background-color: #fff;	border-radius: 3px; }
 
@@ -41,7 +40,7 @@ a {	text-decoration: none;	font-size: 16px; }
 	background: rgba(0,0,0,0.7) !important;
 	height: 50px !important;
 	padding-top: 16px !important;
-} 
+}
 
 .menu {
 
@@ -90,6 +89,7 @@ a {	text-decoration: none;	font-size: 16px; }
 }
 
 /* применение эффектов на главной странице */
+
 .fade_in { opacity: 1 !important; }
 
 /* первый экран */
@@ -101,8 +101,8 @@ a {	text-decoration: none;	font-size: 16px; }
 	height: 854px;
 	transition:1s;
 
-	&:hover{ filter: hue-rotate(15deg);}
-	&:hover{ -webkit-filter: hue-rotate(15deg);}
+	&:hover{ filter: hue-rotate(15deg); }
+	&:hover{ -webkit-filter: hue-rotate(15deg); }
 }
 
 #avatar {
@@ -115,13 +115,13 @@ a {	text-decoration: none;	font-size: 16px; }
 	}
 }
 
-.github_ico{ position: absolute; margin: -193px 157px; }
+.skype_ico{ position: absolute; margin: -193px 157px; }
 
 .vk_ico{ position: absolute; margin: -144px -10px; }
 
 .phone_ico{ position: absolute; margin: -48px 162px; }
 
-.github_ico, .vk_ico, .phone_ico {
+.skype_ico, .vk_ico, .phone_ico {
 	transition: 0.7s;
 	display: block;
 	&:hover{
@@ -133,7 +133,7 @@ a {	text-decoration: none;	font-size: 16px; }
 	transform: translateY(0px) !important;
 	opacity: 1 !important;
 }
-#titl { 
+#titl {
 
 	text-align: center;
 	color: #fff;
@@ -200,7 +200,7 @@ a {	text-decoration: none;	font-size: 16px; }
 /* head icons */
 
 .icons {
-	margin: 65px 95px;
+	margin: 65px 0px;
 	display: inline-block;
 	width: 1170px;
 	opacity: 0;
@@ -210,7 +210,7 @@ a {	text-decoration: none;	font-size: 16px; }
 	  	float: left;
 	  	padding-left: 190px;
 
-	  	&:first-child {padding-left: 0;}
+	  	&:first-child {padding-left: 90px;}
 
 	  	  h3 {
 	  	  	color: #fff;
@@ -227,7 +227,7 @@ a {	text-decoration: none;	font-size: 16px; }
 	position: absolute;
 	transition: 2s;
 	top: 656px;
-	margin-left: 866px;
+	margin-left: 956px;
 	display: block;
 	opacity: 1;
 }
@@ -254,7 +254,7 @@ a {	text-decoration: none;	font-size: 16px; }
 }
 
 #error_explanation {
-	ul { 
+	ul {
 		li {
 			list-style-type: none;
 			padding-bottom: 5px;
@@ -265,117 +265,16 @@ a {	text-decoration: none;	font-size: 16px; }
 .alert-heading { color: inherit; }
 
 .alert-success {
-
 	color: #FFF;
 	background: -webkit-linear-gradient(-90deg,rgb(194,66,172) 0%,rgb(208,85,148) 100%);
 	background: -moz-linear-gradient(-90deg,rgb(194,66,172) 0%,rgb(208,85,148) 100%);
 }
+
 .alert-error {
-
 	color: #FFF;
 	background: -moz-linear-gradient(-90deg,rgb(194,66,172) 0%,rgb(208,85,148) 100%);
 	background: -webkit-linear-gradient(-90deg,rgb(194,66,172) 0%,rgb(208,85,148) 100%);
 }
-
-/* pagination style */
-
-.pagination1 {
-	display: table;
-	border-radius: 4px;
-	bottom: 100px;
-	clear: both;
-	margin: 0 auto;
-}
-
-.pagination {
-	margin: 20px 0 !important;
-}
-
-.pagination > li > a, .pagination > li > span {
-	color: #7153B1 !important;
-}
-
-.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus{
-	background-color: #E7E9F6 !important;
-	border-color: #8D81C1 !important;
-}
-
-/* mesaage form */
-
-.message {
-	opacity: 0;
-	transition: opacity .9s ease-in-out 0.2s ;
-}
-
-#message_screen {
-	background: -moz-linear-gradient(-38deg,rgb(100,69,183) 0%,rgb(169,100,203) 100%);
-	background: -webkit-linear-gradient(-38deg,rgb(100,69,183) 0%,rgb(169,100,203) 100%);
-	height: 700px;
-	color: #fff;
-	transition:2s;
-
-	&:hover{ -webkit-filter: hue-rotate(15deg);}
-	&:hover{ filter: hue-rotate(15deg);}
-
-	h1 {
-		font-weight: 100;
-		font-size: 48px;
-		text-align: center;
-		padding-top: 80px;
-		padding-bottom: 20px;
-		letter-spacing: -0.03em;
-	}
-
-	p {
-		font-size: 20px;
-		font-weight: 300;
-		text-align: center;
-	}
-}
-
-form {	margin-top: 40px; }
-
-.form {
-	height: 40px;
-	margin: 0 auto;
-	display: block;
-	font-size: 15px;
-	color: #fff;
-	border: none;
-}
-
-input#message_name { 
-
-	padding-left: 15px;
-	width: 647px;
-	background: rgba(0,0,0,0.2);
-	outline: 1px solid rgba(0,0,0, 0.15);
-	font-family: 'Roboto';
-	font-weight: 500;
-}
-
-textarea#message_text {
-	max-height: 216px;
-	height: 216px;
-	width: 647px;
-	max-width: 647px;
-	padding: 15px;
-	font-family: 'Roboto';
-	font-weight: 500;
-	font-size: 15px;
-	background: rgba(0,0,0,0.2);
-	outline: 1px solid rgba(0,0,0, 0.15);
-}
-
-input[type="submit"] {
-	margin: 50px auto;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 14px;
-	display: block;
-	color: #fff;
-}
-
 
 /* footer */
 
@@ -393,5 +292,4 @@ footer {
 		text-align: center;
 		width: 1170px;
 	}
-
 }

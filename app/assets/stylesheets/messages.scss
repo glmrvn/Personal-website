@@ -1,3 +1,76 @@
-// Place all the styles related to the Messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* mesaage form */
+
+.message {
+  opacity: 0;
+  transition: opacity .9s ease-in-out 0.2s ;
+}
+
+#message_screen {
+  background: -moz-linear-gradient(-38deg,rgb(100,69,183) 0%,rgb(169,100,203) 100%);
+  background: -webkit-linear-gradient(-38deg,rgb(100,69,183) 0%,rgb(169,100,203) 100%);
+  height: 700px;
+  color: #fff;
+  transition:2s;
+
+  &:hover{ -webkit-filter: hue-rotate(15deg);}
+  &:hover{ filter: hue-rotate(15deg);}
+
+  h1 {
+    font-weight: 100;
+    font-size: 48px;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+form {	margin-top: 40px; }
+
+.form {
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+}
+
+input#message_name {
+
+  padding-left: 15px;
+  width: 647px;
+  background: rgba(0,0,0,0.2);
+  outline: 1px solid rgba(0,0,0, 0.15);
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+textarea#message_text {
+  max-height: 216px;
+  height: 216px;
+  width: 647px;
+  max-width: 647px;
+  padding: 15px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 15px;
+  background: rgba(0,0,0,0.2);
+  outline: 1px solid rgba(0,0,0, 0.15);
+}
+
+input[type="submit"] {
+  margin: 50px auto;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  color: #fff;
+}

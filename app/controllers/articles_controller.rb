@@ -16,10 +16,10 @@ class ArticlesController < ApplicationController
 		@article = Article.new(article_params)
 
 		if @article.save
-		  redirect_to user_path
+		  redirect_to user_path(current_user)
 	    else
 		  render 'new'
-		end		
+		end
 	end
 
 	def edit
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
 	def update
 		if @article.update(article_params)
 		  flash[:succes] = "Article updated"
-		  redirect_to user_path
+		  redirect_to user_path(current_user)
 		else
 		  render 'edit'
 		end
@@ -43,13 +43,12 @@ class ArticlesController < ApplicationController
 		@article.image = nil
 		@article.destroy
 
-		redirect_to user_path
+		redirect_to user_path(current_user)
 		flash[:error] = "Article Deleted"
 	end
 
 	def see_count
 	end
-
 
 	private
 
@@ -62,13 +61,11 @@ class ArticlesController < ApplicationController
 	end
 
 	def article_params
-		params.require(:article).permit( :title,
-                                         :text,
-                                         :image )
+		params.require(:article).permit( :title, :text, :image )
 	end
 
 	def signed_user
-		redirect_to signin_url, notice: "Please sign in." unless signed_in?		
+		redirect_to signin_url, notice: "Please sign in." unless signed_in?
 	end
 
 end
