@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Glmrvn</title>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>ARNIS DESIGN</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="page-preloader"><span class="spinner"></span></div>
   <header>
     <div class="menu">
-    	<div class="wrap">
-        <nav>
-	    	<%=link_to (image_tag("glmrvn.png", id: "user_pic")), root_path %>
+      <nav>
+    	<%=link_to (image_tag("logo.png", id: "user_pic")), root_path %>
 
-          <% if signed_in? %>
-            <%= link_to "Выйти", signout_path, method: "delete" %>
-            <%= link_to "Админ", user_path(current_user) %>
-            <div id="line"></div>
-          <% else %>
-            <%= link_to "Войти", signin_path %>
-          <% end %>
+        <% if signed_in? %>
+          <%= link_to "Выйти", signout_path, method: "delete" %>
+          <%= link_to "Админ", user_path(current_user) %>
+          <div id="line"></div>
+        <% end %>
 
-	        <%= link_to "Портфолио", root_path( :anchor => 'art' ) %>
-          <%= link_to "Связаться со мной", root_path( :anchor => 'message_screen' ) %>
-	      	<%= link_to "Главная", root_path %>
-        </nav>
-      </div>
+        <div id="menu_btn"><%= link_to "СВЯЗАТЬСЯ", root_path( :anchor => 'message_screen' ) %></div>
+        <%= link_to "ПРОЦЕСС", root_path( :anchor => 'six_screen' ) %>
+        <%= link_to "ПОРТФОЛИО", root_path( :anchor => 'fifth_screen' ) %>
+        <%= link_to "РЕШЕНИЯ", root_path( :anchor => 'fourth_screen' ) %>
+        <%= link_to "КТО Я ТАКОЙ?", root_path( :anchor => 'threeth_screen' ) %>
+        <%= link_to "DESIGN", root_path( :anchor => 'second_screen' ) %>
+      </nav>
     </div>
-
   </header>
 
   <div class="wrap">
@@ -39,9 +38,13 @@
   <%= yield %>
 
   <footer>
-    <div class="wrap">
-      <div id="copyright">2008 - 2015 glmrvn, Design Inspiration</div>
-      <div id="foo_menu"></div>
+    <div class="footer_icons">
+    <%= link_to image_tag("ico_twitter.png", class:"foo_ico"), "https://twitter.com/GloomRaven" %>
+    <%= link_to image_tag("ico_vk.png", class:"foo_ico"), root_path %>
+    <%= link_to image_tag("ico_skype.png", class:"foo_ico"), root_path %>
+    <%= link_to image_tag("ico_github.png", class:"foo_ico"), 'https://github.com/glmrvn' %>
+    <%= link_to image_tag("ico_mail.png", class:"foo_ico"), "mailto:faqmybrain@gmail.com?subject=Хочу+сайт&body=Здравствуйте,+нужен+сайт%2C+быстро,+не+дорого" %>
+
     </div>
   </footer>
 

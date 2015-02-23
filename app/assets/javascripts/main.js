@@ -1,10 +1,14 @@
+//заглушка загрузки страницы
+$(window).on('load', function () {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('.spinner');
+    $spinner.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+});
+
 //плавное появление элементов при загрузке страницы
 $(document).ready(function(){
-    $('.menu').addClass('fade_in');
-    $('#titl').addClass('titl_in');
     $('.alert').addClass('alert_js');
-    $('.icons').addClass('fade_in');
-    $('.submit').addClass('fade_in');
 });
 
 //сужение меню при скроле вниз
@@ -17,11 +21,13 @@ $(window).scroll(function() {
         if (scroll < 300) { $('.menu').removeClass("menu_in"); }
 });
 
-//плавное появление макетов при скроле
+//плавное появление при скроле
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-
-        if (scroll >= 500) { $('.article').addClass("article_in"); }
+        if (scroll >= 4000) { $('.article').addClass("article_in"); }
+        if (scroll >= 500) { $('#second_screen').addClass("fade_in"); }
+        if (scroll >= 2200) { $('#fourth_screen').addClass("fade_in"); }
+        if (scroll >= 4300) { $('#six_screen').addClass("fade_in"); }
 });
 
 //плавное появление формы при скроле
@@ -51,23 +57,23 @@ $(document).ready(function(){
 $(function() {
   $(document)  
     .ajaxComplete(function() {
-      $('.article').addClass('fade_in');
+      $('.article').delay(350).fadeIn('slow');
     })
   //   .ajaxStop(function() {
   //     $('.article').addClass('article_in'); // hide it when it is done.
   // });
 });
 
-//паралакс прозрачный взлет ракеты
-$(document).ready(function(){
-    $(window).bind('scroll',function(e){
-        parallaxScroll();
-    });
+// //паралакс прозрачный взлет ракеты
+// $(document).ready(function(){
+//     $(window).bind('scroll',function(e){
+//         parallaxScroll();
+//     });
  
-    function parallaxScroll(){
-        var scrolledY = $(window).scrollTop();
-        $('#rocket').css('margin-top','-'+((scrolledY*0.6))+'px');
-        $('#rocket').css('opacity',+(1-(scrolledY*0.003)));
-    }
+//     function parallaxScroll(){
+//         var scrolledY = $(window).scrollTop();
+//         $('#rocket').css('margin-top','-'+((scrolledY*0.6))+'px');
+//         $('#rocket').css('opacity',+(1-(scrolledY*0.003)));
+//     }
  
-});
+// });

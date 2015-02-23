@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
-	before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update, :see_count]
-	before_filter :article_find, only: [:show, :edit, :update, :see_count]
+	before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update]
+	before_filter :article_find, only: [:show, :edit, :update]
 	before_filter :signed_user,  only: [:edit, :destroy]
 
 	def index
@@ -45,9 +45,6 @@ class ArticlesController < ApplicationController
 
 		redirect_to user_path(current_user)
 		flash[:error] = "Article Deleted"
-	end
-
-	def see_count
 	end
 
 	private

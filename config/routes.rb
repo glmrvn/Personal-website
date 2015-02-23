@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'welcome/index'
+
   root 'articles#index'
 
-  resources :articles do
-    get :see_count, on: :member
-  end
+  resources :articles
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :messages
+  resources :user
 
-    resources :sessions, only: [:new, :create, :destroy]
-    resources :messages
-    resources :user
-
-    match '/signin',  to: 'sessions#new',     via: 'get'
-    match '/signout', to: 'sessions#destroy', via: 'delete'
-    match '/admin',   to: 'user#show',        via: 'get'
+  match '/signin',  to: 'sessions#new',     via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
+  match '/admin',   to: 'user#admin_show',  via: 'get'
 
   #get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.

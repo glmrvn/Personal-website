@@ -36,8 +36,7 @@ class MessagesController < ApplicationController
 	private
 
     def message_params
-	  params.require(:message).permit( :name,
-			                               :text )
+	  params.require(:message).permit( :name, :text )
 	end
 
 	def signed_user

@@ -1,16 +1,16 @@
 a.art_title {
 
-	font-size: 15px;
+	font-size: 18px;
 	letter-spacing: -0.02em;
-	font-weight: 500;
+	font-family: 'Raleway_ExtraBold';
 	text-decoration: none;
-	color: #999;
+	color: #fff;
 	transition: 0.9s;
 	display: block;
 	padding-bottom: 61px;
 	padding-top: 20px;
 
-	&:hover { color: #444; text-decoration: none; }
+	&:hover { color: #999; text-decoration: none; }
 
 }
 
@@ -29,7 +29,7 @@ a.art_title {
 
 .article {
 	color: #545454;
-	opacity: 0;
+/*	opacity: 0;*/
 	float: left;
 	text-align: center;
 	margin: 0px 55px -20px 55px;
@@ -52,8 +52,6 @@ a.art_title {
 	margin-top: -334px;
 }
 
-.art_img_container:hover .art_img {	opacity: 0.6; }
-
 .art_img {
 	max-width: 243px;
 	transition: all 3.35s ease;
@@ -71,8 +69,7 @@ a.art_title {
 .art_cont {
 	h1 {
 		text-align: center;
-		font-weight: 900;
-		color: #666;
+		color: #fff;
 		letter-spacing: -0.04em;
 		margin: 0;
 
@@ -93,7 +90,7 @@ a.art_title {
 	margin-top: 30px;
 	margin-bottom: 80px;
 }
-
+#art {padding-top: 40px;}
 
 /* pagination style */
 
@@ -110,10 +107,20 @@ a.art_title {
 }
 
 .pagination > li > a, .pagination > li > span {
-	color: #7153B1 !important;
+	color: #FFF !important;
+	background-color: transparent !important;
 }
 
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus{
-	background-color: #E7E9F6 !important;
-	border-color: #8D81C1 !important;
+	background-color: rgba(255, 255, 255, 0.4) !important;
+	border-color: #FFF !important;
 }
+
+.pager li > a, .pager li > span {
+	background-color: transparent !important; 
+	border: 1px solid #ddd !important;
+	border-radius: 3px !important;
+}
+
+.pager .next > a, .pager .next > span {	color: #fff !important; }
+.pager .previous > a, .pager .previous > span {color: #fff !important; }
