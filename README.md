@@ -5,4 +5,4 @@ Write on Ruby on Rails
 
 Here: [glmrvn.com]
 
-[glmrvn.com]:glmrvn.com
+[glmrvn.com](wwww.glmrvn.com)

@@ -1,8 +1,9 @@
 /*first screen*/
 .head_bg{
-	background: url(head_bg.jpg) no-repeat right center fixed;
+	background: url(head_bg.jpg) no-repeat fixed 0 0;
 	color: #fff;
 	width: 100%;
+	background-size: cover;
 
 	h1 {
 		font-size: 77px;
@@ -60,7 +61,12 @@
 	padding-left: 23px;
 	margin-top: -10px;
 	margin-right: 10px;
+	transition:.7s;
+
+	&:hover { background:rgba(0,0,0,.3); }
 }
+
+a:hover > #menu_btn { color:#666; }
 .btn {
 	width: 307px; height:54px;
 	border-radius: 3px;
@@ -142,14 +148,15 @@
 /*threeth screen*/
 #threeth_screen {
 	background: url(threeth_screen_bg.jpg) no-repeat center center fixed;
-	height: 1005px;
+	height: 805px;
+	background-size: cover;
 
 	h1 {
 		font-family: 'Raleway_ExtraBold';
 		font-size: 70px;
 		color: #fff;
 		letter-spacing: -.05em;
-		padding-top: 380px;
+		padding-top: 210px;
 		padding-bottom: 40px;
 	}
 
@@ -218,6 +225,7 @@
 	height: 100%;
 	text-align: center;
 	color: #fff;
+	background-size: cover;
 
 	h1, h2 { letter-spacing: -.05em;}
 
@@ -261,7 +269,6 @@
 /*seventh_screen*/
 #seventh_screen {
 	background: url(seventh_screen_bg.jpg);
-	height: 610px;
-	width: 100%;
-
+	height: 610px;width: 100%;
+	background-size: cover;
 }

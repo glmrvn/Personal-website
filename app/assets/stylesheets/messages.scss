@@ -12,11 +12,12 @@
   color: #fff;
   transition:2s;
   height: 780px;
+  background-size: cover;
 
   &:hover{ -webkit-filter: hue-rotate(15deg);}
   &:hover{ filter: hue-rotate(15deg);}
 
-  h1, h2 { letter-spacing: -.05em; text-align: center;}
+  h1, h2 { letter-spacing: -.05em; text-align: center; }
 
   h1 {
     font-size: 70px;

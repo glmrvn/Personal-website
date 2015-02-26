@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	font-family: 'Raleway_Regular', "Arial", sans-serif;
+	font-family: 'Raleway_Regular', "Helvetica", "Arial", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background-color: #fff;
 	margin: 0; padding: 0;
@@ -36,6 +36,7 @@ body {
 }
 
 h1, h2 { margin: 0; }
+
 table {	background-color: #fff;	border-radius: 3px; }
 
 th,td { padding: 7px; }
@@ -48,9 +49,7 @@ a {	text-decoration: none;	font-size: 16px; }
 	margin: 0 auto;
 	width: 480px;
 
-	h1 {
-		text-align: center;
-	}
+	h1 { text-align: center; }
 }
 
  /* header menu */

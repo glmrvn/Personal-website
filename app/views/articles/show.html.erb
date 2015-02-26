@@ -1,35 +1,36 @@
 <div class="head_bg">
   <div class="filter85">
-<div class="wrap">
-  <div class="art_cont">
+	<div class="wrap">
+	  <div class="art_cont">
 
-	<h1><%= @article.title %></h1>
+		<h1><%= @article.title %></h1>
 
-	<% if signed_in? %>
+		<% if signed_in? %>
 
-	<div class="art_indx">
-        <%= image_tag("eye_ico.png", class: "see_ico") %><div class="index"><%= @article.see_count %></div>
-        <%= image_tag("clock_ico.png", class: "date_ico") %><div class="index"><%= @article.created_at.strftime("%d %b %y") %></div>
-    </div>
-    
-    <div class="admin_btns">
+		<div class="art_indx">
+	        <%= image_tag("eye_ico.png", class: "see_ico") %><div class="index"><%= @article.see_count %></div>
+	        <%= image_tag("clock_ico.png", class: "date_ico") %><div class="index"><%= @article.created_at.strftime("%d %b %y") %></div>
+	    </div>
+	    
+	    <div class="admin_btns">
 
-	<%= link_to "Back", articles_path %>
-	<%= link_to "Edit", edit_article_path %>
-	<%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to "Back", articles_path %>
+		<%= link_to "Edit", edit_article_path %>
+		<%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
 
+		</div>
+		<% end %>
+
+		<nav>
+		  <ul class="pager">
+		    <li class="next"><%= link_to("Следующий", @article.previous_post) if @article.previous_post %></li>
+		    <li class="previous"><%= link_to("Предыдущий", @article.next_post) if @article.next_post %></li>
+		  </ul>
+		</nav>
+
+		<%= image_tag @article.image.url(:medium), class: "image_prev" %>
+
+	  </div>
 	</div>
-	<% end %>
-
-	<nav>
-	  <ul class="pager">
-	    <li class="next"><%= link_to("Следующий", @article.previous_post) if @article.previous_post %></li>
-	    <li class="previous"><%= link_to("Предыдущий", @article.next_post) if @article.next_post %></li>
-	  </ul>
-	</nav>
-
-	<%= image_tag @article.image.url(:medium), class: "image_prev" %>
-
   </div>
-
 </div>
