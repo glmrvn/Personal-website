@@ -55,7 +55,6 @@ a.art_title {
 	max-width: 243px;
 	transition: all 3.35s ease;
 	margin: 0 !important;
-
 }
 
 .admin_btns {
@@ -71,9 +70,8 @@ a.art_title {
 		color: #fff;
 		letter-spacing: -0.04em;
 		margin: 0;
-
 	}
-}
+} 
 .see_ico { float: left; margin-left: 500px; }
 
 .date_ico { margin-left: 20px; float: left; }
@@ -102,24 +100,8 @@ a.art_title {
 }
 
 .pagination {
-	margin: 20px 0 !important;
+	margin: 20px 0;
+	border-radius: 4px;
+	display: inline-block;
+	padding-left: 0;
 }
-
-.pagination > li > a, .pagination > li > span {
-	color: #FFF !important;
-	background-color: transparent !important;
-}
-
-.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus{
-	background-color: rgba(255, 255, 255, 0.4) !important;
-	border-color: #FFF !important;
-}
-
-.pager li > a, .pager li > span {
-	background-color: transparent !important; 
-	border: 1px solid #ddd !important;
-	border-radius: 3px !important;
-}
-
-.pager .next > a, .pager .next > span {	color: #fff !important; }
-.pager .previous > a, .pager .previous > span {color: #fff !important; }

@@ -25,6 +25,7 @@ class UserController < ApplicationController
 	def find_elements
 		@messages = Message.all
 		@articles = Article.all
+		@last_update_at = Article.all.order("updated_at").last
 	end
 
 end

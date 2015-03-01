@@ -1,6 +1,3 @@
-
-/* mesaage form */
-
 .message {
   opacity: 0;
   transition: opacity .9s ease-in-out 0.2s ;
@@ -50,7 +47,7 @@ input#message_name:focus, textarea#message_text:focus {
 input#message_name {
 
   padding-left: 15px;
-  width: 647px;
+  width: 661px;
   background: rgba(0,0,0,0.5);
   outline: none;
   font-family: 'Raleway_Medium';
@@ -74,10 +71,10 @@ input[type="submit"] {
   margin: 50px auto;
   text-transform: uppercase;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   display: block;
   color: #fff;
   background: none;
-  width: 400px;
-  padding-top: 6px;
+  width: 420px;
+  padding: 17px;
 }

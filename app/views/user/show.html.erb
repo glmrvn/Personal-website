@@ -1,68 +1,67 @@
-<div class="wrap">
+<div id="admin_panel">
+  <div class="filter85_height100">
+	<div class="wrap">
+	  <h1>Подробная информация о пользователе</h1>
 
-<div class="line"></div><div class="line"></div>
-  <h1>Подробная информация о пользователе</h1>
+	  <div class="well">
+	  <p><b>Email:</b> <%=  @user.email %></p>
+	  <p><b>Last activity:</b> <%=  @user.updated_at.localtime.strftime('%b %e, %H:%M') %></p>
+	  <p><b>Messages:</b> <%=  @messages.size %></p>
+	  <p><b>Articles:</b> <%=  @articles.size %></p>
+	  <p><b>Просмотров:</b> <%=  @articles.sum(:see_count) %></p>
+	  <p><b>Последний просмотр:</b>  <%= @last_update_at.title %> время: <%= @last_update_at.updated_at.localtime.strftime('%b %e, %H:%M') %>  <%= link_to "Show", article_path(@last_update_at) %></p>
+	  </div>
 
-  <div class="well">
-  <p><b>Email:</b> <%=  @user.email %></p>
-  <p><b>Last activity:</b> <%=  @user.updated_at.localtime.strftime('%b %e, %H:%M') %></p>
-  <p><b>Messages:</b> <%=  @messages.size %></p>
-  <p><b>Articles:</b> <%=  @articles.size %></p>
-  <p><b>Просмотров:</b> <%=  @articles.sum(:see_count) %></p>
-  </div>
+	  <h2>Сообщения</h2>
 
-  <h2>Сообщения</h2>
+	  <table class="table-striped">
+	    <tr class="active">
+		  	<th></th>
+		  	<th>Имя или телефон</th>
+		  	<th>Сообщение</th>
+		  	<th>Время</th>
+		  	<th></th>
+		</tr>
 
-  <table class="table table-striped">
-    <tr class="active">
-	  	<th></th>
-	  	<th>Имя или телефон</th>
-	  	<th>Сообщение</th>
-	  	<th>Время</th>
-	  	<th></th>
-	</tr>
+	  <% @messages.all.order("created_at desc").each_with_index do |message, b| %>
+		<tr>
+			<td><%= (b+1) %></td>
+			<td><%= message.name %></td>
+			<td><%= message.text %></td>
+			<td><%= message.created_at.strftime("%d.%m.%y") %></td>
+			<td><%= link_to "Delete", message_path(message), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+		<% end %>
+		</table>
 
-  <% @messages.all.order("created_at desc").each_with_index do |message, b| %>
-	<tr>
-		<td><%= (b+1) %></td>
-		<td><%= message.name %></td>
-		<td><%= message.text %></td>
-		<td><%= message.created_at.strftime("%d.%m.%y") %></td>
-		<td><%= link_to "Delete", message_path(message), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	</tr>
-	<% end %>
-	</table>
+		<h2>Записи:</h2><%= link_to "New", new_article_path %><br><br>
 
-	<h2>Записи:</h2><%= link_to "New", new_article_path %><br><br>
+	  <table class="table-striped" >
+	    <tr class="active">
+	    	<th></th>
+		  	<th>Title</th>
+		  	<th>Text</th>
+		  	<th>Время</th>
+		  	<th>Просмотров (<%= @articles.sum(:see_count) %>)</th>
+		  	<th></th>
+		  	<th></th>
+		  	<th></th>
+		  	<th></th>
+		</tr>
 
-  <table class="table table-striped" >
-    <tr class="active">
-    	<th></th>
-	  	<th>Title</th>
-	  	<th>Text</th>
-	  	<th>Время</th>
-	  	<th>Просмотров (<%= @articles.sum(:see_count) %>)</th>
-	  	<th></th>
-	  	<th></th>
-	  	<th></th>
-	  	<th></th>
-	</tr>
+	  <% @articles.all.order("see_count desc").each_with_index do |article, i| %>
+		<tr>
+			<td><%= (i+1) %></td>
+			<td><%= article.title %></td>
+			<td><%= article.text %></td>
+			<td><%= article.created_at.strftime("%d.%m.%y") %></td>
+			<td><%= article.see_count %></td>
+			<td><%= link_to "Delete", article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to "Edit", edit_article_path(article) %></td>
+			<td><%= link_to "Show", article_path(article) %></td>
+			<td><%= %></td>
+		</tr>
+		<% end %>
+		</table>
 
-  <% @articles.all.order("see_count desc").each_with_index do |article, i| %>
-	<tr>
-		<td><%= (i+1) %></td>
-		<td><%= article.title %></td>
-		<td><%= article.text %></td>
-		<td><%= article.created_at.strftime("%d.%m.%y") %></td>
-		<td><%= article.see_count %></td>
-		<td><%= link_to "Delete", article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		<td><%= link_to "Edit", edit_article_path(article) %></td>
-		<td><%= link_to "Show", article_path(article) %></td>
-		<td><%= %></td>
-	</tr>
-	<% end %>
-	</table>
-	<div class="line"></div>
-	<div class="line"></div>
-
-</div>
+</div></div></div>
