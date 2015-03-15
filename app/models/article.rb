@@ -14,11 +14,11 @@ class Article < ActiveRecord::Base
 	                             size: { in: 0..15.megabytes }
 
 	def previous_post
-	  self.class.where("created_at < ?", created_at).order(created_at: :desc).first
+	  self.class.where("see_count < ?", see_count).order(see_count: :desc).first
 	end
 
 	def next_post
-	  self.class.where("created_at > ?", created_at).order(created_at: :asc).first
+	  self.class.where("see_count > ?", see_count).order(see_count: :asc).first
 	end
 
 end

@@ -21,12 +21,11 @@
 		</div>
 		<% end %>
 
-		<nav>
-		  <ul class="pager">
-		    <li class="next"><%= link_to("Следующий", @article.previous_post) if @article.previous_post %></li>
-		    <li class="previous"><%= link_to("Предыдущий", @article.next_post) if @article.next_post %></li>
-		  </ul>
-		</nav>
+		  <div class="pager">
+		    <%= link_to("", @article.previous_post, class: "next_art") if @article.previous_post %>
+		    <%= link_to("", @article.next_post, class: "prev_art") if @article.next_post %>
+		   </div>
+
 
 		<%= image_tag @article.image.url(:medium), class: "image_prev" %>
 

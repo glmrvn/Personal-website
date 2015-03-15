@@ -30,6 +30,9 @@
 
 input#session_email, input#session_password {
 	border-radius: 0px !important;
+	height: 0px; width: 450px;
+	margin: 10px; 
+	padding: 20px;
 }
 .form-control {
 	background: rgba(0, 0, 0, 0.3) !important;
@@ -46,7 +49,7 @@ input#session_email, input#session_password {
 
 	h1 { padding-top: 80px;	}
 
-	a { float: right; }
+	a { float: right; color: #f80;}
 
 	b { font-family: "Raleway_ExtraBold"; }
 }
@@ -55,6 +58,9 @@ input#session_email, input#session_password {
 	background-color: rgba(27, 27, 27, 0.78) !important;
 	color: #fff !important;
 	border: 1px solid #444444 !important;
+
+	p {padding-left:20px;}
+
 }
 
 table {

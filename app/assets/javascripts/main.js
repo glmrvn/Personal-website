@@ -21,22 +21,10 @@ $(window).scroll(function() {
 //плавное появление при скроле
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-        if (scroll >= 4000) { $('.article').addClass("article_in"); }
         if (scroll >= 300) { $('#second_screen').addClass("fade_in"); }
         if (scroll >= 2100) { $('#fourth_screen').addClass("fade_in"); }
         if (scroll >= 4300) { $('#six_screen').addClass("fade_in"); }
-});
-
-//плавное появление формы при скроле
-$(window).scroll(function() {
-    $('.message').each(function(){
-    var imagePos = $(this).offset().top;
-
-    var topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+700) {
-            $(this).addClass("fade_in");
-        }
-    });
+        if (scroll >= 4650) { $('#message').addClass("fade_in"); }
 });
 
 //плавная езда по странице

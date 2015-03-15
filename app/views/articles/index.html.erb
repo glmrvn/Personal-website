@@ -1,18 +1,22 @@
 <div class="head_bg">
   <div class="filter">
-    <div id="text_logo">ARNIS</div>
-    <div class="line_orng"></div>
-    <h1>Добро пожаловать на <b>ARNIS</b></h1>
-    <h2>Меня зовут Алекс, мне 24 года, я web-дизайнер</h2>
-    <a href="#second_screen"><div class="btn">УЗНАТЬ БОЛЬШЕ</div></a>
-    <a href="#second_screen"><%=image_tag("arrow_down.png", id: "arrow_down") %></a>
+    <div class="wrap">
+      <div id="text_logo">ARNIS</div>
+      <div class="line_orng"></div>
+      <h1>Добро пожаловать на <b>ARNIS</b></h1>
+      <h2>Меня зовут Алекс, мне 24 года, я web-дизайнер</h2>
+      <a href="#second_screen"><div class="btn">УЗНАТЬ БОЛЬШЕ</div></a>
+      <a href="#second_screen"><%=image_tag("arrow_down.png", id: "arrow_down") %></a>
+    </div>
   </div>
 </div>
 
 <div id="second_screen">
-  <h1>Web-design & mobile design</h1>
-  <h2>Качественный дизайн - это ничего лишнего и дружелюбный интерфейс.</h2>
-  <div class="line_orng"></div>
+  <div class="wrap">
+    <h1>Web-design & mobile design</h1>
+    <h2>Качественный дизайн - это ничего лишнего и дружелюбный интерфейс.</h2>
+    <div class="line_orng"></div>
+  </div>
 
   <div id="second_pics", class="wrap">
     <div class="secn_pic"><%= image_tag("1.jpg") %>
@@ -91,9 +95,8 @@
     <h1>Последние работы</h1>
     <h2>Самые актуальные макеты на сегодняшний день.</h2>
     <div class="line_orng"></div>
-    <div class="wrap">
-      <div id="art"><%= render :partial => 'articles' %></div>
-    </div>
+    <div id="art"><%= render :partial => 'articles' %></div>
+
   </div>
 </div>
 
@@ -113,7 +116,7 @@
 <div id="message_screen">
   <div class="filter">
     <div class="wrap">
-      <div class="message">
+      <div id="message">
         <h1>Вы можете связаться со мной</h1>
         <h2>Оставьте сообщение и мы начнем продуктивно работать</h2>
         <div class="line_orng"></div>

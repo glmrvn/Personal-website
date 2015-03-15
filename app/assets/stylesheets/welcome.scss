@@ -1,4 +1,8 @@
 /*first screen*/
+header { background-image: none;
+background-color: rgb(36, 17, 0);
+min-width: 1000px;}
+
 .head_bg{
 	background: url(head_bg.jpg) no-repeat fixed 0 0;
 	color: #fff;
@@ -128,10 +132,9 @@ a:hover > #menu_btn { color:#666; }
 	&:first-child, &:nth-child(4), &:nth-child(7) { padding-left:0; }
 }
 .text { 
-	width:370px;
-	height:247px;
+	width:370px; height:137px;
 	opacity:0;
-	margin-top: -247px;
+  	margin-top: -251px;
 	color: #fff;
 	text-align: center;
 	padding-top: 110px;
@@ -224,7 +227,7 @@ a:hover > #menu_btn { color:#666; }
 /*fifth screen*/
 #fifth_screen {
 	background: url(head_bg.jpg) no-repeat center center fixed;
-	height: 100%;
+	height: 1160px;
 	text-align: center;
 	color: #fff;
 	background-size: cover;
