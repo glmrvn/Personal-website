@@ -64,7 +64,7 @@ a.art_title {
 		letter-spacing: -0.04em;
 		margin: 0;
 	}
-} 
+}
 .see_ico { float: left; margin-left: 500px; }
 
 .date_ico { margin-left: 20px; float: left; }
@@ -84,8 +84,6 @@ a.art_title {
 
 /* pagination style */
 
-.pagination {}
-
 .next_page, .previous_page { margin-top: 380px; }
 
 .next_art, .prev_art { margin-top: -75px; }
@@ -102,3 +100,11 @@ a.art_title {
 }
 
 span.next_page.disabled, span.previous_page.disabled {opacity: 0.15;}
+
+input#article_title, textarea#article_text {
+	width: 200px; height: 20px;
+	padding: 10px;
+	font-size: 14px;
+}
+
+input#article_image { color: #fff; }

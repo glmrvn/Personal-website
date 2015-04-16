@@ -12,23 +12,23 @@ body {
 }
 
 #page-preloader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #000;
-    z-index: 100500;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	z-index: 100500;
 }
 
 #page-preloader .spinner {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background: url('spinner.gif') no-repeat 50% 50%;
-    margin: -16px 0 0 -16px;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: url('spinner.gif') no-repeat 50% 50%;
+	margin: -16px 0 0 -16px;
 }
 
 h1, h2 { margin: 0; }
@@ -38,6 +38,8 @@ table {	background-color: #fff;	border-radius: 3px; }
 th,td { padding: 7px; }
 
 a {	text-decoration: none;	font-size: 16px; }
+
+label { color: #fff; }
 
 .wrap {	margin: 0 auto;	width: 1170px; }
 
@@ -52,7 +54,7 @@ a {	text-decoration: none;	font-size: 16px; }
 
 .menu_in {
 	background: rgba(0,0,0,0.7) !important;
-	height: 39px !important;
+	height: 37px !important;
 	padding-top: 16px !important;
 }
 
@@ -67,28 +69,42 @@ a {	text-decoration: none;	font-size: 16px; }
 	padding-top: 22px;
 
 	#line {
-	 	width: 1px; height: 20px;
-	 	background-color: #fff;
-	 	float: right;
+		 width: 1px; height: 20px;
+		 background-color: #fff;
+		 float: right;
 		margin-right: 20px;
- 	}
+	 }
 
 	a {
-	    float: right;
-	    color: #fff;
-	    padding-right: 30px;
-	    font-family: 'Raleway_Medium';
-	    font-size: 14px;
-	    text-decoration: none;
-	    transition: 0.9s;
-	    letter-spacing: -0.03em;
+		float: right;
+		color: #fff;
+		padding-right: 23px;
+		font-family: 'Raleway_Medium';
+		font-size: 14px;
+		text-decoration: none;
+		transition: 0.9s;
+		letter-spacing: -0.03em;
 
-	    &:first-child { float: left; }
+		&:first-child { float: left; }
 
-	    &:hover { color: #888; }
+		&:hover { color: #888; }
 	}
 }
 
+#menu_btn {
+	border-radius: 3px;
+	border: 1px solid #fff;
+	height: 26px;
+	float: right;
+	padding-top: 9px;
+	text-align: center;
+	padding-left: 23px;
+	margin-top: -9px;
+	margin-right: 10px;
+	transition: .7s;
+
+	&:hover { background:rgba(0,0,0,.3); }
+}
 #user_pic {
 	margin-left: 26px;
 	a { float: left; }

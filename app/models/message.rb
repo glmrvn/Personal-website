@@ -1,6 +1,7 @@
 class Message < ActiveRecord::Base
 
-	validates :name, :text, presence: true,
-	                 length: { in: 5..500 }
+#validation message. Text presence and set length interval
+validates :name, :text, presence: true,
+                        length: { in: 5..500 }
 
 end

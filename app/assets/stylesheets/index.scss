@@ -1,7 +1,9 @@
 /*first screen*/
-header { background-image: none;
-background-color: rgb(36, 17, 0);
-min-width: 1000px;}
+header {
+	background-image: none;
+	background-color: rgb(36, 17, 0);
+	min-width: 1000px;
+}
 
 .head_bg{
 	background: url(head_bg.jpg) no-repeat fixed 0 0;
@@ -25,10 +27,10 @@ min-width: 1000px;}
 	h2 {
 		font-size: 26px;
 		font-family: 'Raleway_Light';
-		padding-top: 66px;
+		padding-top: 36px;
 		text-align: center;
 		letter-spacing: -.04em;
-		padding-bottom: 50px;
+		padding-bottom: 80px;
 	}
 
 	a:hover { text-decoration: none; color: #fff;}
@@ -44,7 +46,7 @@ min-width: 1000px;}
 #text_logo {
 	margin: 0 auto;
 	letter-spacing: 2.3em;
-	padding-top: 236px; padding-left: 55px;
+	padding-top: 166px; padding-left: 55px;
 	color: #fff;
 	font-size: 24px;
 	text-align: center;
@@ -54,20 +56,6 @@ min-width: 1000px;}
 	background: #FF5C26;
 	width: 47px; height: 1px;
 	margin: 0 auto;
-}
-#menu_btn {
-	border-radius: 3px;
-	border: 1px solid #fff;
-	height: 28px;
-	float: right;
-	padding-top: 9px;
-	text-align: center;
-	padding-left: 23px;
-	margin-top: -9px;
-	margin-right: 10px;
-	transition: .7s;
-
-	&:hover { background:rgba(0,0,0,.3); }
 }
 
 a:hover > #menu_btn { color:#666; }
@@ -91,8 +79,9 @@ a:hover > #menu_btn { color:#666; }
 #arrow_down {
 	margin: 0 auto;
 	display: block;
-	padding-top: 140px;
+	padding-top: 147px;
 	padding-bottom: 24px;
+	width: 40px;
 }
 
 /*second screen*/
@@ -125,16 +114,16 @@ a:hover > #menu_btn { color:#666; }
 	padding-top: 30px;
 }
 .secn_pic {
-	padding-left: 26px;
-	padding-top: 26px;
+	padding-left: 30px;
+	padding-top: 30px;
 	float: left;
 
 	&:first-child, &:nth-child(4), &:nth-child(7) { padding-left:0; }
 }
-.text { 
+.text {
 	width:370px; height:137px;
 	opacity:0;
-  	margin-top: -251px;
+	  margin-top: -251px;
 	color: #fff;
 	text-align: center;
 	padding-top: 110px;
@@ -145,7 +134,7 @@ a:hover > #menu_btn { color:#666; }
 
 	&:hover {
 		opacity:1;
-		background: rgba(0,0,0,.6); 
+		background: rgba(0,0,0,.6);
 	}
 }
 
@@ -194,7 +183,7 @@ a:hover > #menu_btn { color:#666; }
 }
 #columns {
 	padding-top: 100px;
-	
+
 	h1 {
 		font-family: 'Raleway_regular';
 		font-size: 18px;
@@ -262,7 +251,7 @@ a:hover > #menu_btn { color:#666; }
 
 	h3 {
 		color: #555;
-		font-size: 16px;
+		font-size: 14px;
 		letter-spacing: 1em;
 		text-align: center;
 		padding-left: 10px;
