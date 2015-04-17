@@ -1,8 +1,5 @@
-#My personal site
-
+#My personal website
 
 Write on Ruby on Rails
 
-Here: [glmrvn.com]
-
-[glmrvn.com](wwww.glmrvn.com)
+[glmrvn.com](http://www.glmrvn.com)
