@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 
   before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update]
   before_filter :article_find, only: [:show, :edit, :update]
-  before_filter :signed_user,  only: [:edit, :destroy]
+  before_filter :signed_user,  only: [:edit, :destroy, :new, :update]
 
   def index
     @articles = Article.paginate(page: params[:page], :per_page => 6)
