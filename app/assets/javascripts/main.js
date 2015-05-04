@@ -21,7 +21,7 @@ $(window).scroll(function() {
 //плавное появление при скроле
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-        if (scroll >= 300) { $('#second_screen').addClass("fade_in"); }
+        if (scroll >= 200) { $('#second_screen').addClass("fade_in"); }
         if (scroll >= 2100) { $('#fourth_screen').addClass("fade_in"); }
         if (scroll >= 4300) { $('#six_screen').addClass("fade_in"); }
         if (scroll >= 4650) { $('#message').addClass("fade_in"); }
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 //появление макетов при ajax перезугрузке
 $(function() {
-  $(document)  
+  $(document)
     .ajaxComplete(function() {
       $('.article').delay(350).fadeIn('slow');
     })

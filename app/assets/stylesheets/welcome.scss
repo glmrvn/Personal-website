@@ -13,13 +13,13 @@ header {
 	overflow-x: hidden;
 
 	h1 {
-		font-size: 77px;
+		font-size: 75px;
 		margin: 0 auto;
 		letter-spacing: -.069em;
 		text-align: center;
 		font-weight: 100;
 		font-family: 'Raleway_Thing';
-		padding-top: 90px;
+		padding-top: 60px;
 	}
 
 	b { font-family: 'Raleway_Black'; }
@@ -46,9 +46,9 @@ header {
 #text_logo {
 	margin: 0 auto;
 	letter-spacing: 2.3em;
-	padding-top: 166px; padding-left: 55px;
+	padding-top: 160px; padding-left: 55px;
 	color: #fff;
-	font-size: 24px;
+	font-size: 20px;
 	text-align: center;
 	padding-bottom: 40px;
 }
@@ -67,8 +67,8 @@ a:hover > #menu_btn { color:#666; }
 	transition: 0.4s;
 	color: #fff;
 	text-align: center;
-	font-size: 15px;
-	font-family: 'Raleway_Regular';
+	font-size: 14px;
+	font-family: 'Raleway_Medium';
 	letter-spacing: 0.6em;
 	margin: 0 auto;
 	display: block;
@@ -96,14 +96,14 @@ a:hover > #menu_btn { color:#666; }
 	}
 
 	h1 {
-		color: #333;
+		color: #444;
 		font-size: 70px;
 		font-family: 'Raleway_ExtraBold';
 		padding-top: 70px;
 	}
 
 	h2 {
-		color: #888;
+		color: #666;
 		font-family: 'Raleway_Light';
 		font-size: 24px;
 		padding-top: 30px;
@@ -185,7 +185,7 @@ a:hover > #menu_btn { color:#666; }
 	padding-top: 100px;
 
 	h1 {
-		font-family: 'Raleway_regular';
+		font-family: 'Raleway_Regular';
 		font-size: 18px;
 		letter-spacing: .35em;
 		color: #333;
@@ -196,8 +196,9 @@ a:hover > #menu_btn { color:#666; }
 	}
 
 	p {
+		font-family: 'Raleway_Medium';
 		font-size: 14px;
-		color: #888;
+		color: #666;
 		line-height: 1.7;
 		padding-top: 30px;
 	}
