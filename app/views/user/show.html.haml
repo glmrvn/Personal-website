@@ -1,0 +1,69 @@
+#admin_panel
+	.filter85_height100
+		.wrap
+
+			%h1 Подробная информация о пользователе
+			.well
+
+				%p
+					%b Email:
+					=@user.email
+
+				%p
+					%b Messages:
+					= @messages.size
+
+				%p
+					%b Articles:
+					= @articles.size
+
+				%p
+					%b Просмотров:
+					= @articles.sum(:see_count)
+
+				%p
+					%b Последний просмотр:
+					= @last_update_at.title
+					время: #{@last_update_at.updated_at.localtime.strftime('%b %e, %H:%M')}  #{link_to "Show", article_path(@last_update_at)}
+
+			%h2 Сообщения
+			%table.table-striped
+				%tr.active
+					%th
+					%th Имя или телефон
+					%th Сообщение
+					%th Время
+					%th
+				- @messages.all.order("created_at desc").each_with_index do |message, b|
+					%tr
+						%td= (b+1)
+						%td= message.name
+						%td= message.text
+						%td= message.created_at.strftime("%d.%m.%y")
+						%td= link_to "Delete", message_path(message), method: :delete, data: { confirm: 'Are you sure?' }
+
+			%h2 Записи:
+			= link_to "New", new_article_path
+			%br
+			%br
+			%table.table-striped
+				%tr.active
+					%th
+					%th Title
+					%th Text
+					%th Время
+					%th Просмотров (#{@articles.sum(:see_count)})
+					%th
+					%th
+					%th
+					%th
+				- @articles.all.order("see_count desc").each_with_index do |article, i|
+					%tr
+						%td= (i+1)
+						%td= article.title
+						%td= article.text
+						%td= article.created_at.strftime("%d.%m.%y")
+						%td= article.see_count
+						%td= link_to "Delete", article_path(article), method: :delete, data: { confirm: 'Are you sure?' }
+						%td= link_to "Edit", edit_article_path(article)
+						%td= link_to "Show", article_path(article)

@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.1.0'
 #HAMl use
 gem 'html2haml'
 gem 'haml'
+gem "haml-rails"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
