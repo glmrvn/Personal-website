@@ -13,20 +13,20 @@
 
 	h1, h2 { letter-spacing: -.05em; text-align: center; }
 
-  h1 {
-	font-size: 70px;
-	font-family: 'Raleway_ExtraBold';
-	padding-top: 70px;
-    }
+	h1 {
+		font-size: 70px;
+		font-family: 'Raleway_ExtraBold';
+		padding-top: 70px;
+	}
 
-  h2 {
+	h2 {
 		padding-top: 30px; padding-bottom: 30px;
 		font-size: 24px;
-	font-family: 'Raleway_Light';
+		font-family: 'Raleway_Light';
 	}
 }
 
-form {    margin-top: 40px; }
+form { margin-top: 40px; }
 
 .form {
 	height: 40px;
@@ -42,7 +42,6 @@ input#message_name:focus, textarea#message_text:focus {
 }
 
 input#message_name {
-
 	padding-left: 15px;
 	width: 661px;
 	background: rgba(0,0,0,0.5);
@@ -68,7 +67,7 @@ input[type="submit"] {
 	margin: 50px auto;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 15px;
+	font-size: 13px;
 	display: block;
 	color: #fff;
 	background: none;
