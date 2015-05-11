@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
 
-  before_filter :all_articles, only: [:index, :new, :create, :show, :edit, :update]
-  before_filter :article_find, only: [:show, :edit, :update]
-  before_filter :signed_user,  only: [:edit, :destroy, :new, :update]
+  before_action :article_find, only: [:show, :edit, :update]
+  before_action :signed_user,  only: [:edit, :destroy, :new, :update]
 
   def index
+    @articles = Article.all
     @articles = Article.paginate(page: params[:page], :per_page => 6)
   end
 
@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
     else
       render 'new'
     end
-end
+  end
 
   def edit
   end
@@ -49,10 +49,6 @@ end
   end
 
   private
-
-  def all_articles
-    @articles  = Article.all
-  end
 
   def article_find
     @article = Article.find(params[:id])

@@ -7,7 +7,7 @@
 
 				%p
 					%b Email:
-					=@user.email
+					=@user.password
 
 				%p
 					%b Messages:
@@ -23,8 +23,8 @@
 
 				%p
 					%b Последний просмотр:
-					= @last_update_at.title
-					время: #{@last_update_at.updated_at.localtime.strftime('%b %e, %H:%M')}  #{link_to "Show", article_path(@last_update_at)}
+					= @articles.last_update_at.title
+					= @articles.last_update_at.updated_at.localtime.strftime('%b %e, %H:%M')
 
 			%h2 Сообщения
 			%table.table-striped
