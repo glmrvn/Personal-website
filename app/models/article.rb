@@ -12,6 +12,8 @@ class Article < ActiveRecord::Base
   validates_attachment :image, presence: true,
                                size: { in: 0..15.megabytes }
 
+  scope :last_update_at, ->{order('updated_at').last}
+
   def previous_post
     self.class.where("see_count < ?", see_count).order(see_count: :desc).first
   end
