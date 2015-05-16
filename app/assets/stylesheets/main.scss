@@ -47,14 +47,6 @@ label { color: #fff; }
 
 /* header menu */
 
-@media screen and (min-width:320px) and (max-width:600px) {
-	.menu, #arrow_down { display: none; }
-	.head_bg h1 { font-size: 44px; }
-	#text_logo { font-size: 14px; padding-top: 50px;}
-	.btn { width: 250px; margin-bottom: 30px;}
-	#second_screen h1, #fourth_screen h1, #six_screen h1 { font-size:32px; padding-top:30px; }
-	#second_screen h2, #fourth_screen h2, #six_screen h2 { font-size:20px; }
-}
 .menu_in {
 	background: rgba(0,0,0,0.7) !important;
 	height: 37px !important;
@@ -177,4 +169,54 @@ footer {
 .foo_ico {
 	float: right;
 	padding-left: 30px
+}
+
+
+// mobile version
+@media screen and (min-width:320px) and (max-width:600px) {
+	html, body {
+		width: 100%;
+		overflow-x: hidden;
+}
+	.menu, #arrow_down { display: none; }
+
+	.head_bg h1 {
+		font-size: 44px;
+		padding-top:35px;
+	}
+	.head_bg h2 {
+		padding-bottom: 60px;
+		font-size: 16px;
+	}
+	#text_logo {
+		font-size: 14px;
+		padding-top: 50px;
+	}
+	.btn {
+		width: 250px;
+		margin-bottom: 30px;
+		font-size: 12px;
+	}
+	#second_screen { opacity:1; }
+
+	#second_screen h1, #fourth_screen h1, #six_screen h1 {
+		font-size: 30px;
+		padding-top: 26px;
+		font-family: 'Raleway_Medium';
+	}
+	#second_screen h2, #fourth_screen h2, #six_screen h2 {
+		font-size: 14px;
+		padding: 15px 0 15px 0;
+	}
+	.secn_pic img{
+		width: 100%;
+	}
+	.secn_pic {
+		padding: 6px 0 6px 0;
+	}
+	#second_pics, .secn_pic {
+		padding-top: 15px;
+		width: 100%;
+	}
+	.line_orng { width: 30px;}
 }
