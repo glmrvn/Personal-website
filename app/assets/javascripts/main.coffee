@@ -23,7 +23,7 @@ $(window).scroll ->
   scroll = $(window).scrollTop()
   if scroll >= 20
     $('.menu').addClass 'menu_in'
-  if scroll < 300
+  if scroll < 180
     $('.menu').removeClass 'menu_in'
   return
 
