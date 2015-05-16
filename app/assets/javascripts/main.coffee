@@ -11,6 +11,13 @@ $(document).ready ->
   $('.alert').addClass 'alert_js'
   return
 
+#Убирает меню при ширене меньше 600px
+# $(document).ready ->
+#   widthOfWindow = $(window).width()
+#   if widthOfWindow < 840
+#     $('.menu').addClass 'menu_none'
+#   return
+
 #сужение меню при скроле вниз
 $(window).scroll ->
   scroll = $(window).scrollTop()

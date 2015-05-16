@@ -36,7 +36,7 @@ a { text-decoration: none;	font-size: 16px; }
 
 label { color: #fff; }
 
-.wrap { margin: 0 auto; width: 1170px; }
+.wrap { margin: 0 auto; min-width:320; max-width: 1170px; }
 
 .wrap_480 {
 	margin: 0 auto;
@@ -47,6 +47,14 @@ label { color: #fff; }
 
 /* header menu */
 
+@media screen and (min-width:320px) and (max-width:600px) {
+	.menu, #arrow_down { display: none; }
+	.head_bg h1 { font-size: 44px; }
+	#text_logo { font-size: 14px; padding-top: 50px;}
+	.btn { width: 250px; margin-bottom: 30px;}
+	#second_screen h1, #fourth_screen h1, #six_screen h1 { font-size:32px; padding-top:30px; }
+	#second_screen h2, #fourth_screen h2, #six_screen h2 { font-size:20px; }
+}
 .menu_in {
 	background: rgba(0,0,0,0.7) !important;
 	height: 37px !important;
