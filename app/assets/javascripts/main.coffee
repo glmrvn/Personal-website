@@ -32,7 +32,7 @@ $(window).scroll ->
   scroll = $(window).scrollTop()
   if scroll >= 200
     $('#second_screen').addClass 'fade_in'
-  if scroll >= 2100
+  if scroll >= 800
     $('#fourth_screen').addClass 'fade_in'
   if scroll >= 4300
     $('#six_screen').addClass 'fade_in'

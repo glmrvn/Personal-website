@@ -135,7 +135,7 @@ a:hover > #menu_btn { color:#666; }
 
 #threeth_screen {
 	background: url(threeth_screen_bg.jpg) no-repeat center center fixed;
-	height: 805px;
+	overflow: hidden;
 	background-size: cover;
 
 	h1 {
@@ -158,7 +158,7 @@ a:hover > #menu_btn { color:#666; }
 		font-family: 'Raleway_Light';
 		width: 703px;
 		line-height: 1.6;
-		padding-top: 40px;
+		padding: 40px 0 0 0;
 		letter-spacing: -.04em;
 	}
 
@@ -169,6 +169,7 @@ a:hover > #menu_btn { color:#666; }
 	display: block;
 	float: right;
 	width: 550px;
+	padding: 0 0 160px 0;
 }
 
 /*fourth screen*/
