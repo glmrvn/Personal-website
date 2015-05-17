@@ -5,10 +5,9 @@
 
 #message_screen {
 	background: url(messages_screen_bg.jpg) no-repeat center center;
-	height: 700px;
+	overflow: hidden;
 	color: #fff;
 	transition:2s;
-	height: 780px;
 	background-size: cover;
 
 	h1, h2 { letter-spacing: -.05em; text-align: center; }
