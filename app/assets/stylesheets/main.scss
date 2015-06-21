@@ -84,7 +84,7 @@ h1 {
 	line-height: 15px;
 }
 .container {
-	width: 100vw;
+	width: 98vw;
 	padding: 90px 0 90px 0;
 	margin-top: -60px;
 	background: url('A.svg') no-repeat center;
@@ -122,11 +122,11 @@ h1 {
 .next_page, .next_art {
 	background: url(arrow_next.svg) no-repeat;
 	float: right;
-	margin-right: 400px;
+	margin-right: 300px;
 }
 .previous_page, .prev_art {
 	float: left;
-	margin-left: 400px;
+	margin-left: 300px;
 	background: url(arrow_prev.svg);
 }
 
