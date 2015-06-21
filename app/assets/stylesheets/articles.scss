@@ -23,30 +23,7 @@ a.art_title {
 
 .article_in { opacity: 1 !important; }
 
-.article {
-	color: #545454;
-	text-align: center;
-	margin:-10px 45px -20px 55px;
-	float: left;
 
-	p {
-		font-size: 16px;
-		line-height: 1.7;
-		width: 640px;
-		padding-bottom: 10px;
-		font-weight: 300;
-	}
-}
-.art_img_container {
-	overflow: hidden;
-	margin-top: -334px;
-}
-
-.art_img {
-	max-width: 243px;
-	transition: all 3.35s ease;
-	margin: 0 !important;
-}
 
 .admin_btns {
 	float: left;
@@ -79,24 +56,7 @@ a.art_title {
 }
 #art {padding-top: 40px;}
 
-/* pagination style */
 
-.next_page, .previous_page { margin-top: 380px; }
-
-.next_art, .prev_art { margin-top: -75px; }
-
-.next_page, .previous_page, .next_art, .prev_art { width: 26px; height: 78px; }
-
-.next_page, .next_art {
-	background: url(arrow_next.png);
-	float: right;
-}
-.previous_page, .prev_art {
-	float: left;
-	background: url(arrow_prev.png);
-}
-
-span.next_page.disabled, span.previous_page.disabled {opacity: 0.15;}
 
 input#article_title, textarea#article_text {
 	width: 200px; height: 20px;

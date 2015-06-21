@@ -1,9 +1,7 @@
-.wrap
-  = will_paginate @article, page_links: false
-  - @articles.all.order('see_count DESC').each do |article|
-    .article
-      .article_bg
-      .art_img_container
-        = link_to image_tag(article.image.url(:thumb), class: "art_img"), article_path(article)
-      .a_to_article
-        = link_to article.title, article_path(article), class: "art_title"
+
+= will_paginate @article, page_links: false
+- @articles.all.order('see_count DESC').each do |article|
+  .article
+    %h1= article.title
+    %p= article.text
+    = image_tag(article.image.url(:medium), class: "art_img")

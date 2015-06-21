@@ -1,82 +1,9 @@
-.head_bg
-	.filter
-		.wrap
-			#text_logo ARNIS
-			.line_orng
-			%h1
-				Добро пожаловать на
-				%b ARNIS DESIGN
-			%h2 Меня зовут Алекс, мне 24 года, я web-дизайнер
-			%a{:href => "#second_screen"}
-				.btn УЗНАТЬ БОЛЬШЕ
-			%a{:href => "#second_screen"}= image_tag("arrow_down.png", id: "arrow_down")
-#second_screen
-	.wrap
-		%h1 Web-design &amp; mobile design
-		%h2 Качественный дизайн - это ничего лишнего плюс дружелюбный интерфейс.
-		.line_orng
-	#second_pics.wrap
-		#secn_pic
+#section1
+	.container
+		= image_tag("alex.png")
+		%h1 Alex Arnis
+		%p UI/UX DESIGNER
+		= link_to image_tag("scrollme.svg", class:"scroll"), "#section2"
 
-#threeth_screen
-	.filter85
-		.wrap
-			%h1 Кто я такой?
-			.line_orn3
-			%p
-				Все начиналось в 2009 году, с простых увлечений графикой и обработкой фотографий.
-				%b К 2010 году увлечение и хобби переросло
-				в серьезный труд и профессию web-дизайнера. В настоящее время занимаюсь так же
-				%b дизайном мобильных приложений.
-			= image_tag("makets_perspective.png", id:"makets_perspective")
-#fourth_screen
-	%h1 Продуктивный дизайн
-	%h2 Успех - это совокупность многих факторов. Расслабьтесь, учтено все.
-	.line_orng
-	#columns.wrap
-		.column
-			= image_tag("col1.jpg")
-			= image_tag("ico_design.png", class:"fourth_icons")
-			%h1 БЫСТРЕЕ МОЛНИИ
-			%p Проект разрабатывается одним человеком, а значит возрастает оперативность вносимых изменений. Быстро и оперативно, как никогда.
-		.column
-			= image_tag("col2.jpg")
-			= image_tag("ico_interface.png", class:"fourth_icons")
-			%h1 ВАЖНЫ ДЕТАЛИ
-			%p Понятный интерфейс ключевая составляющая вашего успеха. Качественно выполненный дизайн и верстка залог большого колличества посетителей
-		.column
-			= image_tag("col3.jpg")
-			= image_tag("ico_relax.png", class:"fourth_icons")
-			%h1 ВСЕ ПРОДУМАНО
-			%p Возможности вашего проекта обдумываются уже на этапе создания дизайна, ускоряя процесс разработки в несколько раз.
-#fifth_screen
-	.filter
-		%h1 Последние работы
-		%h2 Самые актуальные макеты на сегодняшний день.
-		.line_orng
-		#art= render :partial => 'articles'
-#six_screen.wrap
-	%h1 Рабочий процесс
-	%h2 Все просто! 3 этапа. Никаких сложностей.
-	.line_orng
-	.icons
-		.head_ico
-			= image_tag("ico_anal.png")
-			%h3 АНАЛИЗ
-		.head_ico
-			= image_tag("ico_idea.png")
-			%h3 ИДЕЯ
-		.head_ico
-			= image_tag("ico_action.png")
-			%h3 ДЕЙСТВИЕ
-#message_screen
-	.filter
-		.wrap
-			#message
-				%h1 Вы можете связаться со мной
-				%h2 Оставьте сообщение и мы начнем продуктивно работать
-				.line_orng
-				= form_for :message, url: messages_path do |f|
-					%p= f.text_field :name,	:placeholder => 'Введите номер телефона или ваш email...', class: "form"
-					%p= f.text_area :text, :placeholder => 'Введите ваш вопрос, сообщение или отзыв :)', class: "form"
-					= f.submit "отправить сообщение", class: "btn"
+#section2
+	#art= render :partial => 'articles'

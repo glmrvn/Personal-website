@@ -22,17 +22,17 @@
     %header
       .menu
         %nav
-          = link_to (image_tag("logo.png", id: "user_pic")), root_path
+          / = link_to (image_tag("logo.png", id: "user_pic")), root_path
           - if signed_in?
             = link_to "Выйти", signout_path, method: "delete"
             = link_to "Админ", user_path(current_user)
-            #line
-          #menu_btn= link_to "СВЯЗАТЬСЯ", root_path( :anchor => 'message_screen' )
-          = link_to "ПРОЦЕСС", root_path( :anchor => 'six_screen' )
-          = link_to "ПОРТФОЛИО", root_path( :anchor => 'fifth_screen' )
-          = link_to "РЕШЕНИЯ", root_path( :anchor => 'fourth_screen' )
-          = link_to "КТО Я ТАКОЙ?", root_path( :anchor => 'threeth_screen' )
-          = link_to "DESIGN", root_path( :anchor => 'second_screen' )
+            / #line
+          / #menu_btn= link_to "СВЯЗАТЬСЯ", root_path( :anchor => 'message_screen' )
+          / = link_to "ПРОЦЕСС", root_path( :anchor => 'six_screen' )
+          / = link_to "ПОРТФОЛИО", root_path( :anchor => 'fifth_screen' )
+          / = link_to "РЕШЕНИЯ", root_path( :anchor => 'fourth_screen' )
+          / = link_to "КТО Я ТАКОЙ?", root_path( :anchor => 'threeth_screen' )
+          = link_to "GLMRVN@GMAIL.COM", "mailto:glmrvn@gmail.com?subject=Тема+письма&body=Здравствуйте"
     .wrap
       - flash.each do |key, value|
         %div{:class => "alert alert-#{key}"}= value
