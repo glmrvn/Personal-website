@@ -1,5 +1,4 @@
-
-= will_paginate @article, page_links: false
+= will_paginate @article, page_links: false, :params => {:anchor => "section2"}
 - @articles.all.order('see_count DESC').each do |article|
   .article
     %h1= article.title

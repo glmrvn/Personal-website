@@ -3,3 +3,4 @@ $ ->
     $.get @href, null, null, 'script'
     false
   return
+

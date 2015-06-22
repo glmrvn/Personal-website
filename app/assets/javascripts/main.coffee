@@ -11,34 +11,14 @@ $(document).ready ->
   $('.alert').addClass 'alert_js'
   return
 
-#Убирает меню при ширене меньше 600px
-# $(document).ready ->
-#   widthOfWindow = $(window).width()
-#   if widthOfWindow < 840
-#     $('.menu').addClass 'menu_none'
-#   return
-
 #сужение меню при скроле вниз
-$(window).scroll ->
-  scroll = $(window).scrollTop()
-  if scroll >= 20
-    $('.menu').addClass 'menu_in'
-  if scroll < 180
-    $('.menu').removeClass 'menu_in'
-  return
-
-#плавное появление при скроле
-$(window).scroll ->
-  scroll = $(window).scrollTop()
-  if scroll >= 200
-    $('#second_screen').addClass 'fade_in'
-  if scroll >= 800
-    $('#fourth_screen').addClass 'fade_in'
-  if scroll >= 4300
-    $('#six_screen').addClass 'fade_in'
-  if scroll >= 4650
-    $('#message').addClass 'fade_in'
-  return
+# $(window).scroll ->
+#   scroll = $(window).scrollTop()
+#   if scroll >= 20
+#     $('.menu').addClass 'menu_in'
+#   if scroll < 180
+#     $('.menu').removeClass 'menu_in'
+#   return
 
 #плавная езда по странице
 $(document).ready ->
