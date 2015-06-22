@@ -21,24 +21,15 @@ body {
 	margin: -16px 0 0 -16px;
 }
 
-h1, h2 { margin: 0; }
-
-table { background-color: #fff;	border-radius: 3px; }
-
-th,td { padding: 7px; }
-
-a { text-decoration: none;	font-size: 16px; }
-
-label { color: #fff; }
-
 .wrap { margin: 0 auto; min-width: 320px; max-width: 1170px; }
 
 .wrap_480 {
 	margin: 0 auto;
 	width: 480px;
 
-	h1 { text-align: center; }
+	h1 { text-align: center; }	
 }
+.wrap_100 {	margin: 0 auto;	width: 100px; }
 
 /* header menu */
 
@@ -72,6 +63,7 @@ h1 {
 	font-size: 58px;
 	color: #636363;
 	line-height: 69px;
+	padding-top: 20px;
 }
 
 #section1 p, #section2 p {
@@ -103,13 +95,12 @@ h1 {
 	h1, p {color: #fff;}
 }
 
-.article {  }
 .art_img { width: 300px; padding: 35px 0 30px 0;}
 
 /* pagination style */
 
 .next_page, .previous_page { 
-	margin-top: 260px; 
+	margin-bottom: -20px;
 	transition: .3s;
 
   	&:hover {opacity: 0.50;}
@@ -117,22 +108,25 @@ h1 {
 
 .next_page, .previous_page, .next_art, .prev_art { width: 41px; height: 41px; }
 
+.pagination {
+	display: block;
+}
+
 .next_page, .next_art {
 	background: url(arrow_next.svg) no-repeat;
 	float: right;
-	margin-right: 300px;
 }
+
 .previous_page, .prev_art {
 	float: left;
-	margin-left: 300px;
 	background: url(arrow_prev.svg);
 }
 
 span.next_page.disabled, span.previous_page.disabled {opacity: 0.15;}
+
 /* применение эффектов на главной странице */
 
 .fade_in { opacity: 1 !important; }
-
 
 /* flash messages styles */
 

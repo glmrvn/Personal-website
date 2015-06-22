@@ -14,63 +14,13 @@
 
 	h1 {
 		font-size: 70px;
-		font-family: 'Raleway_ExtraBold';
+		font-family: 'Raleway';
 		padding-top: 70px;
 	}
 
 	h2 {
 		padding-top: 30px; padding-bottom: 30px;
 		font-size: 24px;
-		font-family: 'Raleway_Light';
+		font-family: 'Raleway';
 	}
-}
-
-form { margin-top: 40px; }
-
-.form {
-	height: 40px;
-	margin: 0 auto;
-	display: block;
-	font-size: 15px;
-	color: #fff;
-	border: none;
-}
-
-input#message_name:focus, textarea#message_text:focus {
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-}
-
-input#message_name {
-	padding-left: 15px;
-	width: 661px;
-	background: rgba(0,0,0,0.5);
-	outline: none;
-	font-family: 'Raleway_Medium';
-	font-weight: 500;
-}
-
-textarea#message_text {
-	max-height: 216px;
-	height: 216px;
-	width: 647px;
-	max-width: 647px;
-	padding: 15px;
-	font-family: 'Raleway_Medium';
-	font-weight: 500;
-	font-size: 15px;
-	background: rgba(0,0,0,0.5);
-	outline: none;
-}
-
-input[type="submit"] {
-	margin: 50px auto;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 13px;
-	display: block;
-	color: #fff;
-	background: none;
-	width: 420px;
-	padding: 17px;
-	margin-bottom: 100px;
 }

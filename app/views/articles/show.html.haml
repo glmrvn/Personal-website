@@ -1,19 +1,17 @@
-.head_bg
-  .filter85
-    .wrap
-      .art_cont
-        %h1= @article.title
-        - if signed_in?
-          .art_indx
-            = image_tag("eye_ico.png", class: "see_ico")
-            .index= @article.see_count
-            = image_tag("clock_ico.png", class: "date_ico")
-            .index= @article.created_at.strftime("%d %b %y")
-          .admin_btns
-            = link_to "Back", articles_path
-            = link_to "Edit", edit_article_path
-            = link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }
-        .pager
-          = link_to("", @article.previous_post, class: "next_art") if @article.previous_post
-          = link_to("", @article.next_post, class: "prev_art") if @article.next_post
-        = image_tag @article.image.url(:medium), class: "image_prev"
+.wrap
+  .art_cont
+    %h1= @article.title
+    - if signed_in?
+      .art_indx
+        = image_tag("eye_ico.png", class: "see_ico")
+        .index= @article.see_count
+        = image_tag("clock_ico.png", class: "date_ico")
+        .index= @article.created_at.strftime("%d %b %y")
+      .admin_btns
+        = link_to "Back", articles_path
+        = link_to "Edit", edit_article_path
+        = link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }
+    .pager
+      = link_to("", @article.previous_post, class: "next_art") if @article.previous_post
+      = link_to("", @article.next_post, class: "prev_art") if @article.next_post
+    = image_tag @article.image.url(:medium), class: "image_prev"

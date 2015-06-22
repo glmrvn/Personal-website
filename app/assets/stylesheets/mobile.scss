@@ -1,10 +1,14 @@
-
 // mobile version
 @media screen and (min-width:320px) and (max-width:600px) {
 	html, body {
 		width: 100%;
 		overflow-x: hidden;
 }
+
+	#section2 {
+		h1 {font-size: 42px;
+		}
+	}
 	.menu, #arrow_down { display: none; }
 
 	.head_bg h1 {
@@ -88,7 +92,6 @@
 		float: none;
 		margin: 0 auto;
 	}
-	.pagination {display: none;}
 	.article_bg {margin: 0px 15px;}
 
 	.icons {

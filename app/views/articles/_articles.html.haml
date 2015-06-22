@@ -1,6 +1,7 @@
-= will_paginate @article, page_links: false, :params => {:anchor => "section2"}
 - @articles.all.order('see_count DESC').each do |article|
   .article
     %h1= article.title
     %p= article.text
+    .wrap_100
+      = will_paginate @article, page_links: false, :params => {:anchor => "section2"}
     = image_tag(article.image.url(:medium), class: "art_img")

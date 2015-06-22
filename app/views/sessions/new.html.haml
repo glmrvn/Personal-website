@@ -1,14 +1,13 @@
 %content
-  .session_bg
-    .filter85_height100
-      %h1 Вход в систему
-      .wrap_480
-        .form-group
-          .span6.offset3
-            = form_for(:session, url: sessions_path) do |f|
-              = f.label "Email:"
-              = f.text_field :email, class: "form-control"
-              %br/
-              = f.label "Пароль:"
-              = f.password_field :password, class: "form-control"
-              = f.submit "Войти в систему", class: "btn"
+.wrap_480
+  %h1 Вход в систему
+  .row
+    .form-group
+      .span6.offset3
+        = form_for(:session, url: sessions_path) do |f|
+          = f.label "Email:"
+          = f.text_field :email, class: "form-control"
+          %br/
+          = f.label "Пароль:"
+          = f.password_field :password, class: "form-control"
+          = f.submit "Войти в систему", class: "btn btn-large btn-primary"

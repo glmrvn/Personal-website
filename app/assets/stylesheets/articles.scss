@@ -2,7 +2,7 @@ a.art_title {
 
 	font-size: 18px;
 	letter-spacing: -0.02em;
-	font-family: 'Raleway_ExtraBold';
+	font-family: 'Raleway';
 	text-decoration: none;
 	color: #fff;
 	transition: 0.9s;
@@ -20,10 +20,6 @@ a.art_title {
 	width: 272px;
 	height: 344px;
 }
-
-.article_in { opacity: 1 !important; }
-
-
 
 .admin_btns {
 	float: left;
@@ -46,17 +42,12 @@ a.art_title {
 
 .index { float: left; margin-left: 14px; font-size: 14px; }
 
-.line { width: 1170px; height: 1px; background: #fff; float: left; margin-top: 30px; margin-bottom: 30px; }
-
 .image_prev {
 	max-width: 960px;
 	margin: 30px auto;
 	display: block;
 	padding-bottom: 50px;
 }
-#art {padding-top: 40px;}
-
-
 
 input#article_title, textarea#article_text {
 	width: 200px; height: 20px;
