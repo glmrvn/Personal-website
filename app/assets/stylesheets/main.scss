@@ -8,20 +8,20 @@ body {
 
 /* prealoder */
 
-#page-preloader {
-	position: fixed;
-	left: 0; top: 0; right: 0; bottom: 0;
-	background: #000;
-	z-index: 100500;
-}
-
-#page-preloader .spinner {
-	width: 32px; height: 32px;
-	position: absolute;
-	left: 50%; top: 50%;
-	background: url('spinner.gif') no-repeat 50% 50%;
-	margin: -16px 0 0 -16px;
-}
+// #page-preloader {
+// 	position: fixed;
+// 	left: 0; top: 0; right: 0; bottom: 0;
+// 	background: #000;
+// 	z-index: 100500;
+// }
+//
+// #page-preloader .spinner {
+// 	width: 32px; height: 32px;
+// 	position: absolute;
+// 	left: 50%; top: 50%;
+// 	background: url('spinner.gif') no-repeat 50% 50%;
+// 	margin: -16px 0 0 -16px;
+// }
 
 /* wrap */
 
@@ -43,11 +43,11 @@ body {
 		float: right;
 		padding: 10px 10px 0 0;
 		font-weight: 500;
-		font-size: 12px;
+		font-size: 11px;
 		color: #aaa;
 		letter-spacing: 4.23px;
 		transition: .3s;
-		&:hover { color: #888; text-decoration:none;}
+		&:hover { color: #888; text-decoration:none; height: }
 	}
 }
 
@@ -86,7 +86,6 @@ h1 {
 	bottom: 10px;
   position: absolute;
   transition: .3s;
-
   &:hover {opacity: 0.50;};
 }
 
@@ -94,6 +93,7 @@ h1 {
 	background-color: #111;
 	text-align: center;
 	h1, p {color: #fff;}
+	h1 {padding-top: 30px;}
 }
 
 #art { min-height:800px; }
