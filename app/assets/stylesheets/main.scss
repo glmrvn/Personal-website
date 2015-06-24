@@ -62,11 +62,9 @@ body {
 }
 
 h1 {
-
 	font-weight: 100;
 	font-size: 58px;
 	color: #636363;
-	padding-top: 20px;
 }
 
 #section1 p, #section2 p {
@@ -78,23 +76,23 @@ h1 {
 }
 .container {
 	width: 98vw;
-	padding: 90px 0 90px 0;
-	margin-top: -60px;
-	// background: url('A.svg') no-repeat center;
+	margin-top: -80px;
 }
-
+.userpic {
+	border-radius: 50%;
+	width: 80px;
+}
 .scroll {
 	bottom: 10px;
-  	position: absolute;
-  	transition: .3s;
+  position: absolute;
+  transition: .3s;
 
-  	&:hover {opacity: 0.50;};
+  &:hover {opacity: 0.50;};
 }
 
 #section2 {
 	background-color: #111;
 	text-align: center;
-
 	h1, p {color: #fff;}
 }
 
@@ -106,8 +104,7 @@ h1 {
 
 .next_page, .previous_page {
 	transition: .3s;
-
-  	&:hover {opacity: 0.50;}
+  &:hover {opacity: 0.50;}
 }
 
 .next_page, .previous_page, .next_art, .prev_art { width: 41px; height: 41px; }
