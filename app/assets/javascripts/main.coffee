@@ -1,11 +1,3 @@
-#заглушка при загрузке страницы
-# $(window).on 'load', ->
-#   $preloader = $('#page-preloader')
-#   $spinner = $preloader.find('.spinner')
-#   $spinner.fadeOut()
-#   $preloader.delay(350).fadeOut 'slow'
-#   return
-
 #плавное появление элементов при загрузке страницы
 $(document).ready ->
   $('.alert').addClass 'alert_js'

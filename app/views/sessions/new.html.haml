@@ -1,13 +1,16 @@
 %content
 .wrap_480
+  %br/
+  %br/
   %h1 Вход в систему
   .row
     .form-group
       .span6.offset3
         = form_for(:session, url: sessions_path) do |f|
-          = f.label "Email:"
-          = f.text_field :email, class: "form-control"
+          = f.label "Email:", class: "col-sm-2 control-label"
+          = f.text_field :email, class: "form-control", placeholder: "Email"
           %br/
-          = f.label "Пароль:"
-          = f.password_field :password, class: "form-control"
-          = f.submit "Войти в систему", class: "btn btn-large btn-primary"
+          = f.label "Пароль:", class: "col-sm-2 control-label"
+          = f.password_field :password, class: "form-control", placeholder: "Password"
+          %br/
+          = f.submit "Войти в систему", class: "btn btn-default"

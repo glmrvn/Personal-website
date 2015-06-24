@@ -1,13 +1,12 @@
 #admin_panel {
-	background: #111;
 	min-height: 100%; width: 100%;
 	background-size: cover;
+	font-size: 15px;
 
-	h1, h2 {padding-bottom: 20px; color: #fff;}
+	h1, h2 {
+		padding-bottom: 20px;
+		font-size: 34px;
+		font-weight: 300;
+	}
 
-	h1 { padding-top: 80px;	}
-
-	a { float: right; color: #f80;}
-
-	b { font-family: 'Raleway'; }
 }
