@@ -7,7 +7,7 @@ body {
 	margin: 0; padding: 0;
 	width: 100%; height: 100%;
 }
-a:focus {text-decoration: none;}
+a:focus { text-decoration: none; }
 
 h1, h2 {
 	font-weight: 100;
@@ -15,7 +15,7 @@ h1, h2 {
 }
 
 /* wrap */
-.wrap { margin: 0 auto; min-width: 320px; max-width: 1170px; }
+.wrap { margin: 0 auto; min-width: 320px; max-width: 1000px; }
 
 .wrap_480 {
 	margin: 0 auto;
@@ -32,7 +32,7 @@ h1, h2 {
 		float: right;
 		padding: 10px 15px 0 0;
 		font-weight: 500;
-		font-size: 11px;
+		font-size: 10px;
 		color: #aaa;
 		letter-spacing: 4.23px;
 		transition: .3s;
@@ -54,7 +54,7 @@ h1, h2 {
 
 #section1 p, #section2 p {
 	font-weight: 500;
-	font-size: 11px;
+	font-size: 10px;
 	color: #AFAFAF;
 	letter-spacing: 11.23px;
 	line-height: 15px;
@@ -72,11 +72,11 @@ h1, h2 {
 a.scroll {
  	transition: .3s;
  	margin-top: 40px;
-	padding: 9px 44px 9px 50px;
+	padding: 10px 44px 10px 50px;
 	font-weight: 500;
-	font-size: 12px;
+	font-size: 11px;
 	color: #aaa;
-	letter-spacing: 6.23px;
+	letter-spacing: 8px;
 	transition: .4s;
 
 	border: 1px solid #ccc;
@@ -105,9 +105,7 @@ a.scroll {
 
 .next_page, .previous_page, .next_art, .prev_art { width: 41px; height: 41px; }
 
-.pagination {
-	display: block;
-}
+.pagination { display: block; }
 
 .next_page, .next_art {
 	background: url(arrow_next.svg) no-repeat;

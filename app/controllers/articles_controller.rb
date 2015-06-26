@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   before_action :article_find, only: [:show, :edit, :update]
-  before_action :signed_user,  only: [:edit, :destroy, :new, :update]
+  before_action :signed_user,  only: [:edit, :destroy, :new, :update, :show]
 
   def index
     @articles = Article.all.paginate(page: params[:page], :per_page => 1)
@@ -28,7 +28,6 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       flash[:succes] = "Article updated"
       redirect_to user_path(current_user)
-
     else
       render 'edit'
     end
@@ -48,7 +47,6 @@ class ArticlesController < ApplicationController
   end
 
   private
-
   def article_find
     @article = Article.find(params[:id])
   end
