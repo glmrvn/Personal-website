@@ -4,9 +4,8 @@ class ArticlesController < ApplicationController
   before_action :signed_user,  only: [:edit, :destroy, :new, :update, :show]
 
   def index
-    @articles = Article.all.paginate(page: params[:page], :per_page => 1)
-  end
-
+    @articles = Article.all
+end
   def new
    @article = Article.new
   end

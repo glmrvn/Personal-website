@@ -97,7 +97,15 @@ a.scroll {
 
 #art { min-height: 900px; }
 
-.art_img { width: 300px; padding: 15px 0 60px 0;}
+.article { float: left; }
+
+.art_img {
+	width: 300px; padding: 15px 0 60px 0;
+	opacity: 0.8;
+	transition: .4s;
+
+	&:hover { opacity: 1;}
+}
 
 /* pagination style */
 .next_page, .previous_page {
