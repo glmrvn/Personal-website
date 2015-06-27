@@ -1,16 +1,7 @@
-#плавное появление элементов при загрузке страницы
+#ысплывающие уведомления
 $(document).ready ->
   $('.alert').addClass 'alert_js'
   return
-
-#сужение меню при скроле вниз
-# $(window).scroll ->
-#   scroll = $(window).scrollTop()
-#   if scroll >= 20
-#     $('.menu').addClass 'menu_in'
-#   if scroll < 180
-#     $('.menu').removeClass 'menu_in'
-#   return
 
 #плавная езда по странице
 $(document).ready ->

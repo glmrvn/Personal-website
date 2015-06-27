@@ -13,29 +13,6 @@ a.art_title {
 	&:hover { color: #999; text-decoration: none; }
 }
 
-.a_to_article { margin-top: 20px; margin-bottom: 20px;}
-
-.article_bg {
-	background: url('art_bg.png') no-repeat;
-	width: 272px;
-	height: 344px;
-}
-
-.admin_btns {
-	float: left;
-	padding-right: 10px;
-	margin-left: 281px;
-	margin-bottom: 40px;
-}
-
-.art_cont {
-	h1 {
-		text-align: center;
-		color: #fff;
-		letter-spacing: -0.04em;
-		margin: 0;
-	}
-}
 .see_ico { float: left; margin-left: 500px; }
 
 .date_ico { margin-left: 20px; float: left; }
@@ -48,11 +25,3 @@ a.art_title {
 	display: block;
 	padding-bottom: 50px;
 }
-
-input#article_title, textarea#article_text {
-	width: 200px; height: 20px;
-	padding: 10px;
-	font-size: 14px;
-}
-
-input#article_image { color: #fff; }

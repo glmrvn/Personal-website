@@ -1,20 +1,15 @@
-#admin_panel
-  .filter85_height100
-    .wrap
-      %h1 Новое сообщение блога
-      .form-group
-        = form_for :article, url: articles_path do |f|
-          = render 'shared/error_messages'
-          %p
-            = f.label :title
-            %br/
-            = f.text_field :title, class: "form-control"
-          %p
-            = f.label :text
-            %br/
-            = f.text_area :text, class: "form-control"
-          %p
-            = f.file_field :image
-            %br/
-            %br/
-            = f.submit class: "btn btn-large btn-primary"
+.wrap_480
+  %h1 Новое сообщение блога
+  %br/
+  .form-group
+    = form_for :article, url: articles_path do |f|
+      = render 'shared/error_messages'
+      = f.label :title, class: "col-sm-2 control-label"
+      = f.text_field :title, class: "form-control", placeholder: "Title"
+      %br/
+      = f.label :text, class: "col-sm-2 control-label"
+      = f.text_area :text,  class: "form-control", placeholder: "Description"
+      %br/
+      = f.file_field :image
+      %br/
+      = f.submit class: "btn btn-large btn-primary"

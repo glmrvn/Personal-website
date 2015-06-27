@@ -11,7 +11,7 @@
       %tr
         %td Articles:
         %td= @articles.size
-      %tr  
+      %tr
         %td Просмотров:
         %td= @articles.sum(:see_count)
 
@@ -32,7 +32,7 @@
         %th
       - @articles.all.order("see_count desc").each_with_index do |article, i|
         %tr
-          %td= (i+1)
+          %td.bold= (i+1)
           %td= article.title
           %td= article.text
           %td= article.created_at.strftime("%d.%m.%y")
