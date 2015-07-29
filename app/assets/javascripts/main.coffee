@@ -3,13 +3,6 @@ $(document).ready ->
   $('.alert').addClass 'alert_js'
   return
 
- #появление футера при скролле
- $(window).scroll ->
-   scroll = $(window).scrollTop()
-   if scroll < 100
-     $('footer').delay(350).fadeIn 'slow'
-   return
-
 #плавная езда по странице
 $(document).ready ->
   $('a[href^="#"], a[href^="."]').click ->
@@ -22,4 +15,11 @@ $(document).ready ->
       # анимируем скроолинг к элементу scroll_el
     false
     # выключаем стандартное действие
+  return
+
+#появление футера при скролле
+$(window).scroll ->
+  scroll = $(window).scrollTop()
+  if scroll < 100
+    $('footer').fadeIn 'slow'
   return

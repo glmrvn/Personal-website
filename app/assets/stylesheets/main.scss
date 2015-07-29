@@ -133,18 +133,14 @@ span.next_page.disabled, span.previous_page.disabled {opacity: 0.15;}
 .alert_js { opacity: 0 !important; }
 
 .alert {
-	padding: 8px 35px 8px 14px;
-	margin-bottom: 18px;
+	margin: 0 auto;
 	color: #c09853;
 	background-color: #fcf8e3;
 	border-radius: 2px;
-	top: 66px;
 	text-align: center;
 	width: 500px;
 	z-index: 100;
-	opacity: 1;
 	transition: 5s;
-	position: absolute;
 }
 
 #error_explanation {
