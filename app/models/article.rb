@@ -21,5 +21,8 @@ class Article < ActiveRecord::Base
   def next_post
     self.class.where("see_count > ?", see_count).order(see_count: :asc).first
   end
-
+  
+  def self.latest
+    Article.order(:updated_at).last
+  end
 end
