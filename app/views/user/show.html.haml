@@ -30,7 +30,7 @@
         %th
         %th
         %th
-      - @articles.all.order("see_count desc").each_with_index do |article, i|
+      - @articles.all.order('created_at ASC').each_with_index do |article, i|
         %tr
           %td.bold= (i+1)
           %td= article.title

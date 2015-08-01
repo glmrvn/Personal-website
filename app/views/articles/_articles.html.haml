@@ -1,4 +1,6 @@
-- @articles.all.order('see_count DESC').each do |article|
+- @articles.all.order('created_at ASC').each do |article|
   .article
-
-  = image_tag(article.image.url(:medium), class: "art_img")
+  - if signed_in?
+    = link_to image_tag(article.image.url(:medium), class: "art_img"), article.image.url(:original)
+  - else
+    = image_tag(article.image.url(:medium), class: "art_img")
