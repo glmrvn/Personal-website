@@ -14,14 +14,14 @@ class Article < ActiveRecord::Base
 
   scope :last_update_at, ->{order('updated_at').last}
 
-  def previous_post
-    self.class.where("see_count < ?", see_count).order(see_count: :desc).first
+  def next_post
+    self.class.where("created_at < ?", created_at).order(created_at: :desc).first
   end
 
-  def next_post
-    self.class.where("see_count > ?", see_count).order(see_count: :asc).first
+  def previous_post
+    self.class.where("created_at > ?", created_at).order(created_at: :asc).first
   end
-  
+
   def self.latest
     Article.order(:updated_at).last
   end

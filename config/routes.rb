@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
 
-  root 'articles#index'
+  root 'welcome#index'
+
 
   resources :articles
   resources :messages
   resources :sessions, only: [:new, :create, :destroy]
-  resources :user,     only: [:show]
+  resources :user,     only: [:show] do
+    get :nil_see_count_all, on: :collection
+  end
 
-  match '/signin',  to: 'sessions#new',     via: 'get'
-  match '/signout', to: 'sessions#destroy', via: 'delete'
-  match '/admin',   to: 'user#admin_show',  via: 'get'
+  match '/signin',    to: 'sessions#new',     via: 'get'
+  match '/signout',   to: 'sessions#destroy', via: 'delete'
+  match '/admin',     to: 'user#admin_show',  via: 'get'
+  match '/portfolio', to: 'articles#index',    via: 'get'
 
 end

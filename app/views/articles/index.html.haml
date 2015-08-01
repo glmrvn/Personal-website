@@ -1,9 +1,10 @@
-#section1
-	.container
-		= image_tag("alex.png", class:"userpic")
-		%h1 Alex Arnis
-		%p UI/UX DESIGNER
-		= link_to "CASES", "#section2", class: 'scroll'
-
 #section2
-	#art= render :partial => 'articles'
+  .articles
+  %h1 Portfolio
+  %p CLICK TO SEE DETAILS
+  %br
+  - cache ['store', Article.latest] do
+    - @articles.all.order('created_at ASC').each do |article|
+      - cache ['entry', article] do
+        .article
+        = link_to image_tag(article.image.url(:medium), class: "art_img_small"), article_path(article)

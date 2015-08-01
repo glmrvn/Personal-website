@@ -24,6 +24,7 @@
             = link_to "Выйти", signout_path, method: "delete"
             = link_to "Админ", user_path(current_user)
           = link_to "SEND MESSAGE", "mailto:glmrvn@gmail.com?subject=Тема+письма&body=Здравствуйте"
+          = link_to "SEE DETAILS", portfolio_path
     .wrap
       - flash.each do |key, value|
         %div{:class => "alert alert-#{key}"}= value
