@@ -33,7 +33,7 @@ end
   end
 
   def show
-    @article.increment!(:see_count)
+    @article.increment!(:see_count) unless signed_in?
   end
 
   def destroy
