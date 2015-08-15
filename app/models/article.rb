@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
 
   has_attached_file :image, :styles => { :thumb  => [ "", :jpg ],
-                                         :medium => [ "600x9000", :jpg] },
+                                         :original => [ "600x9000", :jpg] },
                             :convert_options => { :thumb => "-gravity north -thumbnail 243x324^ -extent 243x324"},
                             :default_url => "/images/:style/missing.png"
 
@@ -25,4 +25,5 @@ class Article < ActiveRecord::Base
   def self.latest
     Article.order(:updated_at).last
   end
+
 end

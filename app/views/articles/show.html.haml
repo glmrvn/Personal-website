@@ -14,4 +14,4 @@
     .pager
       = link_to("", @article.previous_post, class: "next_art") if @article.previous_post
       = link_to("", @article.next_post, class: "prev_art") if @article.next_post
-    = image_tag @article.image.url(:medium), class: "image_prev"
+    = image_tag @article.image.url(:original), class: "image_prev"
