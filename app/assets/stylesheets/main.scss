@@ -43,10 +43,14 @@ h1, h2 {
 		&:first-child {padding-right: 10px;}
 	}
 }
+.menu_right {
+	float: left !important;
+	margin-left: 15px;
+}
 
 /* section1 */
 #section1 {
-	height: 100vh;
+	height: 94vh;
 	min-height: 700px;
 	text-align: center;
 	display: table-cell;
@@ -163,8 +167,8 @@ footer {
 	font-size: 14px;
 	position: fixed;
 	bottom: 0;
-	display: none;
-}
+/*	display: none;
+*/}
 
 .footer_icons {
 	margin: 0 auto;

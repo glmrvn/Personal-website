@@ -18,8 +18,8 @@ $(document).ready ->
   return
 
 #появление футера при скролле
-$(window).scroll ->
-  scroll = $(window).scrollTop()
-  if scroll < 100
-    $('footer').fadeIn 'slow'
-  return
+# $(window).scroll ->
+#   scroll = $(window).scrollTop()
+#   if scroll < 100
+#     $('footer').fadeIn 'slow'
+#   return
