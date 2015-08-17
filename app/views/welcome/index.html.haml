@@ -3,11 +3,11 @@
     = image_tag("alex.png", class:"userpic")
     %h1 Alex Arnis
     %p UI/UX DESIGNER
-    = link_to "CASES", portfolio_path, class: 'scroll'
+    = link_to "CASES", "#section2", class: 'scroll'
 
 #section2
   - cache ['store', Article.latest] do
     - @articles.all.order('created_at ASC').each do |article|
       - cache ['entry', article] do
         .article
-        = link_to image_tag(article.image_url, class: "art_img"), article_path(article)
+        = image_tag(article.image_url, class: "art_img")
