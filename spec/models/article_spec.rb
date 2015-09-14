@@ -14,8 +14,7 @@ describe Article do
   end
 
   describe "Should not be valid Article model" do
-    before { @article.title = "  ",
-             @article.text  = "  "}
+    before { @article.title =  @article.text = "  " }
     it { should_not be_valid }
   end
 

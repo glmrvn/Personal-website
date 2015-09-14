@@ -1,23 +1,23 @@
 require 'rubygems'
-require 'spork'
+# require 'spork'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
-Spork.prefork do
-  ENV["RAILS_ENV"] ||= 'test'
-  require File.expand_path("../../config/environment", __FILE__)
-  require 'rspec/rails'
-  # require 'rspec/autorun'
-  # Loading more in this block will cause your tests to run faster. However,
-  # if you change any configuration or code from libraries loaded here, you'll
-  # need to restart spork for it take effect.
+# Spork.prefork do
+#   ENV["RAILS_ENV"] ||= 'test'
+#   require File.expand_path("../../config/environment", __FILE__)
+#   require 'rspec/rails'
+#   # require 'rspec/autorun'
+#   # Loading more in this block will cause your tests to run faster. However,
+#   # if you change any configuration or code from libraries loaded here, you'll
+#   # need to restart spork for it take effect.
+#
+# end
 
-end
-
-Spork.each_run do
-  # This code will be run each time you run your specs.
-
-end
+# Spork.each_run do
+#   # This code will be run each time you run your specs.
+#
+# end
 
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run

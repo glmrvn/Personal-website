@@ -25,10 +25,10 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
-  gem 'guard-spork'
+  gem 'guard-spring'
+  gem 'spring-commands-rspec', group: :development
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'spork-rails', github: 'sporkrb/spork-rails'
 end
 
 group :test do

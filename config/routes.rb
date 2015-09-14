@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-
   resources :articles
   resources :messages
   resources :sessions, only: [:new, :create, :destroy]
@@ -13,6 +12,6 @@ Rails.application.routes.draw do
   match '/signin',    to: 'sessions#new',     via: 'get'
   match '/signout',   to: 'sessions#destroy', via: 'delete'
   match '/admin',     to: 'user#admin_show',  via: 'get'
-  match '/portfolio', to: 'articles#index',    via: 'get'
+  match '/portfolio', to: 'articles#index',   via: 'get'
 
 end
