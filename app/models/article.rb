@@ -1,6 +1,8 @@
 class Article < ActiveRecord::Base
 
-  has_attached_file :image, :styles => { :thumb  => [ "", :jpg ],
+  before_save :text_uppercase
+
+  has_attached_file :image, :styles => { :thumb    => [ "", :jpg ],
                                          :original => [ "600x9000", :jpg] },
                             :convert_options => { :thumb => "-gravity north -thumbnail 243x324^ -extent 243x324"},
                             :default_url => "/images/:style/missing.png"
@@ -28,6 +30,10 @@ class Article < ActiveRecord::Base
 
   def self.image_have
     self.all.where.not(image_url: false)
+  end
+
+  def text_uppercase
+     self.text.upcase!
   end
 
 end
