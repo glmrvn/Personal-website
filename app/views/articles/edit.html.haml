@@ -1,25 +1,27 @@
-#admin_panel
-  .filter85_height100
-    .wrap
-      %h1 Изменить сообщение
-      = image_tag @article.image.url(:thumb)
-      .input-group
-        = form_for @article do |f|
-          = render 'shared/error_messages'
-          %p
-            = f.label :title
-            %br/
-            = f.text_field :title, class: "form-control"
-          %p
-            = f.label :text
-            %br/
-            = f.text_area :text, class: "form-control"
-          %p
-            = f.label :image_url
-            %br/
-            = f.text_area :image_url, class: "form-control"
-          %p
-            = f.file_field :image
-            %br/
-            %br/
-            = f.submit "Сохранить изменения", class: "btn btn-large btn-primary"
+.wrap_480
+  %h1 Edit article
+  %br/
+  = image_tag @article.image.url(:thumb)
+  .form-group
+    = form_for @article do |f|
+      = render 'shared/error_messages'
+      %p
+        = f.label :title
+        %br/
+        = f.text_field :title, class: "form-control"
+      %p
+        = f.label :text
+        %br/
+        = f.text_area :text, class: "form-control"
+      %p
+        = f.label :image_url
+        %br/
+        = f.text_area :image_url, class: "form-control"
+      %p
+        %br/
+        = f.file_field :image
+        %br/
+        = f.submit "Save", class: "btn btn-large btn-primary"
+        %br/
+        %br/
+        %br/

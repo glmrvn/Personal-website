@@ -3,15 +3,10 @@
     %h1= @article.title
     %p= @article.text
     - if signed_in?
-      .art_indx
-        = image_tag("eye_ico.png", class: "see_ico")
-        .index= @article.see_count
-        = image_tag("clock_ico.png", class: "date_ico")
-        .index= @article.created_at.strftime("%d %b %y")
       .admin_btns
         = link_to "Edit", edit_article_path
         = link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }
     .pager
       = link_to("", @article.previous_post, class: "next_art") if @article.previous_post
       = link_to("", @article.next_post, class: "prev_art") if @article.next_post
-    = image_tag @article.image.url(:original), class: "image_prev"
+    = image_tag @article.image_url, class: "image_prev"

@@ -21,9 +21,9 @@
       .menu
         %nav
           - if signed_in?
-            = link_to "Выйти", signout_path, method: "delete"
-            = link_to "Админ", user_path(current_user)
-          = link_to "SEND MESSAGE", "mailto:glmrvn@gmail.com?subject=Тема+письма&body=Здравствуйте"
+            = link_to "Sign Out", signout_path, method: "delete"
+            = link_to "Admin", user_path(current_user)
+          = link_to "Send Message", "mailto:glmrvn@gmail.com?subject=Тема+письма&body=Здравствуйте"
           -# = link_to "SEE DETAILS", portfolio_path
           -# = link_to "MAIN PAGE", root_path, class:"menu_right"
     .wrap
