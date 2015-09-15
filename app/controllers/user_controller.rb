@@ -1,6 +1,7 @@
 class UserController < ApplicationController
 
   before_action :find_elements,  only: [:show, :nil_see_count_all, :new]
+  before_action :admin_have,     only: [:new]
 
   def show
     signed_user
@@ -8,11 +9,7 @@ class UserController < ApplicationController
   end
 
   def new
-    if @users.count >= 1
-      redirect_to signin_url, notice: "Please sign in."
-    else
-      @user = User.new
-    end
+    @user = User.new
   end
 
   def create
@@ -49,6 +46,12 @@ class UserController < ApplicationController
     @users = User.all
     @messages = Message.all
     @articles = Article.all
+  end
+
+  def admin_have
+    if @users.count >= 1
+      redirect_to signin_url, notice: "Please sign in."
+    end
   end
 
 end
