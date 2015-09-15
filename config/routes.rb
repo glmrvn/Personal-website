@@ -5,9 +5,12 @@ Rails.application.routes.draw do
   resources :articles
   resources :messages
   resources :sessions, only: [:new, :create, :destroy]
-  resources :user,     only: [:show] do
+  resources :user,     only: [:new, :create, :show] do
     get :nil_see_count_all, on: :collection
   end
+  # resources :user,     only: [:show, :new, :create, :destroy, :index ] do
+  #   get :nil_see_count_all, on: :collection
+  # end
 
   match '/signin',    to: 'sessions#new',     via: 'get'
   match '/signout',   to: 'sessions#destroy', via: 'delete'

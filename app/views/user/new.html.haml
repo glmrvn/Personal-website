@@ -1,0 +1,16 @@
+.wrap_480
+  %h1 Create admin user
+  %br/
+  .form-group
+    = form_for :user, url: { controller: "user", action: "create" } do |f|
+      = f.label :email
+      = f.text_field :email, class: "form-control", placeholder: "Enter your email"
+      %br/
+      = f.label :password
+      = f.password_field :password,  class: "form-control", placeholder: "Enter your password"
+      %br/
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation,  class: "form-control", placeholder: "Enter your password confirmation"
+      %br/
+
+      = f.submit "Creat admin account", class: "btn btn-large btn-primary"

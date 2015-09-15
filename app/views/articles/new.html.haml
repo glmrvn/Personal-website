@@ -1,13 +1,13 @@
 .wrap_480
-  %h1 Новое сообщение блога
+  %h1 Add new article
   %br/
   .form-group
     = form_for :article, url: articles_path do |f|
       = render 'shared/error_messages'
-      = f.label :title, class: "col-sm-2 control-label"
+      = f.label :title
       = f.text_field :title, class: "form-control", placeholder: "Title"
       %br/
-      = f.label :text, class: "col-sm-2 control-label"
+      = f.label :text
       = f.text_area :text,  class: "form-control", placeholder: "Description"
       %br/
       = f.label :image_url
