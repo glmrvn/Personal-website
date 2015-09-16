@@ -1,11 +1,11 @@
 class UserController < ApplicationController
 
-  before_action :find_elements,  only: [:show, :nil_see_count_all, :new]
+  before_action :find_elements,  only: [:new, :show, :nil_see_count_all]
   before_action :admin_have,     only: [:new]
+  before_action :user_find,      only: [:show, :edit, :update]
 
   def show
     signed_user
-    @user = User.find(params[:id])
   end
 
   def new
@@ -18,6 +18,19 @@ class UserController < ApplicationController
       redirect_to root_path, notice: "User succesfull created"
     else
       render 'new'
+    end
+  end
+
+  def edit
+    signed_user
+  end
+
+  def update
+    if @user.update(user_params)
+      flash[:succes] = "User updated"
+      redirect_to user_path(current_user)
+    else
+      render 'edit'
     end
   end
 
@@ -34,6 +47,9 @@ class UserController < ApplicationController
 
   private
 
+  def user_find
+    @user = User.find(params[:id])
+  end
   def signed_user
     redirect_to signin_url, notice: "Пожалуйста пройдите авторизацию" unless signed_in?
   end
@@ -44,7 +60,6 @@ class UserController < ApplicationController
 
   def find_elements
     @users = User.all
-    @messages = Message.all
     @articles = Article.all
   end
 

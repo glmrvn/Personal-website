@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :articles
-  resources :messages
   resources :sessions, only: [:new, :create, :destroy]
-  resources :user,     only: [:new, :create, :show] do
+  resources :user,     only: [:new, :create, :show, :edit, :update] do
     get :nil_see_count_all, on: :collection
   end
   # resources :user,     only: [:show, :new, :create, :destroy, :index ] do
