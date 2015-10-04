@@ -16,3 +16,11 @@ $(document).ready ->
     false
     # выключаем стандартное действие
   return
+
+#выбор активной вкладки
+$(document).ready ->
+  $tabs = $('a.tab')
+  $tabs.click ->
+    $tabs.removeClass 'active'
+    $(this).addClass 'active'
+    return

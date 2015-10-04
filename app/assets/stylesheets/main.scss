@@ -77,15 +77,13 @@ h1, h2 {
 	width: 80px;
 }
 a.scroll {
- 	transition: .3s;
- 	margin-top: 40px;
+	margin-top: 40px;
 	padding: 10px 44px 10px 50px;
 	font-weight: 500;
 	font-size: 11px;
 	color: #aaa;
 	letter-spacing: 8px;
 	transition: .4s;
-
 	border: 1px solid #ccc;
 	&:hover { color: #eee; text-decoration:none; background-color: #222; border: none;}
 }
@@ -94,6 +92,22 @@ a.scroll {
 #section2 {
 	background-color: #111;
 	text-align: center;
+
+	a.active {
+		border: 1px solid #fff;
+		&:hover { text-decoration:none; }
+	}
+	a.tab {
+		margin: 30px 0 20px 0;
+		padding: 10px 44px 10px 50px;
+		font-weight: 500;
+		font-size: 11px;
+		color: #fff;
+		letter-spacing: 8px;
+		transition: .4s;
+		display: inline-block;
+		&:hover { text-decoration:none; }
+	}
 
 	h1, p { color: #fff; }
 
@@ -116,7 +130,7 @@ a.scroll {
 /* pagination style */
 .next_page, .previous_page {
 	transition: .3s;
-  &:hover {opacity: 0.50;}
+	&:hover {opacity: 0.50;}
 }
 
 .next_page, .previous_page, .next_art, .prev_art { width: 41px; height: 41px; }
