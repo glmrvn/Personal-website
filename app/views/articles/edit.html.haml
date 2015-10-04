@@ -21,6 +21,12 @@
         %br/
         = f.file_field :image
         %br/
+        = f.radio_button :tag, "WEB", :checked => true
+        = label :tag, "WEB"
+        = f.radio_button :tag, "APP"
+        = label :tag, "APP"
+        %br/
+        %br/
         = f.submit "Save", class: "btn btn-large btn-primary"
         %br/
         %br/

@@ -51,7 +51,7 @@ end
   end
 
   def article_params
-    params.require(:article).permit( :title, :text, :image, :image_url )
+    params.require(:article).permit( :title, :text, :image, :image_url, :tag )
   end
 
   def signed_user
