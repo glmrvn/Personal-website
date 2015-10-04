@@ -6,11 +6,5 @@
     = link_to "CASES", "#section2", class: 'scroll'
 
 #section2
-  = link_to "WEB", "#", class: 'tab active'
-  = link_to "APP", "#", class: 'tab'
   .br
-  - cache ['store', Article.latest] do
-    - @articles.image_have.order('created_at ASC').each do |article|
-      - cache ['entry', article] do
-        .article
-        = image_tag(article.image_url, class: "art_img")
+  = render partial: 'articles/articles_all'

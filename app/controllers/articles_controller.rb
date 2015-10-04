@@ -1,11 +1,18 @@
 class ArticlesController < ApplicationController
+  protect_from_forgery except: :index
 
   before_action :article_find, only: [:show, :edit, :update]
   before_action :signed_user,  only: [:edit, :destroy, :new, :update]
 
   def index
     @articles = Article.all
-end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def new
    @article = Article.new
   end

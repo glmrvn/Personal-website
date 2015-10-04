@@ -1,10 +1,7 @@
 #section2
-  .articles
   %h1 Portfolio
   %p CLICK TO SEE DETAILS
-  %br
-  - cache ['store', Article.latest] do
-    - @articles.all.order('created_at ASC').each do |article|
-      - cache ['entry', article] do
-        .article
-        = link_to image_tag(article.image_url, class: "art_img"), article_path(article)
+  .br
+  = link_to "WEB", articles_path(:format => :js), remote: true, class: 'tab active'
+  = link_to "APP", articles_path(:format => :js), remote: true, class: 'tab'
+  .articles= render partial: 'articles_all'

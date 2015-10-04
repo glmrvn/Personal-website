@@ -32,6 +32,14 @@ class Article < ActiveRecord::Base
     self.all.where.not(image_url: false)
   end
 
+  def self.web_tag
+    self.all.where(tag: 'WEB')
+  end
+
+  def self.app_tag
+    self.all.where(tag: 'APP')
+  end
+
   def text_uppercase
      self.text.upcase!
   end
