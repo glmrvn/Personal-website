@@ -2,6 +2,6 @@
   %h1 Portfolio
   %p CLICK TO SEE DETAILS
   .br
-  = link_to "WEB", articles_path(:format => :js), remote: true, class: 'tab active'
-  = link_to "APP", articles_path(:format => :js), remote: true, class: 'tab'
+  = link_to "WEB", "#", remote: true, class: 'tab active', id: 'web'
+  = link_to "APP", "#", remote: true, class: 'tab',        id: 'app'
   .articles= render partial: 'articles_all'

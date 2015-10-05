@@ -24,3 +24,20 @@ $(document).ready ->
     $tabs.removeClass 'active'
     $(this).addClass 'active'
     return
+
+#скрипт для работы вкладок
+$(document).ready ->
+  $('.art_img_app').hide()
+  
+  $web = $('#web')
+  $app = $('#app')
+
+  $web.click ->
+    $('.art_img_app').hide()
+    $('.art_img_web').show()
+    return
+
+  $app.click ->
+    $('.art_img_web').hide()
+    $('.art_img_app').show()
+    return

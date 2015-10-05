@@ -1,6 +1,0 @@
-.br
-- cache ['store', Article.latest] do
-  - @articles.app_tag.image_have.order('created_at ASC').each do |article|
-    - cache ['entry', article] do
-      .article
-      = image_tag(article.image_url, class: "art_img")
