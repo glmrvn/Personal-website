@@ -3,22 +3,22 @@
     .h1 Admin page
     %table.table
       %tr.active
-        %th Подробная информация о пользователе
+        %th About current user:
         %th
       %tr
-        %td Email
+        %td Email:
         %td= @user.email
       %tr
         %td Articles:
         %td= @articles.size
       %tr
-        %td Просмотров:
+        %td Views:
         %td= @articles.sum(:see_count)
       %tr
         %td
         %td= link_to "Edit account", edit_user_path
 
-    %h2 Записи:
+    %h2 Articles
     = link_to "New", new_article_path
     = link_to "Delete all see count", nil_see_count_all_user_index_path
     %br
@@ -28,9 +28,9 @@
         %th
         %th Title
         %th Text
-        %th Дата добавления
-        %th Просмотров (#{@articles.sum(:see_count)})
-        %th
+        %th Added
+        %th Views (#{@articles.sum(:see_count)})
+        %th Tag
         %th
         %th
         %th
