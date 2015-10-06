@@ -25,7 +25,8 @@
             = link_to "Admin", user_path(current_user)
           = link_to "Send Message", "mailto:glmrvn@gmail.com?subject=Тема+письма&body=Здравствуйте"
           -# = link_to "SEE DETAILS", portfolio_path
-          -# = link_to "MAIN PAGE", root_path, class:"menu_right"
+          - unless current_page?(root_path)
+            = link_to "MAIN PAGE", root_path, class:"menu_right"
     .wrap
       - flash.each do |key, value|
         %div{:class => "alert alert-#{key}"}= value
