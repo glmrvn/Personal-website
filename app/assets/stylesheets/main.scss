@@ -135,23 +135,21 @@ a.scroll {
 }
 
 /* pagination style */
-.next_page, .previous_page {
+.next_art, .prev_art {
 	transition: .3s;
 	&:hover {opacity: 0.50;}
 }
 
-.next_page, .previous_page, .next_art, .prev_art { width: 41px; height: 41px; }
+.next_art, .prev_art { width: 41px; height: 41px; }
 
 .pagination { display: block; }
 
-.next_page, .next_art {
-	background: url(arrow_next.svg) no-repeat;
+.next_art {
 	float: right;
 }
 
-.previous_page, .prev_art {
+.prev_art {
 	float: left;
-	background: url(arrow_prev.svg);
 }
 
 span.next_page.disabled, span.previous_page.disabled {opacity: 0.15;}

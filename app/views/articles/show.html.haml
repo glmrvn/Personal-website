@@ -7,6 +7,7 @@
         = link_to "Edit", edit_article_path
         = link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }
     .pager
-      = link_to("", @article.previous_post, class: "next_art") if @article.previous_post
-      = link_to("", @article.next_post, class: "prev_art") if @article.next_post
+      = link_to image_tag("arrow_next.svg", class: "next_art"), @article.previous_post if @article.previous_post
+      = link_to image_tag("arrow_prev.svg", class: "prev_art"), @article.next_post     if @article.next_post
+
     = image_tag @article.image_url, class: "image_prev"
