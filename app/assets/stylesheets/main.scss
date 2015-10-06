@@ -119,8 +119,15 @@ a.scroll {
 
 .article { float: left; }
 .art_img_small { width: 100px;}
-.art_img_web, .art_img_app {
+.art_img_web {
 	width: 300px; padding: 15px 0 60px 0;
+	opacity: 0.8;
+	transition: .4s;
+
+	&:hover { opacity: 1;}
+}
+.art_img_app {
+	width: 400px; padding: 15px 0 60px 0;
 	opacity: 0.8;
 	transition: .4s;
 
