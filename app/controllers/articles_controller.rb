@@ -56,7 +56,7 @@ class ArticlesController < ApplicationController
   end
 
   def signed_user
-    redirect_to signin_url, notice: "Please sign in." unless signed_in?
+    redirect_to signin_url, notice: "Please sign in" unless signed_in?
   end
 
 end

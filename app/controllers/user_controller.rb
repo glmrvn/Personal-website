@@ -51,7 +51,7 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
   end
   def signed_user
-    redirect_to signin_url, notice: "Пожалуйста пройдите авторизацию" unless signed_in?
+    redirect_to signin_url, notice: "Please sign in" unless signed_in?
   end
 
   def user_params
@@ -65,7 +65,7 @@ class UserController < ApplicationController
 
   def admin_have
     if @users.count >= 1
-      redirect_to signin_url, notice: "Please sign in."
+      redirect_to signin_url, notice: "Please sign in"
     end
   end
 
