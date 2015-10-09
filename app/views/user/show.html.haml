@@ -28,9 +28,9 @@
         %th
         %th Title
         %th Text
+        %th Tag
         %th Added
         %th Views (#{@articles.sum(:see_count)})
-        %th Tag
         %th
         %th
         %th
@@ -40,9 +40,9 @@
           %td.bold= (i+1)
           %td= article.title
           %td= article.text
+          %td= article.tag
           %td= article.created_at.strftime("%d.%m.%y")
           %td= article.see_count
-          %td= article.tag
           %td= link_to "Delete", article_path(article), method: :delete, data: { confirm: 'Are you sure?' }
           %td= link_to "Edit", edit_article_path(article)
           %td= link_to "Show", article_path(article)

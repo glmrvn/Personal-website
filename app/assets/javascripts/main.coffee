@@ -25,7 +25,7 @@ $(document).ready ->
     $(this).addClass 'active'
     return
 
-#выбор активной вкладки
+#Исчезновение и появление футера при скроле
 $(window).scroll ->
   $footer = $('footer')
   scroll = $(window).scrollTop()
