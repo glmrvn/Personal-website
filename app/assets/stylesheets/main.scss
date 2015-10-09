@@ -39,8 +39,8 @@ h1, h2 {
 		letter-spacing: 4.23px;
 		transition: .3s;
 		text-transform: uppercase;
-		&:hover { color: #888; text-decoration:none;}
-		&:first-child {padding-right: 10px;}
+		&:hover { color: #888; text-decoration:none; }
+		&:first-child { padding-right: 10px; }
 	}
 }
 .menu_right {
@@ -186,18 +186,18 @@ footer {
 	font-size: 14px;
 	position: fixed;
 	bottom: 0;
-/*	display: none;
-*/}
+	display: none;
+}
 
 .footer_icons {
 	margin: 0 auto;
 	display: table;
-	padding-top: 12px;
+	padding-top: 9px;
 }
 
 .foo_ico {
-	float: right;
-	padding-left: 30px;
+	display: inline-block;
+	padding: 0 15px 0 15px;
 
 	&:hover {
 		opacity: 0.6;

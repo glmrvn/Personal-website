@@ -25,10 +25,20 @@ $(document).ready ->
     $(this).addClass 'active'
     return
 
+#выбор активной вкладки
+$(window).scroll ->
+  $footer = $('footer')
+  scroll = $(window).scrollTop()
+  $footer.hide()
+
+  if scroll > 300
+    $footer.show()
+    return
+
 #скрипт для работы вкладок
 $(document).ready ->
   $('.art_img_app').hide()
-  
+
   $web = $('#web')
   $app = $('#app')
 
