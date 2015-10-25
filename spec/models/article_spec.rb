@@ -23,4 +23,9 @@ describe Article do
     expect(page).to have_content("Portfolio")
   end
 
+  it "Should be have link to main page in article page" do
+    visit article_path(@article)
+    expect(page).to have_link("MAIN PAGE", href: root_path)
+  end
+
 end
