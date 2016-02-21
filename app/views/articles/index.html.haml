@@ -1,7 +1,7 @@
 #section2
   %h1 Portfolio
-  %p CLICK TO SEE DETAILS
-  .br
+  %p CLICK IMAGE TO SEE DETAILS
+  %br
   = link_to "WEB", "#", remote: true, class: 'tab active', id: 'web'
   = link_to "APP", "#", remote: true, class: 'tab',        id: 'app'
   .articles= render partial: 'articles_all'

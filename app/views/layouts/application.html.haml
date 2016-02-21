@@ -23,7 +23,7 @@
           - if signed_in?
             = link_to "Sign Out", signout_path, method: "delete"
             = link_to "Admin", user_path(current_user)
-          = link_to "Send Message", "mailto:glmrvn@gmail.com?subject=Тема+письма&body=Здравствуйте"
+          = link_to "Contact me", "mailto:glmrvn@gmail.com?subject=Message+theme&body=Hello,"
           -# = link_to "SEE DETAILS", portfolio_path
           - unless current_page?(root_path)
             = link_to "MAIN PAGE", root_path, class:"menu_right"
@@ -34,9 +34,9 @@
     %footer
       .footer_icons
         = link_to image_tag("ico_dribbble.svg", class:"foo_ico"), "https://dribbble.com/glmrvn"
-        = link_to image_tag("github_icon.svg",  class:"foo_ico"), "https://github.com/glmrvn"
         = link_to image_tag("sketch_icon.svg",  class:"foo_ico"), "http://www.sketchappsources.com/contributor/glmrvn"
+        = link_to image_tag("twitter_icon.svg", class:"foo_ico"), "https://twitter.com/gloomraven"
+        = link_to image_tag("github_icon.svg",  class:"foo_ico"), "https://github.com/glmrvn"
         = link_to image_tag("skype_icon.svg",   class:"foo_ico"), "skype:+gloomraven?call"
         = link_to image_tag("vk_icon.svg",      class:"foo_ico"), "http://vk.com/id254915817"
-        = link_to image_tag("twitter_icon.svg", class:"foo_ico"), "https://twitter.com/GloomRaven"
         -# = link_to image_tag("ico_mail.png", class:"foo_ico"), "mailto:faqmybrain@gmail.com?subject=Тема+письма&body=Здравствуйте"

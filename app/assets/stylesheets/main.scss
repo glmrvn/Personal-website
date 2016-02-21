@@ -13,7 +13,7 @@ a:focus { text-decoration: none; }
 
 h1, h2 {
 	font-weight: 100;
-	font-size: 58px;
+	font-size: 40px;
 }
 
 .wrap > h1 {
@@ -68,10 +68,10 @@ h1, h2 {
 	font-weight: 500;
 	font-size: 10px;
 	color: #AFAFAF;
-	letter-spacing: 11.23px;
+	letter-spacing: 10px;
 	line-height: 15px;
 }
-#section1 p {padding-bottom: 20px;}
+#section1 p { padding: 0 0px 20px 6px; }
 
 .container {
 	width: 99vw;
@@ -83,7 +83,7 @@ h1, h2 {
 }
 a.scroll {
 	margin-top: 40px;
-	padding: 10px 44px 10px 50px;
+	padding: 10px 34px 10px 40px;
 	font-weight: 500;
 	font-size: 11px;
 	color: #aaa;
@@ -116,6 +116,8 @@ a.scroll {
 
 	h1, p { color: #fff; }
 
+	p { opacity: 0.54; }
+
 	h1 { padding: 30px 0 10px 0; margin: 0; }
 
 }
@@ -126,17 +128,17 @@ a.scroll {
 .art_img_small { width: 100px;}
 .art_img_web {
 	width: 300px; padding: 15px 0 60px 0;
-	opacity: 0.8;
+	opacity: 0.7;
 	transition: .4s;
 
-	&:hover { opacity: 1;}
+	&:hover { opacity: 1; }
 }
 .art_img_app {
 	width: 400px; padding: 15px 0 60px 0;
-	opacity: 0.8;
+	opacity: 0.7;
 	transition: .4s;
 
-	&:hover { opacity: 1;}
+	&:hover { opacity: 1; }
 }
 
 /* pagination style */
@@ -203,9 +205,9 @@ footer {
 .foo_ico {
 	display: inline-block;
 	padding: 0 15px 0 15px;
+	transition: .9s;
 
 	&:hover {
 		opacity: 0.6;
-		transition: .4s;
 	}
 }
