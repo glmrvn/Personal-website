@@ -3,8 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 gem 'pg'
 
+gem 'puma'
+
 gem 'paperclip', "~> 4.2"
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 gem 'will_paginate'
 
 gem 'coffee-rails', '~> 4.1.0'
@@ -23,6 +25,10 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'capistrano', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rvm', require: false
+
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'guard-spring'

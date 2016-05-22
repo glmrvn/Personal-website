@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: glmrvn
+  password: None
+  pool: 5
+development:
+  <<: *default
+  database: glmrvn_development
+test:
+  <<: *default
+  database: glmrvn_test

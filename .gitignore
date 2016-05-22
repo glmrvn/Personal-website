@@ -12,9 +12,6 @@
 !/log/.keep
 /tmp
 
-# Игнорирование прочих ненужных файлов.
-database.yml
-secrets.yml
 doc/
 *.swp
 *~
@@ -24,3 +21,5 @@ doc/
 .secret
 .keep
 /public/system/articles/images/*
+/public/assets
+
