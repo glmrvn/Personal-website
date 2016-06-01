@@ -2,4 +2,4 @@
 
 Written on Ruby on Rails
 
-[glmrvn.herokuapp.com](http://glmrvn.herokuapp.com/)
+[glmrvn.com](http://glmrvn.com/)
