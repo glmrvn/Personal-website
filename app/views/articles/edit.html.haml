@@ -19,8 +19,6 @@
         = f.text_area :image_url, class: "form-control"
       %p
         %br/
-        = f.file_field :image
-        %br/
         = f.radio_button :tag, "WEB", :checked => true
         = label :tag, "WEB"
         = f.radio_button :tag, "APP"
