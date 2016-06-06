@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: glmrvn
+  username: postgres
   password: None
   pool: 5
 development:

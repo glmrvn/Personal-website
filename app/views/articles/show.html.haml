@@ -6,8 +6,14 @@
       .admin_btns
         = link_to "Edit", edit_article_path
         = link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }
+    - if @article.resource_url.present?
+      = link_to @article.resource_url.gsub(/^https?:\/\//, ''),
+                @article.resource_url,
+                class: 'resource_link'
     .pager
-      = link_to image_tag("arrow_next.svg", class: "next_art"), @article.previous_post if @article.previous_post
-      = link_to image_tag("arrow_prev.svg", class: "prev_art"), @article.next_post     if @article.next_post
+      - if @article.previous_post
+        = link_to image_tag("arrow_next.svg", class: "next_art"), @article.previous_post
+      - if @article.next_post
+        = link_to image_tag("arrow_prev.svg", class: "prev_art"), @article.next_post
 
     = image_tag @article.image_url, class: "image_prev"

@@ -12,6 +12,8 @@ class Article < ActiveRecord::Base
   validates :title, :text, presence: true,
                            length: { minimum: 5 }
 
+  validates :resource_url, url: {allow_blank: true} 
+
   validates_attachment :image, size: { in: 0..15.megabytes }
 
   scope :last_update_at, ->{ order('updated_at').last }

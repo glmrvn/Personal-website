@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-   @article = Article.new
+    @article = Article.new
   end
 
   def create
@@ -52,7 +52,9 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit( :title, :text, :image, :image_url, :tag )
+    params.require(:article).permit(
+      :title, :text, :image, :image_url, :tag, :resource_url
+    )
   end
 
   def signed_user
