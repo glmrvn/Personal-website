@@ -1,5 +1,4 @@
 a.art_title {
-
 	font-size: 18px;
 	letter-spacing: -0.02em;
 	font-family: 'Raleway';
@@ -24,4 +23,13 @@ a.art_title {
 	margin: 30px auto;
 	display: block;
 	padding-bottom: 50px;
+}
+
+.resource_link {
+	color: #CCC;
+	transition: 1s;
+
+	&:hover {
+		color: #FFF;
+	}
 }
