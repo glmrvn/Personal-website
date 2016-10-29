@@ -1,28 +1,28 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.0'
+gem 'rails', '5.0.0'
 gem 'pg'
 
 gem 'puma'
 
-gem 'paperclip', "~> 4.2"
+gem 'paperclip'
 gem 'bcrypt'
 gem 'will_paginate'
 
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 gem 'haml-rails'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 gem 'bootstrap-sass'
 
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 gem 'devise'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 gem 'validate_url'
 
 group :doc do
-  gem 'sdoc', '~> 0.4.0'
+  gem 'sdoc'
 end
 
 group :development, :test do
@@ -34,7 +34,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spring'
   gem 'spring-commands-rspec', group: :development
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
   gem 'spring'
 end
 
