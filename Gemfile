@@ -8,6 +8,7 @@ gem 'puma'
 gem 'paperclip'
 gem 'bcrypt'
 gem 'will_paginate'
+gem 'rack', '2.0.1'
 
 gem 'coffee-rails'
 gem 'haml-rails'
