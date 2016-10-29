@@ -20,6 +20,6 @@ doc/
 .idea
 .secret
 .keep
+.env
 /public/system/articles/images/*
 /public/assets
-
