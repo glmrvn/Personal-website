@@ -1,9 +1,9 @@
 %br
-- cache ['store', Article.latest] do
-  - @articles.web_tag.image_have.order('created_at ASC').each do |article|
+- cache [Article.latest] do
+  - @articles.web_tag.image_have.order('created_at DESC').each do |article|
     - cache ['entry', article] do
       = link_to image_tag(article.image_url, class: "art_img_web"), article_path(article)
 %br
 
-- @articles.app_tag.image_have.order('created_at ASC').each do |article_app|
+- @articles.app_tag.image_have.order('created_at DESC').each do |article_app|
   = link_to image_tag(article_app.image_url, class: "art_img_app"), article_path(article_app)
