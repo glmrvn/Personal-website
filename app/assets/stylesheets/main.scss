@@ -25,12 +25,15 @@ h1 {
 /* wrap */
 .wrap { margin: 0 auto; min-width: 320px; max-width: 960px; }
 
-// .wrap_480 {
-// 	margin: 0 auto;
-// 	width: 480px;
-// 	h1 { text-align: center; }
-// }
-//
+.wrap_480 {
+	margin: 0 auto;
+	width: 480px;
+	color: #fff;
+
+	h1 { text-align: center; }
+	label { padding: 20px; }
+}
+
 // .wrap_100 {	margin: 0 auto;	width: 100px; }
 
 /* menu */
