@@ -15,7 +15,6 @@ gem 'foreman'
 gem 'coffee-rails'
 gem 'haml-rails'
 gem 'sass-rails'
-gem 'bootstrap-sass'
 
 gem 'uglifier'
 gem 'devise'

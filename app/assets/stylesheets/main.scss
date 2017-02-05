@@ -1,15 +1,15 @@
-@import "bootstrap";
+// @import "bootstrap";
 
-html {width: 100%; min-height: 100%; position: relative; overflow-x: hidden;}
+html { width: 100%; min-height: 100%; position: relative; overflow-x: hidden; }
 
 body {
-	font-family: 'Raleway', "Helvetica", "Arial", sans-serif;
+	font-family: "Avenir Next", "Ubuntu", "Arial", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background-color: #fff;
 	margin: 0; padding: 0;
 	width: 100%; height: 100%;
 }
-a:focus { text-decoration: none; }
+a, a:focus { text-decoration: none; }
 
 h1, h2 {
 	font-weight: 100;

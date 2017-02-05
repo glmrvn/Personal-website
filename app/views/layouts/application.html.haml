@@ -2,11 +2,12 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title ALEX ARNIS
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Alexander Dyakov
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=cyrillic'
     = favicon_link_tag 'favicon.png'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     = csrf_meta_tags
 
     -# METRICS CODE
