@@ -108,7 +108,15 @@ a.scroll {
 
 /* section2 */
 #section2 {
-	text-align: center;
+
+	h2 {
+		color: #fff;
+		font-size: 20px;
+		letter-spacing: 0.3px;
+		font-weight: 400;
+		width: 280px;
+		line-height: 24px;
+	}
 
 	a.active {
 		border: 1px solid #fff;
@@ -136,7 +144,12 @@ a.scroll {
 
 #art { min-height: 900px; }
 
-.article { float: left; }
+.article {
+	float: left;
+	padding: 40px 20px 0 0;
+
+}
+
 .art_img_small { width: 100px;}
 .art_img_web {
 	width: 300px; padding: 15px 0 60px 0;
@@ -146,7 +159,7 @@ a.scroll {
 	&:hover { opacity: 1; }
 }
 .art_img_app {
-	width: 400px; padding: 15px 0 60px 0;
+	width: 300px;
 	opacity: 0.7;
 	transition: .4s;
 

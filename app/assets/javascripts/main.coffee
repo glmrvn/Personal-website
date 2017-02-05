@@ -26,14 +26,15 @@ $(document).ready ->
     return
 
 #Исчезновение и появление футера при скроле
-# $(window).scroll ->
-#   $footer = $('footer')
-#   scroll = $(window).scrollTop()
-#   $footer.hide()
-#
-#   if scroll > 300
-#     $footer.show()
-#     return
+$(window).scroll ->
+  $footer = $('footer')
+  scroll = $(window).scrollTop()
+  $footer.hide()
+
+  if scroll > 300
+    # $footer.fadeIn(300)
+    $footer.show()
+    return
 
 #Футер всегда оторбражается
 $(window).ready ->
@@ -43,7 +44,7 @@ $(window).ready ->
 
 #скрипт для работы вкладок
 $(document).ready ->
-  $('.art_img_app').hide()
+  $('.art_img_web').hide()
 
   $web = $('#web')
   $app = $('#app')
