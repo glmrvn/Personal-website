@@ -55,12 +55,15 @@
       .menu
         %nav
           - if signed_in?
-            = link_to "Sign Out", signout_path, method: "delete"
-            = link_to "Admin", user_path(current_user)
-          = link_to "Contact me", "mailto:glmrvn@gmail.com?subject=Message+theme&body=Hello,"
+            = link_to "sign out", signout_path, method: "delete"
+            = link_to "admin", user_path(current_user)
+          = link_to "связаться", "mailto:glmrvn@gmail.com?subject=Message+theme&body=Здравствуйте,"
+          = link_to "обо мне", "#"
+          = link_to "блог", "#"
+          = link_to image_tag("ic_menu.svg"), root_path, class:"menu_right"
           -# = link_to "SEE DETAILS", portfolio_path
           - unless current_page?(root_path)
-            = link_to "MAIN PAGE", root_path, class:"menu_right"
+            = link_to "main page", root_path, class:"menu_right"
     .wrap
       - flash.each do |key, value|
         %div{:class => "alert alert-#{key}"}= value
@@ -73,4 +76,4 @@
         = link_to image_tag("github_icon.svg",  class:"foo_ico"), "https://github.com/glmrvn", target:"_blank"
         = link_to image_tag("skype_icon.svg",   class:"foo_ico"), "skype:+gloomraven?call"
         = link_to image_tag("vk_icon.svg",      class:"foo_ico"), "http://vk.com/id254915817", target:"_blank"
-        -# = link_to image_tag("ico_mail.png", class:"foo_ico"), "mailto:faqmybrain@gmail.com?subject=Тема+письма&body=Здравствуйте"
+        = link_to image_tag("ico_mail.png", class:"foo_ico"), "mailto:faqmybrain@gmail.com?subject=Тема+письма&body=Здравствуйте"
