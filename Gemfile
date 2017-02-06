@@ -9,7 +9,6 @@ gem 'puma'
 gem 'paperclip'
 gem 'bcrypt'
 gem 'will_paginate'
-gem 'rack', '2.0.1'
 gem 'foreman'
 
 gem 'coffee-rails'

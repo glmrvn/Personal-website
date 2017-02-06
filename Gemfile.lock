@@ -321,7 +321,6 @@ DEPENDENCIES
   paperclip
   pg
   puma
-  rack (= 2.0.1)
   rails (= 5.0.1)
   rails_12factor
   rspec-rails
